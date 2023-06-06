@@ -1,0 +1,140 @@
+:root {
+    --ui-bg-color: #080808;
+    --text-color: #EEE;
+}
+* {
+
+}
+p, a, h1, h2, h3, h4 {
+    font-family: 'Raleway', 'Comic Sans MS', serif;
+    color: var(--text-color);
+}
+.manuscript {
+    font-family: 'Tangerine', 'Comic Sans MS', serif;
+    font-size: 2rem;
+}
+.center {
+    text-align: center;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: black;
+}
+body {
+    overflow-x: hidden;
+}
+body.frozen {
+    height: 100svh;
+    overflow-y: hidden;
+}
+#container {
+    margin-top: 60px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    gap: 20px;
+}
+img.confim-click {
+    width: 200px;
+    height: 200px;
+    max-width: 100%;
+    justify-self: center;
+    outline: solid 2px rgba(255, 255, 255, .7);
+    cursor: pointer;
+    border-radius: 2px;
+}
+img.confim-click.active {
+    outline: solid 3px white;
+    box-shadow: white 0 0 20px 2px;
+}
+header {
+    height: 60px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background: var(--ui-bg-color);
+    border-bottom: solid 1px rgba(255, 255, 255, .2);
+}
+header h2 {
+    font-weight: 100;
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0;
+    padding-top: .3em;
+    padding-left: .8em;
+}
+
+/* Menu and its content */
+#menu {
+    height: calc(100vh - 60px - 2px);
+    width: calc(100vw - 4px);
+    background: var(--ui-bg-color);
+    position: absolute;
+    left: 2px;
+    top: 60px;
+    transition: left 200ms ease-in-out;
+    outline: solid 2px rgba(255, 255, 255, .8);
+}
+#menu.hidden {
+    left: calc(100vw + 3px);
+}
+#menu p {
+    margin: 0;
+}
+#menu #damien {
+    font-size: 3.2rem;
+}
+#menu footer {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+
+/* Menu burger */
+#burger {
+    height: 60px;
+    width: 60px;
+    background: #222;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+#burger .bar {
+    background: white;
+    border-radius: 1px;
+    width: 30px;
+    height: 4px;
+    position: absolute;
+    left: 15px;
+    transition: transform 200ms, height 200ms, left 150ms;
+}
+#burger .bar-1 {
+    top: 18px;
+    transform-origin: 0 0;
+}
+#burger .bar-2 {
+    top: 28px;
+    transition: height 200ms;
+}
+#burger .bar-3 {
+    top: 38px;
+    transform-origin: 0 4px;
+}
+#burger.open .bar {
+    left: 21px;
+}
+#burger.open .bar-1 {
+    transform: rotate(45deg);
+}
+#burger.open .bar-2 {
+    height: 0;
+    transition: height 0ms;
+}
+#burger.open .bar-3 {
+    transform: rotate(-45deg);
+}
