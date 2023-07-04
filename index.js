@@ -14,7 +14,7 @@ app.listen(port, () => {
 })
 
 app.post('/eh', (req, res) => {
-  let num = req.body.num
+  let num = parseInt(req.body.num)
 
   // Log reception in Node console
   console.log('HTTP POST received from browserrrrr!')
@@ -23,8 +23,10 @@ app.post('/eh', (req, res) => {
   res.send('OK Roger, from Node server to browser.')
 
   // Shoot an OSC message to port 6999
-  client.send('/confim', num, () => {
-    console.log('Message /confim with number ' + num + ' was sent to port 6999')
+  let oscAddress = num < 100 ? '/visuals' : '/audio'
+  client.send(oscAddress, num, () => {
+    console.log('Message with number ' + num + ' was sent on address ' + oscAddress + ' to port 6999')
     //client.close();
   });
+
 })
