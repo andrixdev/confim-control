@@ -1,3 +1,7 @@
+/**
+ * Alex Andrix @2023
+ */
+
 import { Client } from 'node-osc';
 import express from 'express';
 import bodyParser from 'body-parser';
@@ -23,7 +27,8 @@ app.post('/eh', (req, res) => {
   res.send('OK Roger, from Node server to browser.')
 
   // Shoot an OSC message to port 6999
-  let oscAddress = num < 100 ? '/visuals' : '/audio'
+  // Addresses below 100 are for visual triggers, 100 to 199 are for audio, 200 and more for video
+  let oscAddress = num < 100 ? '/visuals' : (num < 200 ? '/audio' : '/video')
   client.send(oscAddress, num, () => {
     console.log('Message with number ' + num + ' was sent on address ' + oscAddress + ' to port 6999')
     //client.close();

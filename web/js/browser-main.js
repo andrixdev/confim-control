@@ -1,3 +1,7 @@
+/**
+ * Alex Andrix @2023
+ */
+
 // Conference tiles controls
 let activate = (id) => {
 	Array.from(document.getElementsByClassName('confim-click')).forEach((el) => {
@@ -52,13 +56,21 @@ document.getElementById('burger').addEventListener('click', () => {
 })
 
 // Music play and pause toggles
-let playNode = document.getElementById('audio-play')
-let pauseNode = document.getElementById('audio-pause')
-playNode.addEventListener('click', () => {
-	playNode.setAttribute('data-visibility', 'hidden')
-	pauseNode.setAttribute('data-visibility', 'visible')
+let playNode1 = document.getElementById('audio-play-1')
+let pauseNode1 = document.getElementById('audio-pause-1')
+let playNode2 = document.getElementById('audio-play-2')
+let pauseNode2 = document.getElementById('audio-pause-2')
+let playNode3 = document.getElementById('audio-play-3')
+let pauseNode3 = document.getElementById('audio-pause-3')
+playNode1.addEventListener('click', () => {
+	playNode1.setAttribute('data-visibility', 'hidden')
+	pauseNode1.setAttribute('data-visibility', 'visible')
 })
-pauseNode.addEventListener('click', () => {
-	playNode.setAttribute('data-visibility', 'visible')
-	pauseNode.setAttribute('data-visibility', 'hidden')
+pauseNode2.addEventListener('click', () => {
+	playNode2.setAttribute('data-visibility', 'visible')
+	pauseNode2.setAttribute('data-visibility', 'hidden')
+})
+pauseNode3.addEventListener('click', () => {
+	playNode3.setAttribute('data-visibility', 'visible')
+	pauseNode3.setAttribute('data-visibility', 'hidden')
 })

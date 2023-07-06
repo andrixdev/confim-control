@@ -1,3 +1,5 @@
+/* Alex Andrix @2023 */
+
 :root {
     --ui-bg-color: #080808;
     --text-color: #EEE;
@@ -139,9 +141,15 @@ header h2 {
 }
 
 /* Music play and pause toggles */
-#audio-play[data-visibility="hidden"] {
+.audio-play[data-visibility="hidden"] {
     display: none;
 }
-#audio-pause[data-visibility="hidden"] {
+.audio-pause[data-visibility="hidden"] {
     display: none;
+}
+.audio {
+    outline: 5px solid white;
+}
+#audio-play-1 {
+    outline-color: red;
 }
