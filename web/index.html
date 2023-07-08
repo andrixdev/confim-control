@@ -35,27 +35,79 @@
 		</nav>
 	</header>
 
-	<div id="container">
-		<img class="confim-click" data-confim-id="1" src="./img/anemone.png" alt="Anemone"/>
-		<img class="confim-click" data-confim-id="2" src="./img/cylinder.png" alt="Cylinder"/>
-		<img class="confim-click" data-confim-id="3" src="./img/sphere.png" alt="Sphere"/>
-		<img class="confim-click" data-confim-id="4" src="./img/vortex.png" alt="Vortex"/>
-		<img class="confim-click" data-confim-id="5" src="./img/turbulence.png" alt="Fifth"/>
-		<img class="confim-click" data-confim-id="6" src="./img/cube.png" alt="Sixth"/>
-		<img class="confim-click" data-confim-id="7" src="./img/treetex.png" alt=""/>
-		<img class="confim-click" data-confim-id="8" src="./img/treestripes.png" alt=""/>
-		<img class="confim-click" data-confim-id="9" src="./img/treemore.png" alt=""/>
-		<img class="confim-click" data-confim-id="10" src="./img/treesplit.png" alt=""/>
-		<img class="confim-click" data-confim-id="11" src="./img/treedee.png" alt=""/>
+	<div id="content">
+		<div id="items-container">
+			<img class="confim-click" data-confim-id="1" src="./img/anemone.png" alt="Anemone"/>
+			<img class="confim-click" data-confim-id="2" src="./img/cylinder.png" alt="Cylinder"/>
+			<img class="confim-click" data-confim-id="3" src="./img/sphere.png" alt="Sphere"/>
+			<img class="confim-click" data-confim-id="4" src="./img/vortex.png" alt="Vortex"/>
+			<img class="confim-click" data-confim-id="5" src="./img/turbulence.png" alt="Fifth"/>
+			<img class="confim-click" data-confim-id="6" src="./img/cube.png" alt="Cube"/>
+			<img class="confim-click" data-confim-id="7" src="./img/treetex.png" alt="Tree Texture"/>
+			<img class="confim-click" data-confim-id="8" src="./img/treestripes.png" alt="Tree Stripes"/>
+			<img class="confim-click" data-confim-id="9" src="./img/treemore.png" alt="Tree More"/>
+			<img class="confim-click" data-confim-id="10" src="./img/treesplit.png" alt="Tree Split"/>
+			<img class="confim-click" data-confim-id="11" src="./img/treedee.png" alt="Tree Dee"/>
+			<img class="confim-click" data-confim-id="12" src="./img/treedata.png" alt="Tree Data"/>
+		</div>
+		
+		<div id="params">
+			<!-- Toggle extinct species -->
+			<div class="param flexrow flexstart">
+				<img class="item-preview" src="./img/treedata.png" alt="Tree Data" />
+				<div class="switch on" data-confim-id="50"><div class="switch-inner"></div></div>
+				<p class="param-text">Extinct</p>
+			</div>
+
+			<!-- Toggle colors -->
+			<div class="param flexrow flexstart">
+				<img class="item-preview" src="./img/treedata.png" alt="Tree Data" />
+				<div class="switch off" data-confim-id="51"><div class="switch-inner"></div></div>
+				<p class="param-text">Colors</p>
+			</div>
+
+			<!-- Toggle glow -->
+			<div class="param flexrow flexstart">
+				<img class="item-preview" src="./img/treedata.png" alt="Tree Data" />
+				<div class="switch off" data-confim-id="52"><div class="switch-inner"></div></div>
+				<p class="param-text">Glow</p>
+			</div>
+
+			<!-- Toggle animation -->
+			<div class="param flexrow flexstart">
+				<img class="item-preview" src="./img/treedata.png" alt="Tree Data" />
+				<div class="switch off" data-confim-id="53"><div class="switch-inner"></div></div>
+				<p class="param-text">Animation</p>
+			</div>
+		</div>
 	</div>
 
 	<div id="menu" class="hidden">
-		<img class="confim-click audio audio-play" data-confim-id="100" id="audio-1-play" data-visibility="visible"  src="./img/music-play.jpg" alt="Audio Play"/>
-		<img class="confim-click audio audio-pause" data-confim-id="101" id="audio-1-pause" data-visibility="hidden" src="./img/music-pause.jpg" alt="Audio Pause"/>
-		<img class="confim-click audio audio-play" data-confim-id="102" id="audio-2-play" data-visibility="visible"  src="./img/music-play.jpg" alt="Audio Play"/>
-		<img class="confim-click audio audio-pause" data-confim-id="103" id="audio-2-pause" data-visibility="hidden" src="./img/music-pause.jpg" alt="Audio Pause"/>
-		<img class="confim-click audio audio-play" data-confim-id="104" id="audio-3-play" data-visibility="visible"  src="./img/music-play.jpg" alt="Audio Play"/>
-		<img class="confim-click audio audio-pause" data-confim-id="105" id="audio-3-pause" data-visibility="hidden" src="./img/music-pause.jpg" alt="Audio Pause"/>
+
+		<div id="media">
+
+			<div id="audio">
+				<h2 class="center manuscript">Music</h2>
+				<div class="flexrow flexcenter flexwrap">
+					<img class="media audio audio-play" data-confim-id="100" id="audio-play-1" data-visibility="visible"  src="./img/music-play.jpg" alt="Audio Play 1"/>
+					<img class="media audio audio-pause" data-confim-id="101" id="audio-pause-1" data-visibility="hidden" src="./img/music-pause.jpg" alt="Audio Pause 1"/>
+					<img class="media audio audio-play" data-confim-id="102" id="audio-play-2" data-visibility="visible"  src="./img/music-play.jpg" alt="Audio Play 2"/>
+					<img class="media audio audio-pause" data-confim-id="103" id="audio-pause-2" data-visibility="hidden" src="./img/music-pause.jpg" alt="Audio Pause 2"/>
+					<img class="media audio audio-play" data-confim-id="104" id="audio-play-3" data-visibility="visible"  src="./img/music-play.jpg" alt="Audio Play 3"/>
+					<img class="media audio audio-pause" data-confim-id="105" id="audio-pause-3" data-visibility="hidden" src="./img/music-pause.jpg" alt="Audio Pause 3"/>
+				</div>
+			</div>
+	
+			<div id="video">
+				<h2 class="center manuscript">Video</h2>
+				<div class="flexcol flexcenter">
+					<img class="media video video-play" data-confim-id="200" id="video-play-1" data-visibility="visible" src="./img/cnrs-play.png" alt="Video Play 1"/>
+					<img class="media video video-stop" data-confim-id="202" id="video-stop-1" data-visibility="hidden" src="./img/cnrs-stop.png" alt="Video Stop 1"/>
+				</div>
+			</div>
+
+		</div>
+		
 		
 		<footer>
 			<p class="manuscript center">Conférence du 10 octobre 2023</p>
