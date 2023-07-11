@@ -11,3 +11,8 @@ Web app for immersive science talks under a dome
 * Clone this repository on your machine
 * Run **node .** in main directory to boot Node server with index.js
 * Open *localhost:8082* in Google Chrome or Mozilla FireFox
+
+# Compiling LESS into CSS
+* Install the LESS preprocessor (https://lesscss.org/usage/)
+* Run **lessc ./web/less/main.less ./web/css/main.css**
+* Now your can see your updated CSS
