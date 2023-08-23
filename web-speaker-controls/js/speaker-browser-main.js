@@ -52,7 +52,7 @@ let openMenu = () => {
 }
 let closeMenu = () => {
 	burgerNode.classList = ''
-	titleNode.innerHTML = "Conférence Immersive"
+	titleNode.innerHTML = "Conférence Immersive - Damien"
 	menuNode.classList = 'hidden'
 	bodyNode.classList = ''
 }
@@ -60,32 +60,4 @@ document.getElementById('burger').addEventListener('click', () => {
 	let isHidden = menuNode.classList == 'hidden'
 	if (isHidden) openMenu()
 	else closeMenu()
-})
-
-// Music play and pause toggles
-let playNode1 = document.getElementById('audio-play-1')
-let pauseNode1 = document.getElementById('audio-pause-1')
-let playNode2 = document.getElementById('audio-play-2')
-let pauseNode2 = document.getElementById('audio-pause-2')
-let playNode3 = document.getElementById('audio-play-3')
-let pauseNode3 = document.getElementById('audio-pause-3')
-let playNode4 = document.getElementById('video-play-1')
-let stopNode4 = document.getElementById('video-stop-1')
-
-let mediaNodes = [
-	[playNode1, pauseNode1],
-	[playNode2, pauseNode2],
-	[playNode3, pauseNode3],
-	[playNode4, stopNode4]
-]
-mediaNodes.forEach((couple) => {
-	let play = couple[0], pause = couple[1]
-	play.addEventListener('click', () => {
-		play.setAttribute('data-visibility', 'hidden')
-		pause.setAttribute('data-visibility', 'visible')
-	})
-	pause.addEventListener('click', () => {
-		pause.setAttribute('data-visibility', 'hidden')
-		play.setAttribute('data-visibility', 'visible')
-	})
 })

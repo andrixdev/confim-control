@@ -2,7 +2,7 @@
  * Alex Andrix @2023
  */
 
-// Conference tiles controls (display)
+// Conference controls (tiles state toggle)
 let activate = (id) => {
 	Array.from(document.getElementsByClassName('confim-click')).forEach((el) => {
 		el.classList = "confim-click"
@@ -10,7 +10,8 @@ let activate = (id) => {
 		if (el.getAttribute('data-confim-id') == id) el.classList = "confim-click active"
 	})
 }
-// Conference tiles controls (send OSC)
+
+// Conference controls (send OSC)
 Array.from(document.querySelectorAll('[data-confim-id]')).forEach((el) => {
 	let num = el.getAttribute('data-confim-id')
 
@@ -31,6 +32,7 @@ Array.from(document.querySelectorAll('[data-confim-id]')).forEach((el) => {
 		xhr.send("num=" + num)
 	})
 })
+
 // Special params controls (display)
 Array.from(document.getElementsByClassName('switch')).forEach((el) => {
 	el.addEventListener('click', () => {
@@ -52,7 +54,7 @@ let openMenu = () => {
 }
 let closeMenu = () => {
 	burgerNode.classList = ''
-	titleNode.innerHTML = "Conférence Immersive"
+	titleNode.innerHTML = "Conférence Immersive - Assistant"
 	menuNode.classList = 'hidden'
 	bodyNode.classList = ''
 }
