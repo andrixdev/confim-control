@@ -1,0 +1,137 @@
+<!-- Alex Andrix @2023 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Confim Speaker Controls</title>
+
+	<!-- Meta stuff -->
+	<meta charset="utf-8" />
+	<meta name="keywords" content="OSC, control, app, immersive, planetarium, conference" />
+	<meta name="author" content="Alex Andrix" />
+	<meta name="description" content="Control app for immersive conferences" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, target-densitydpi=device-dpi, minimum-scale=1" />
+	
+	<!-- Icons -->
+	<!-- To do -->
+	
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+	
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="./css/main.css" />
+
+</head>
+
+<body>
+
+	<header>
+		<h2 id="title" class="manuscript">Spe. Conférence Immersive</h2>
+		<nav id="burger">
+			<div class="bar bar-1"></div>
+			<div class="bar bar-2"></div>
+			<div class="bar bar-3"></div>
+		</nav>
+	</header>
+
+	<div id="content">
+		<div id="items-container">
+			<img class="confim-click" data-confim-id="1" src="./img/treedee.png" alt="Tree Dee"/>
+			<img class="confim-click" data-confim-id="2" src="./img/treedata.png" alt="Tree Data"/>
+		</div>
+		
+		<div id="params">
+			<!-- Toggle extinct species -->
+			<div class="param flexrow flexstart">
+				<img class="item-preview" src="./img/treedata.png" alt="Tree Data" />
+				<div class="switch on" data-confim-id="50"><div class="switch-inner"></div></div>
+				<p class="param-text">Extinct</p>
+			</div>
+
+			<!-- Toggle colors -->
+			<div class="param flexrow flexstart">
+				<img class="item-preview" src="./img/treedata.png" alt="Tree Data" />
+				<div class="switch off" data-confim-id="51"><div class="switch-inner"></div></div>
+				<p class="param-text">Colors</p>
+			</div>
+
+			<!-- Toggle glow -->
+			<div class="param flexrow flexstart">
+				<img class="item-preview" src="./img/treedata.png" alt="Tree Data" />
+				<div class="switch off" data-confim-id="52"><div class="switch-inner"></div></div>
+				<p class="param-text">Glow</p>
+			</div>
+
+			<!-- Toggle animation -->
+			<div class="param flexrow flexstart">
+				<img class="item-preview" src="./img/treedata.png" alt="Tree Data" />
+				<div class="switch off" data-confim-id="53"><div class="switch-inner"></div></div>
+				<p class="param-text">Animation</p>
+			</div>
+
+			<!-- Toggle Circles -->
+			<div class="param flexrow flexstart">
+				<img class="item-preview" src="./img/treedata.png" alt="Tree Data" />
+				<div class="switch off" data-confim-id="54"><div class="switch-inner"></div></div>
+				<p class="param-text">Circles</p>
+			</div>
+
+			<!-- Toggle Circles -->
+			<div class="param flexrow flexstart">
+				<img class="item-preview" src="./img/treedata.png" alt="Tree Data" />
+				<div class="switch off" data-confim-id="55"><div class="switch-inner"></div></div>
+				<p class="param-text">Zoo</p>
+			</div>
+
+			<!-- Toggle Time scale -->
+			<div class="param flexrow flexstart">
+				<img class="item-preview" src="./img/treedata.png" alt="Tree Data" />
+				<div class="switch off" data-confim-id="56"><div class="switch-inner"></div></div>
+				<p class="param-text">Time scale</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="menu" class="hidden">
+
+		<div id="media">
+
+			<div id="audio">
+				<h2 class="center manuscript">Music</h2>
+				<div class="flexrow flexcenter flexwrap">
+					<img class="media audio audio-play" data-confim-id="100" id="audio-play-1" data-visibility="visible"  src="./img/music-play.jpg" alt="Audio Play 1"/>
+					<img class="media audio audio-pause" data-confim-id="101" id="audio-pause-1" data-visibility="hidden" src="./img/music-pause.jpg" alt="Audio Pause 1"/>
+
+					<img class="media audio audio-play" data-confim-id="103" id="audio-play-2" data-visibility="visible"  src="./img/music-play.jpg" alt="Audio Play 2"/>
+					<img class="media audio audio-pause" data-confim-id="104" id="audio-pause-2" data-visibility="hidden" src="./img/music-pause.jpg" alt="Audio Pause 2"/>
+
+					<img class="media audio audio-play" data-confim-id="106" id="audio-play-3" data-visibility="visible"  src="./img/music-play.jpg" alt="Audio Play 3"/>
+					<img class="media audio audio-pause" data-confim-id="107" id="audio-pause-3" data-visibility="hidden" src="./img/music-pause.jpg" alt="Audio Pause 3"/>
+				</div>
+			</div>
+	
+			<div id="video">
+				<h2 class="center manuscript">Video</h2>
+				<div class="flexcol flexcenter">
+					<img class="media video video-play" data-confim-id="200" id="video-play-1" data-visibility="visible" src="./img/cnrs-play.png" alt="Video Play 1"/>
+					<img class="media video video-stop" data-confim-id="202" id="video-stop-1" data-visibility="hidden" src="./img/cnrs-stop.png" alt="Video Stop 1"/>
+				</div>
+			</div>
+
+		</div>
+		
+		
+		<footer>
+			<p class="manuscript center">Conférence du 10 octobre 2023</p>
+			<p class="manuscript center" id="damien">Damien de Vienne</p>
+		</footer>
+	</div>
+	
+<!-- Scripts for libraries -->
+<!-- None! -->
+
+<!-- Our scripts -->
+<script type="text/javascript" src="./js/browser-main.js"></script>
+
+</body>
