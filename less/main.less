@@ -8,6 +8,7 @@
     --audio-sample-color-2: hsl(240, 60%, 43%);
     --audio-sample-color-3: hsl(280, 90%, 43%);
     --video-color-1: hsl(5, 83%, 42%);
+    --box-shadow: white 0 0 20px 2px;
 }
 p, a, h1, h2, h3, h4 {
     font-family: 'Raleway', 'Comic Sans MS', serif;
@@ -89,6 +90,10 @@ header {
 #content {
     margin-top: 60px;
     padding: 20px;
+
+    h2 {
+        font-size: 2.5rem;
+    }
 }
 
 #items-container {
@@ -107,7 +112,7 @@ header {
 
         &.active {
             outline: solid 3px white;
-            box-shadow: white 0 0 20px 2px;
+            box-shadow: var(--box-shadow);
         }
     }
 }
@@ -168,6 +173,29 @@ header {
     &.on .switch-inner {
         left: 45px;
     }
+}
+/* Tile */
+.tile {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+
+    &[data-visibility="hidden"] {
+        display: none;
+    }
+
+    &:hover {
+        box-shadow: var(--box-shadow);
+    }
+}
+.reset {
+    border-radius: 50%;
+}
+.audio,
+.video {
+    border: 8px solid white;
 }
 
 /* Menu and its content */
@@ -243,23 +271,6 @@ header {
 
 }
 
-/* Media */
-#media h2 {
-    font-size: 2.5rem;
-}
-.media {
-    border: 8px solid white;
-    width: 90px;
-    height: 90px;
-    margin-bottom: 10px;
-    margin-right: 5px;
-    cursor: pointer;
-
-    &[data-visibility="hidden"] {
-        display: none;
-    }
-}
-
 /* Music */
 #audio-play-1,
 #audio-pause-1 {
@@ -276,4 +287,9 @@ header {
 #video-play-1,
 #video-stop-1 {
     border-color: var(--video-color-1);
+}
+/* Highlight when playing */
+.audio-pause,
+.video-stop {
+    box-shadow: var(--box-shadow);
 }

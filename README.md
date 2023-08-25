@@ -14,5 +14,5 @@ Web app for immersive science talks under a dome
 
 # Compiling LESS into CSS
 * Install the LESS preprocessor (https://lesscss.org/usage/)
-* Run **lessc ./web/less/main.less ./web/css/main.css**
+* Run **lessc ./less/main.less ./web-assistant-controls/css/main.css && lessc ./less/main.less ./web-speaker-controls/css/main.css** to compile in both speaker and assistant app directories
 * Now your can see your updated CSS

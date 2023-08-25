@@ -7,6 +7,7 @@
   --audio-sample-color-2: hsl(240, 60%, 43%);
   --audio-sample-color-3: hsl(280, 90%, 43%);
   --video-color-1: hsl(5, 83%, 42%);
+  --box-shadow: white 0 0 20px 2px;
 }
 p,
 a,
@@ -92,6 +93,9 @@ header h2 {
   margin-top: 60px;
   padding: 20px;
 }
+#content h2 {
+  font-size: 2.5rem;
+}
 #items-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -108,7 +112,7 @@ header h2 {
 }
 #items-container img.confim-click.active {
   outline: solid 3px white;
-  box-shadow: white 0 0 20px 2px;
+  box-shadow: var(--box-shadow);
 }
 #params {
   padding-top: 30px;
@@ -162,6 +166,27 @@ header h2 {
 }
 .switch.on .switch-inner {
   left: 45px;
+}
+/* Tile */
+.tile {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.tile[data-visibility="hidden"] {
+  display: none;
+}
+.tile:hover {
+  box-shadow: var(--box-shadow);
+}
+.reset {
+  border-radius: 50%;
+}
+.audio,
+.video {
+  border: 8px solid white;
 }
 /* Menu and its content */
 #menu {
@@ -230,21 +255,6 @@ header h2 {
 #burger.open .bar-3 {
   transform: rotate(-45deg);
 }
-/* Media */
-#media h2 {
-  font-size: 2.5rem;
-}
-.media {
-  border: 8px solid white;
-  width: 90px;
-  height: 90px;
-  margin-bottom: 10px;
-  margin-right: 5px;
-  cursor: pointer;
-}
-.media[data-visibility="hidden"] {
-  display: none;
-}
 /* Music */
 #audio-play-1,
 #audio-pause-1 {
@@ -261,4 +271,9 @@ header h2 {
 #video-play-1,
 #video-stop-1 {
   border-color: var(--video-color-1);
+}
+/* Highlight when playing */
+.audio-pause,
+.video-stop {
+  box-shadow: var(--box-shadow);
 }
