@@ -10,7 +10,8 @@ Web app for immersive science talks under a dome
 * Install Git (https://git-scm.com/downloads)
 * Clone this repository on your machine
 * Run **node .** in main directory to boot Node server with index.js
-* Open *localhost:8082* in Google Chrome or Mozilla FireFox
+* Open *localhost:8082/speaker* in Google Chrome or Mozilla FireFox to open Speaker app
+* Open *localhost:8082/assistant* in Google Chrome or Mozilla FireFox to open Assistant app
 
 # Compiling LESS into CSS
 * Install the LESS preprocessor (https://lesscss.org/usage/)
