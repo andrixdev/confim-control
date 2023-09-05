@@ -16,7 +16,7 @@ app.use('/speaker', express.static('web-speaker-controls'))
 app.use('/assistant', express.static('web-assistant-controls'))
 
 app.listen(port, () => {
-  console.log(`Confim Control speaker app listening on port ${port} for browser input`)
+  console.log(`Confim Control app listening on port ${port} for browser input`)
 })
 
 app.post('/eh', (req, res) => {

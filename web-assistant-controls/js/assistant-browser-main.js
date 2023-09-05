@@ -65,6 +65,7 @@ document.getElementById('burger').addEventListener('click', () => {
 })
 
 // Music play and pause toggles
+/*
 let playNode1 = document.getElementById('audio-play-1')
 let pauseNode1 = document.getElementById('audio-pause-1')
 let playNode2 = document.getElementById('audio-play-2')
@@ -91,3 +92,4 @@ mediaNodes.forEach((couple) => {
 		play.setAttribute('data-visibility', 'visible')
 	})
 })
+*/
