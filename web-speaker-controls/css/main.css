@@ -181,6 +181,11 @@ header h2 {
 .tile:hover {
   box-shadow: var(--box-shadow);
 }
+.tile + p {
+  margin-top: 0;
+  text-align: center;
+  height: 3rem;
+}
 .reset {
   border-radius: 50%;
 }
