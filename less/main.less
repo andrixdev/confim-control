@@ -4,13 +4,15 @@
     --ui-bg-color: #080808;
     --text-color: #EEE;
     --main-blue: hsl(200, 83%, 42%);
+    --audio-sample-color-0: hsl(0, 0%, 85%);
     --audio-sample-color-1: hsl(200, 83%, 43%);
-    --audio-sample-color-2: hsl(240, 60%, 43%);
-    --audio-sample-color-3: hsl(280, 90%, 43%);
+    --audio-sample-color-2: hsl(230, 70%, 63%);
+    --audio-sample-color-3: hsl(260, 90%, 53%);
+    --audio-sample-color-4: hsl(290, 50%, 53%);
     --video-color-1: hsl(5, 83%, 42%);
     --box-shadow: white 0 0 20px 2px;
 }
-p, a, h1, h2, h3, h4 {
+p, a, label, h1, h2, h3, h4 {
     font-family: 'Raleway', 'Comic Sans MS', serif;
     color: var(--text-color);
 }
@@ -194,13 +196,13 @@ header {
         text-align: center;
         height: 3rem;
     }
-}
-.reset {
-    border-radius: 50%;
-}
-.audio,
-.video {
-    border: 8px solid white;
+    &.reset {
+        border-radius: 50%;
+    }
+    &.audio,
+    &.video {
+        border: 6px solid white;
+    }
 }
 
 /* Menu and its content */
@@ -277,24 +279,55 @@ header {
 }
 
 /* Music */
-#audio-play-1,
-#audio-pause-1 {
+#audio {
+    #master {
+        margin-bottom: 2rem;
+        input {
+            width: calc(100% - 50px);
+        }
+    }
+    .audio.active {
+        border-color: transparent;
+        box-shadow: var(--box-shadow);
+        animation: rot 3s linear infinite;
+
+        & + p {
+            text-shadow: var(--text-color) 0 0 10px;
+        }
+    }
+}
+.audio {
+    border-radius: 50%;
+}
+#audio-play-0 {
+    border-color: var(--audio-sample-color-0);
+}
+#audio-play-1 {
     border-color: var(--audio-sample-color-1);
 }
-#audio-play-2,
-#audio-pause-2 {
+#audio-play-2 {
     border-color: var(--audio-sample-color-2);
 }
-#audio-play-3,
-#audio-pause-3 {
+#audio-play-3 {
     border-color: var(--audio-sample-color-3);
 }
-#video-play-1,
-#video-stop-1 {
+#audio-play-4 {
+    border-color: var(--audio-sample-color-4);
+}
+#video-play-1 {
     border-color: var(--video-color-1);
 }
 /* Highlight when playing */
 .audio-pause,
 .video-stop {
     box-shadow: var(--box-shadow);
+}
+
+@keyframes rot {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }

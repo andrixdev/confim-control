@@ -29,8 +29,12 @@ app.post('/eh', (req, res) => {
   res.send('OK Roger, from Node server to browser.')
 
   // Shoot an OSC message to port 6999
-  // Addresses below 100 are for visual triggers, 100 to 199 are for audio, 200 and more for video
-  let oscAddress = num < 100 ? '/visuals' : (num < 200 ? '/audio' : '/video')
+  // Addresses :
+  // [0, 100] for visual triggers
+  // [100, 199] for audio triggers
+  // [200, 299] for video
+  // [500, 600] for master sound volume 
+  let oscAddress = num < 100 ? '/visuals' : (num < 200 ? '/audio' : (num < 300 ? '/video' : '/master'))
   client.send(oscAddress, num, () => {
     console.log('Message with number ' + num + ' was sent on address ' + oscAddress + ' to port 6999')
     //client.close();
