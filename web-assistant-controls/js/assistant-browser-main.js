@@ -39,16 +39,16 @@ document.getElementById('master-volume').addEventListener('input', (ev) => {
 }*/
 
 // UI music tracks toggles
-let tracks = document.getElementsByClassName('music-track')
+/*let tracks = document.getElementsByClassName('music-track')
 Array.from(tracks).forEach((el) => {
 	el.addEventListener('click', (ev) => {
 		Array.from(tracks).forEach((tr) => {
 			let itsMe = tr.getAttribute('data-confim-id') == ev.target.getAttribute('data-confim-id')
 			tr.classList.toggle("active", itsMe)
-			tr.src = itsMe ? "./img/music.jpg" : "./img/music-play.jpg"
+			//tr.src = itsMe ? "./img/music.jpg" : "./img/music-play.jpg"
 		})
 	})
-})
+})*/
 
 // Special params controls (display)
 Array.from(document.getElementsByClassName('switch')).forEach((el) => {
@@ -58,11 +58,23 @@ Array.from(document.getElementsByClassName('switch')).forEach((el) => {
 })
 
 // Media play and pause toggles
-let playNode1 = document.getElementById('video-play-1')
-let stopNode1 = document.getElementById('video-stop-1')
+let playNode0 = document.getElementById('video-play-1')
+let stopNode0 = document.getElementById('video-stop-1')
+let playNode1 = document.getElementById('audio-play-1')
+let stopNode1 = document.getElementById('audio-stop-1')
+let playNode2 = document.getElementById('audio-play-2')
+let stopNode2 = document.getElementById('audio-stop-2')
+let playNode3 = document.getElementById('audio-play-3')
+let stopNode3 = document.getElementById('audio-stop-3')
+let playNode4 = document.getElementById('audio-play-4')
+let stopNode4 = document.getElementById('audio-stop-4')
 
 let mediaNodes = [
-	[playNode1, stopNode1]
+	[playNode0, stopNode0],
+	[playNode1, stopNode1],
+	[playNode2, stopNode2],
+	[playNode3, stopNode3],
+	[playNode4, stopNode4]
 ]
 mediaNodes.forEach((couple) => {
 	let play = couple[0], pause = couple[1]

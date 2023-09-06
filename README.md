@@ -6,6 +6,7 @@ Web app for immersive science talks under a dome
 * Install npm (https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 * Install Git (https://git-scm.com/downloads)
 * Clone this repository on your machine
+* Run **npm install** in main directory to download dependencies
 * Run **node .** in main directory to boot Node server with index.js
 * Open *localhost:8082/speaker* in Google Chrome or Mozilla FireFox to open Speaker app
 * Open *localhost:8082/assistant* in Google Chrome or Mozilla FireFox to open Assistant app

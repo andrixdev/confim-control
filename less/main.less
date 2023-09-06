@@ -180,9 +180,8 @@ header {
 .tile {
     width: 90px;
     height: 90px;
-    margin-bottom: 10px;
-    margin-right: 10px;
     cursor: pointer;
+    position: relative;
 
     &[data-visibility="hidden"] {
         display: none;
@@ -279,6 +278,28 @@ header {
 }
 
 /* Music */
+.music-tracks {
+    .music-track {
+        position: relative;
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+
+    .stop-icon {
+        background: white;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 38px;
+        left: 38px;
+        margin: auto;
+        display: none;
+        pointer-events: none;
+    }
+    .audio-stop[data-visibility="visible"] + .stop-icon {
+        display: inherit;
+    }
+}
 #audio {
     #master {
         margin-bottom: 2rem;
@@ -286,7 +307,7 @@ header {
             width: calc(100% - 50px);
         }
     }
-    .audio.active {
+    .audio-stop {
         border-color: transparent;
         box-shadow: var(--box-shadow);
         animation: rot 3s linear infinite;

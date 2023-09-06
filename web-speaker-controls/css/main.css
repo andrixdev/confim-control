@@ -174,9 +174,8 @@ header h2 {
 .tile {
   width: 90px;
   height: 90px;
-  margin-bottom: 10px;
-  margin-right: 10px;
   cursor: pointer;
+  position: relative;
 }
 .tile[data-visibility="hidden"] {
   display: none;
@@ -264,18 +263,37 @@ header h2 {
   transform: rotate(-45deg);
 }
 /* Music */
+.music-tracks .music-track {
+  position: relative;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+.music-tracks .stop-icon {
+  background: white;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 38px;
+  left: 38px;
+  margin: auto;
+  display: none;
+  pointer-events: none;
+}
+.music-tracks .audio-stop[data-visibility="visible"] + .stop-icon {
+  display: inherit;
+}
 #audio #master {
   margin-bottom: 2rem;
 }
 #audio #master input {
   width: calc(100% - 50px);
 }
-#audio .audio.active {
+#audio .audio-stop {
   border-color: transparent;
   box-shadow: var(--box-shadow);
   animation: rot 3s linear infinite;
 }
-#audio .audio.active + p {
+#audio .audio-stop + p {
   text-shadow: var(--text-color) 0 0 10px;
 }
 .audio {
