@@ -2,7 +2,9 @@
 /* Alex Andrix @2023 */
 
 :root {
-    --ui-bg-color: #080808;
+    --ui-bg-color-1: #080808;
+    --ui-bg-color-2: #0E0E0E;
+    --ui-bg-color-3: #131313;
     --text-color: #EEE;
     --main-blue: hsl(200, 83%, 42%);
     --audio-sample-color-0: hsl(0, 0%, 85%);
@@ -138,7 +140,7 @@ header {
     z-index: 10;
     position: fixed;
     top: 0;
-    background: var(--ui-bg-color);
+    background: var(--ui-bg-color-1);
     border-bottom: solid 1px rgba(255, 255, 255, .2);
 
     h2 {
@@ -153,7 +155,6 @@ header {
 }
 #content {
     margin-top: 60px;
-    padding: 20px;
 
     h2 {
         font-size: 2.5rem;
@@ -164,7 +165,7 @@ header {
 #menu {
     height: calc(100vh - 60px - 2px);
     width: calc(100vw - 4px);
-    background: var(--ui-bg-color);
+    background: var(--ui-bg-color-3);
     position: absolute;
     left: 2px;
     top: 60px;
