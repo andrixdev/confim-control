@@ -117,6 +117,26 @@ header h2 {
   outline: solid 3px white;
   box-shadow: var(--box-shadow);
 }
+#animations {
+  margin: 30px 0;
+}
+.anim {
+  cursor: pointer;
+  width: auto;
+}
+.anim img {
+  width: 80px;
+  height: 80px;
+}
+.anim img:hover {
+  box-shadow: var(--box-shadow);
+}
+.anim p.anim-text {
+  color: var(--text-color);
+  font-size: 1.3rem;
+  user-select: none;
+  margin-left: 1rem;
+}
 #params {
   padding-top: 30px;
 }
