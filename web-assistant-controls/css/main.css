@@ -1,4 +1,7 @@
 /* Alex Andrix @2023 */
+* {
+  color: blue;
+}
 :root {
   --ui-bg-color: #080808;
   --text-color: #EEE;
@@ -11,6 +14,7 @@
   --video-color-1: hsl(5, 83%, 42%);
   --box-shadow: white 0 0 20px 2px;
 }
+/* Helpers */
 p,
 a,
 label,
@@ -60,6 +64,7 @@ h4 {
 .center {
   text-align: center;
 }
+/* Skeleton */
 html,
 body {
   width: 100%;
@@ -99,6 +104,7 @@ header h2 {
 #content h2 {
   font-size: 2.5rem;
 }
+/* Specific */
 #items-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -196,6 +202,11 @@ header h2 {
   height: 90px;
   cursor: pointer;
   position: relative;
+  border: solid 1px rgba(255, 255, 255, 0.5);
+}
+.tile.audio,
+.tile.video {
+  border: 6px solid white;
 }
 .tile[data-visibility="hidden"] {
   display: none;
@@ -203,17 +214,8 @@ header h2 {
 .tile:hover {
   box-shadow: var(--box-shadow);
 }
-.tile + p {
-  margin-top: 0;
-  text-align: center;
-  height: 3rem;
-}
-.tile.reset {
+.tile.visuals-reset {
   border-radius: 50%;
-}
-.tile.audio,
-.tile.video {
-  border: 6px solid white;
 }
 /* Menu and its content */
 #menu {
@@ -306,7 +308,7 @@ header h2 {
   margin-bottom: 2rem;
 }
 #audio #master input {
-  width: calc(100% - 50px);
+  width: 70%;
 }
 #audio .audio-stop {
   border-color: transparent;

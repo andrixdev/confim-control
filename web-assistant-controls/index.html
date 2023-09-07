@@ -21,6 +21,7 @@
 	
 	<!-- Stylesheets -->
 	<link rel="stylesheet" type="text/css" href="./css/main.css" />
+	<link rel="stylesheet" type="text/css" href="./css/assistant.css" />
 
 </head>
 
@@ -40,7 +41,15 @@
 		<div id="visuals">
 			<h2 class="center manuscript">Visuals</h2>
 			<div class="flexrow flexcenter">
-				<img class="tile reset" data-confim-id="0" src="./img/reset-icon.png" alt="Visuals Reset" />
+				<div class="flexcol flexcenter">
+					<img class="tile visuals-reset" data-confim-id="0" src="./img/reset-icon.png" alt="Visuals Reset" />
+					<p>Reset</p>
+				</div>
+				<div class="flexcol flexcenter">
+					<img class="tile credits" data-confim-id="3" src="./img/credits.png" alt="Credits" />
+					<p>Credits</p>
+				</div>
+				
 			</div>
 		</div>
 
@@ -50,7 +59,7 @@
 				<h2 class="center manuscript">Music tracks</h2>
 				<div id="master" class="flexcol flexcenter flexwrap">
 					<input type="range" id="master-volume" name="volume" min="0" max="100" value="50" />
-					<label for="volume">Master</label>
+					<label for="volume">Master volume</label>
 				</div>
 				<div class="music-tracks flexrow flexcenter flexwrap">
 
