@@ -28,6 +28,9 @@
   cursor: pointer;
   width: auto;
 }
+.anim.active {
+  box-shadow: var(--box-shadow);
+}
 .anim img {
   width: 80px;
   height: 80px;
