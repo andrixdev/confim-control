@@ -40,14 +40,22 @@
 
 		<div id="visuals">
 			<h2 class="center manuscript">Visuals</h2>
-			<div class="flexrow flexcenter">
+			<div class="flexcol flexcenter">
 				<div class="visual flexcol flexcenter">
 					<img class="tile visuals-reset" data-confim-id="0" src="./img/reset-icon.png" alt="Visuals Reset" />
 					<p>Reset</p>
 				</div>
-				<div class="visual flexcol flexcenter">
-					<img class="tile credits" data-confim-id="3" src="./img/credits.png" alt="Credits" />
-					<p>Credits</p>
+
+				<div class="visual flexcol flexstart">
+					<img class="item-preview" src="./img/credits.png" alt="Opening credits" />
+					<div class="switch on" data-confim-id="1"><div class="switch-inner"></div></div>
+					<p class="param-text">Opening credits</p>
+				</div>
+
+				<div class="visual flexcol flexstart">
+					<img class="item-preview" src="./img/credits.png" alt="End credits" />
+					<div class="switch on" data-confim-id="1"><div class="switch-inner"></div></div>
+					<p class="param-text">End credits</p>
 				</div>
 				
 			</div>
@@ -56,7 +64,7 @@
 		<div id="audio">
 			<h2 class="center manuscript">Music tracks</h2>
 			<div id="master" class="flexcol flexcenter flexwrap">
-				<input type="range" id="master-volume" name="volume" min="0" max="100" value="50" />
+				<input type="range" id="master-volume" name="volume" min="0" max="100" value="100" />
 				<label for="volume">Master volume</label>
 			</div>
 			<div id="music-tracks" class="flexrow flexcenter flexwrap">
@@ -94,9 +102,17 @@
 
 		<div id="video">
 			<h2 class="center manuscript">Video clips</h2>
-			<div class="flexcol flexcenter">
-				<img class="tile video video-play" data-confim-id="200" id="video-play-1" data-visibility="visible" src="./img/cnrs-play.png" alt="Video Play 1"/>
+			<div class="flexrow flexcenter">
+				<img class="tile video video-play" data-confim-id="200" id="video-play-1" data-visibility="visible" src="./img/cnrs-play-43s.png" alt="Video Play 1"/>
 				<img class="tile video video-stop" data-confim-id="202" id="video-stop-1" data-visibility="hidden" src="./img/cnrs-stop.png" alt="Video Stop 1"/>
+				<img class="tile video video-play" data-confim-id="203" id="video-play-2" data-visibility="visible" src="./img/cnrs-play-11s.png" alt="Video Play 2"/>
+				<img class="tile video video-stop" data-confim-id="205" id="video-stop-2" data-visibility="hidden" src="./img/cnrs-stop.png" alt="Video Stop 2"/>
+			</div>
+		</div>
+
+		<div id="c">
+			<div class="flexrow">
+				<p>ANDRIX ® 2023</p>
 			</div>
 		</div>
 

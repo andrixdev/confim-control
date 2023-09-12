@@ -58,8 +58,6 @@ Array.from(document.getElementsByClassName('switch')).forEach((el) => {
 })
 
 // Media play and pause toggles
-let playNode0 = document.getElementById('video-play-1')
-let stopNode0 = document.getElementById('video-stop-1')
 let playNode1 = document.getElementById('audio-play-1')
 let stopNode1 = document.getElementById('audio-stop-1')
 let playNode2 = document.getElementById('audio-play-2')
@@ -68,13 +66,18 @@ let playNode3 = document.getElementById('audio-play-3')
 let stopNode3 = document.getElementById('audio-stop-3')
 let playNode4 = document.getElementById('audio-play-4')
 let stopNode4 = document.getElementById('audio-stop-4')
+let playNode5 = document.getElementById('video-play-1')
+let stopNode5 = document.getElementById('video-stop-1')
+let playNode6 = document.getElementById('video-play-2')
+let stopNode6 = document.getElementById('video-stop-2')
 
 let mediaNodes = [
-	[playNode0, stopNode0],
 	[playNode1, stopNode1],
 	[playNode2, stopNode2],
 	[playNode3, stopNode3],
-	[playNode4, stopNode4]
+	[playNode4, stopNode4],
+	[playNode5, stopNode5],
+	[playNode6, stopNode6]
 ]
 mediaNodes.forEach((couple) => {
 	let play = couple[0], pause = couple[1]

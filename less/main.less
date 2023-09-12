@@ -63,6 +63,7 @@ p, a, label, h1, h2, h3, h4 {
 
 /* Generic elements */
 .switch {
+    margin: 1rem;
     width: 60px;
     min-width: 60px;
     height: 20px;
@@ -118,6 +119,11 @@ p, a, label, h1, h2, h3, h4 {
     }
     
 }
+img.item-preview {
+    width: 80px;
+    height: 80px;
+    border: solid 1px rgba(255, 255, 255, .4);
+}
 
 /* Page skeleton */
 html, body {
@@ -158,6 +164,15 @@ header {
 
     h2 {
         font-size: 2.5rem;
+    }
+
+    & > div {
+        &:nth-of-type(2n) {
+            background: var(--ui-bg-color-2);
+        }
+        &:nth-of-type(2n+1) {
+            background: var(--ui-bg-color-3);
+        }
     }
 }
 
@@ -232,4 +247,9 @@ header {
         transform: rotate(-45deg);
     }
 
+}
+
+/* Copyrights */
+#c p {
+    opacity: 0.5;
 }

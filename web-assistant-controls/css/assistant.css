@@ -1,18 +1,15 @@
 /* Alex Andrix @2023 */
 /* Specific */
-#content.assistant > div:nth-of-type(2n) {
-  background: var(--ui-bg-color-2);
-}
-#content.assistant > div:nth-of-type(2n+1) {
-  background: var(--ui-bg-color-3);
-}
-#content.assistant #visuals,
-#content.assistant #audio,
-#content.assistant #video {
+#visuals,
+#audio,
+#video {
   padding: 1rem 0 3rem;
 }
 #visuals .visual {
-  margin: 0 1rem;
+  margin: 1rem;
+}
+#visuals .switch + p.param-text {
+  margin-top: 0;
 }
 #music-tracks .music-track {
   position: relative;
@@ -34,10 +31,14 @@
   display: inherit;
 }
 #audio #master {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 #audio #master input {
+  margin-top: 1rem;
   width: 70%;
+}
+#audio #master label {
+  margin-top: 0.5rem;
 }
 #audio .audio-stop {
   border-color: transparent;
@@ -50,22 +51,25 @@
 .audio {
   border-radius: 50%;
 }
-#audio-play-0 {
+.audio#audio-play-0 {
   border-color: var(--audio-sample-color-0);
 }
-#audio-play-1 {
+.audio#audio-play-1 {
   border-color: var(--audio-sample-color-1);
 }
-#audio-play-2 {
+.audio#audio-play-2 {
   border-color: var(--audio-sample-color-2);
 }
-#audio-play-3 {
+.audio#audio-play-3 {
   border-color: var(--audio-sample-color-3);
 }
-#audio-play-4 {
+.audio#audio-play-4 {
   border-color: var(--audio-sample-color-4);
 }
-#video-play-1 {
+.video {
+  margin: 0 1rem;
+}
+.video.video-stop {
   border-color: var(--video-color-1);
 }
 /* Highlight when playing */
