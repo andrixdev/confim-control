@@ -24,16 +24,14 @@
 #animations .anim {
   cursor: pointer;
   width: auto;
+  margin: 1rem 0;
 }
-#animations .anim.active {
+#animations .anim:hover {
   box-shadow: var(--box-shadow);
 }
 #animations .anim img {
   width: 80px;
   height: 80px;
-}
-#animations .anim img:hover {
-  box-shadow: var(--box-shadow);
 }
 #animations .anim p.anim-text {
   color: var(--text-color);
