@@ -37,95 +37,65 @@
 	</header>
 
 	<div id="content" class="speaker">
+
+		<!-- Steps -->
+		<div id="steps">
+			<div class="step flexrow flexstart">
+				<div class="cam active" data-confim-id="80" data-cam-id="0">CAM START</div>
+			</div>
+			<div class="step flexrow flexstart">
+				<div class="cam" data-confim-id="81" data-cam-id="1">FLIP</div>
+				<div class="action" data-confim-id="50">display branches</div>
+			</div>
+			<div class="step flexrow flexstart">
+				<div class="cam" data-confim-id="82" data-cam-id="2">FULL</div>
+				<div class="switch-action" data-confim-id="62">mammals morpho</div>
+				<div class="switch-action" data-confim-id="63">mammals ACGT</div>
+				<div class="switch-action" data-confim-id="64">ancestors ACGT</div>
+			</div>
+			<div class="step flexrow flexstart">
+				<div class="cam" data-confim-id="83" data-cam-id="3">BACKWARDS 1</div>
+				<div class="action" data-confim-id="51">activate colors</div>
+				<div class="switch-action" data-confim-id="65">superkingdom text</div>
+			</div>
+			<div class="step flexrow flexstart">
+				<div class="cam" data-confim-id="84" data-cam-id="4">THREE QUARTERS</div>
+				<div class="switch-action" data-confim-id="66">group text</div>
+			</div>
+			<div class="step flexrow flexstart">
+				<div class="cam" data-confim-id="85" data-cam-id="5">BACKWARDS 2</div>
+				<div class="action" data-confim-id="52">hide tree</div>
+			</div>
+			<div class="step flexrow flexstart">
+				<div class="cam" data-confim-id="86" data-cam-id="6">HALF 1</div>
+				<div class="switch-action" data-confim-id="67">LUCA</div>
+			</div>
+			<div class="step flexrow flexstart">
+				<div class="cam" data-confim-id="87" data-cam-id="7">HALF 2</div>
+			</div>
+			<div class="step flexrow flexstart">
+				<div class="cam" data-confim-id="88" data-cam-id="8">BACKWARDS 3</div>
+				<div class="switch-action" data-confim-id="68">carousel</div>
+			</div>
+			<div class="step flexrow flexstart">
+				<div class="cam" data-confim-id="89" data-cam-id="9">CORNER</div>
+				<div class="switch-action" data-confim-id="69">scale and today</div>
+				<div class="switch-action" data-confim-id="70">extinctions 1</div>
+				<div class="switch-action" data-confim-id="71">extinctions 2</div>
+			</div>
+			<div class="step flexrow flexstart">
+				<div class="cam" data-confim-id="90" data-cam-id="10">BACKWARDS 4</div>
+				<div class="switch-action" data-confim-id="72">arcs</div>
+				<div class="switch-action" data-confim-id="73">rotifer</div>
+			</div>
+			<div class="step flexrow flexstart">
+				<div class="cam" data-confim-id="91" data-cam-id="11">THROUGH</div>
+			</div>
+			<div class="step flexrow flexstart">
+				<div class="cam" data-confim-id="92" data-cam-id="12">BACKWARDS 5</div>
+			</div>
+		</div>
 		
-		<!-- Items (GameObjects to toggle) -->
-		<div id="items-container">
-			<img class="confim-click" data-confim-id="1" src="./img/chayote.png" alt="Chayote"/>
-			<img class="confim-click" data-confim-id="2" src="./img/treedata.png" alt="Tree Data"/>
-		</div>
-
-		<!-- Animations -->
-		<div id="animations">
-
-			<div class="anim confim-click flexrow flexstart" data-confim-id="70">
-				<img src="./img/anemone.png" alt="Tree Traveling"/>
-				<p class="anim-text">Animation 1</p>
-			</div>
-			<div class="anim confim-click flexrow flexstart" data-confim-id="71">
-				<img src="./img/anemone.png" alt="Tree Traveling"/>
-				<p class="anim-text">Animation 2</p>
-			</div>
-			<div class="anim confim-click flexrow flexstart" data-confim-id="72">
-				<img src="./img/anemone.png" alt="Tree Traveling"/>
-				<p class="anim-text">Animation 3</p>
-			</div>
-			<div class="anim confim-click flexrow flexstart" data-confim-id="73">
-				<img src="./img/anemone.png" alt="Tree Traveling"/>
-				<p class="anim-text">Animation 4</p>
-			</div>
-			
-		</div>
-		
-		<!-- Visual parameters -->
-		<div id="params">
-
-			<!-- Toggle LUCA sphere -->
-			<div class="param flexrow flexstart">
-				<img class="item-preview" src="./img/treedata.png" alt="Tree Data" />
-				<div class="switch on" data-confim-id="62"><div class="switch-inner"></div></div>
-				<p class="param-text">LUCA</p>
-			</div>
-
-			<!-- Toggle extinct species -->
-			<div class="param flexrow flexstart">
-				<img class="item-preview" src="./img/treedata.png" alt="Tree Data" />
-				<div class="switch on" data-confim-id="50"><div class="switch-inner"></div></div>
-				<p class="param-text">Extinct</p>
-			</div>
-
-			<!-- Toggle colors -->
-			<div class="param flexrow flexstart">
-				<img class="item-preview" src="./img/treedata.png" alt="Tree Data" />
-				<div class="switch off" data-confim-id="51"><div class="switch-inner"></div></div>
-				<p class="param-text">Colors</p>
-			</div>
-
-			<!-- Toggle glow -->
-			<div class="param flexrow flexstart">
-				<img class="item-preview" src="./img/treedata.png" alt="Tree Data" />
-				<div class="switch off" data-confim-id="52"><div class="switch-inner"></div></div>
-				<p class="param-text">Glow</p>
-			</div>
-
-			<!-- Toggle animation -->
-			<div class="param flexrow flexstart">
-				<img class="item-preview" src="./img/treedata.png" alt="Tree Data" />
-				<div class="switch off" data-confim-id="53"><div class="switch-inner"></div></div>
-				<p class="param-text">Animation</p>
-			</div>
-
-			<!-- Toggle Circles -->
-			<div class="param flexrow flexstart">
-				<img class="item-preview" src="./img/treedata.png" alt="Tree Data" />
-				<div class="switch off" data-confim-id="54"><div class="switch-inner"></div></div>
-				<p class="param-text">Circles</p>
-			</div>
-
-			<!-- Toggle Circles -->
-			<div class="param flexrow flexstart">
-				<img class="item-preview" src="./img/treedata.png" alt="Tree Data" />
-				<div class="switch off" data-confim-id="55"><div class="switch-inner"></div></div>
-				<p class="param-text">Zoo</p>
-			</div>
-
-			<!-- Toggle Time scale -->
-			<div class="param flexrow flexstart">
-				<img class="item-preview" src="./img/treedata.png" alt="Tree Data" />
-				<div class="switch off" data-confim-id="56"><div class="switch-inner"></div></div>
-				<p class="param-text">Time scale</p>
-			</div>
-		</div>
-
 		<!-- Copyrights -->
 		<div id="c">
 			<div class="flexrow">

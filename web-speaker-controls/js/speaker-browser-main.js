@@ -31,3 +31,17 @@ Array.from(document.getElementsByClassName('switch')).forEach((el) => {
 		el.classList = "switch " + (el.classList.contains("on") ? "off" : "on")
 	})
 })
+
+// Handle constrained cam transitions
+let cams = document.getElementsByClassName('cam')
+let resetCams = () => {
+	Array.from(cams).forEach(c => {
+		c.classList.toggle('active', false)
+	})
+}
+Array.from(cams).forEach(c => {
+	c.addEventListener('click', () => {
+		resetCams()
+		c.classList.toggle('active', true)
+	})
+})

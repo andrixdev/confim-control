@@ -1,21 +1,36 @@
 // out: "../css/assistant.css"
 /* Alex Andrix @2023 */
 
+.flexchildrenstart {
+    align-items: start;
+}
+.hoverable:hover {
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+}
+h2 {
+    margin: .5rem 0;
+}
 /* Specific */
 #visuals,
 #audio,
 #video {
-    padding: 1rem 0 3rem;
+    padding: 1rem 0 .5rem;
 }
 #visuals {
     .visual {
         margin: 1rem;
     }
-    .switch + p.param-text {
-        margin-top: 0;
+    .switch {
+        margin-bottom: 0;
+    }
+    p.param-text {
+        margin-bottom: 0;
     }
 }
 #music-tracks {
+    padding-top: 5px;
+
     .music-track {
         position: relative;
         margin-bottom: 10px;
@@ -39,7 +54,7 @@
 }
 #audio {
     #master {
-        margin-bottom: 4rem;
+        margin-bottom: 1rem;
 
         input {
             margin-top: 1rem;

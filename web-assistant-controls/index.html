@@ -40,7 +40,7 @@
 
 		<div id="visuals">
 			<h2 class="center manuscript">Visuals</h2>
-			<div class="flexrow flexcenter">
+			<div class="flexrow flexcenter flexchildrenstart">
 				<div class="visual flexcol flexcenter">
 					<img class="tile visuals-reset" data-confim-id="0" src="./img/reset-icon.png" alt="Visuals Reset" />
 					<p>Reset</p>
@@ -57,16 +57,22 @@
 					<div class="switch off" data-confim-id="61"><div class="switch-inner"></div></div>
 					<p class="param-text">End credits</p>
 				</div>
+
+				<div class="visual flexcol flexstart">
+					<img class="item-preview hoverable" data-confim-id="1" src="./img/chayote.png" alt="Chayote" />
+					<p class="param-text">Chayote</p>
+				</div>
+
+				<div class="visual flexcol flexstart">
+					<img class="item-preview hoverable" data-confim-id="2" src="./img/treedata.png" alt="Tree" />
+					<p class="param-text">Tree</p>
+				</div>
 				
 			</div>
 		</div>
 
 		<div id="audio">
 			<h2 class="center manuscript">Music tracks</h2>
-			<div id="master" class="flexcol flexcenter flexwrap">
-				<input type="range" id="master-volume" name="volume" min="0" max="100" value="100" />
-				<label for="volume">Master volume</label>
-			</div>
 			<div id="music-tracks" class="flexrow flexcenter flexwrap">
 
 				<div class="music-track flexcol flexcenter flexwrap">
@@ -97,6 +103,10 @@
 					<p>Antarctic</p>
 				</div>
 
+			</div>
+			<div id="master" class="flexcol flexcenter flexwrap">
+				<input type="range" id="master-volume" name="volume" min="0" max="100" value="100" />
+				<label for="volume">Master volume</label>
 			</div>
 		</div>
 
