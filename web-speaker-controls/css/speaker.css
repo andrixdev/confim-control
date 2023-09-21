@@ -1,7 +1,7 @@
 /* Alex Andrix @2023 */
 /* Specific */
 #content.speaker > div:not(#c) {
-  padding: 1rem;
+  padding: 5px;
 }
 #items-container {
   display: grid;
@@ -104,6 +104,15 @@
     transform: rotate(360deg);
   }
 }
+#steps .step {
+  display: flex;
+  flex-flow: row;
+}
+@media (max-width: 380px) {
+  #steps .step {
+    flex-wrap: wrap;
+  }
+}
 #steps .step:nth-of-type(2n) {
   background: var(--ui-bg-color-2);
 }
@@ -115,9 +124,9 @@
 #steps .step .switch-action {
   user-select: none;
   cursor: pointer;
-  margin: 5px;
+  margin: 3px;
   border-radius: 2px;
-  border: solid 2px white;
+  border: solid 1.5px white;
   text-align: center;
   font-family: 'Raleway', 'Comic Sans MS', serif;
   display: flex;
@@ -159,11 +168,13 @@
 #steps .step .action {
   width: 120px;
   height: 60px;
-  background: hsl(250, 40%, 60%);
+  color: white;
+  background: linear-gradient(hsl(20, 80%, 40%), hsl(355, 80%, 40%));
 }
 #steps .step .switch-action {
   width: 130px;
   height: 60px;
-  background: hsl(200, 60%, 60%);
-  border-radius: 50px;
+  color: white;
+  background: linear-gradient(hsl(195, 83%, 40%), hsl(220, 73%, 30%));
+  border-radius: 20px;
 }
