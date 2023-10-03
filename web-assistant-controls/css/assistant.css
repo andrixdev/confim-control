@@ -16,13 +16,14 @@ h2 {
   padding: 1rem 0 0.5rem;
 }
 #visuals .visual {
-  margin: 1rem;
+  margin: 1rem 0.5rem;
 }
 #visuals .switch {
   margin-bottom: 0;
 }
 #visuals p.param-text {
   margin-bottom: 0;
+  text-align: center;
 }
 #music-tracks {
   padding-top: 5px;
@@ -50,8 +51,8 @@ h2 {
   margin-bottom: 1rem;
 }
 #audio #master input {
-  margin-top: 1rem;
-  width: 70%;
+  margin-top: 0.5rem;
+  width: 95%;
 }
 #audio #master label {
   margin-top: 0.5rem;
