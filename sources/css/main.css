@@ -13,6 +13,30 @@
   --video-color-1: hsl(5, 83%, 42%);
   --box-shadow: white 0 0 20px 2px;
 }
+@font-face {
+  font-family: "Tangerine";
+  src: local("Tangerine"), url("../../sources/fonts/Tangerine-Regular.ttf");
+}
+@font-face {
+  font-family: "Raleway";
+  src: local("Raleway"), url("../../sources/fonts/Raleway-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Raleway";
+  src: local("Raleway Light"), url("../../sources/fonts/Raleway-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Raleway";
+  src: local("Raleway ExtraLight"), url("../../sources/fonts/Raleway-ExtraLight.ttf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Raleway";
+  src: local("Raleway Thin"), url("../../sources/fonts/Raleway-Thin.ttf");
+  font-weight: 100;
+}
 /* Helpers */
 p,
 a,
