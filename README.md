@@ -1,24 +1,29 @@
 # Confim Control
 Web app for immersive science talks under a dome
 
-# Developer : Setup
+# User: Setup
 * Install Node (https://nodejs.org/)
 * Install npm (https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-* Install Git (https://git-scm.com/downloads)
-* Clone this repository on your machine
+* Clone this repository on your machine (on GitHub or with Git installed on your machine)
 * Run **npm install** in main directory to download dependencies
 * Run **node .** in main directory to boot Node server with index.js
 * Open *localhost:8082/speaker* in Google Chrome or Mozilla FireFox to open Speaker app
 * Open *localhost:8082/assistant* in Google Chrome or Mozilla FireFox to open Assistant app
 
-# Developer : Compiling LESS into CSS with Visual Studio Code
+# Developer: Contributing
+* Install Git (https://git-scm.com/downloads)
+* Talk to the main developer
+* Agree on a cool feature and push commits on a new separate branch
+* Test your code (manually)
+* Submit a Pull Request, code will be reviewed
+
+# Developer: Compiling LESS into CSS with Visual Studio Code
 * Install the Easy LESS extension (by mrcrowl)
 * All .less files are automatically compiled to CSS on file save
-* On editing *less/main.less*, you still have to manually update *main.css* in both web-speaker-controls/css/ and web-assistant-controls/css/ with the new *less/main.css* file
 
-# Developer : Compiling LESS into CSS without Visual Studio Code
+# Developer: Compiling LESS into CSS without Visual Studio Code
 * Install the LESS preprocessor (https://lesscss.org/usage/)
-* Run **lessc ./less/main.less ./less/main.css** to generate the new main CSS file
-* In both web-speaker-controls/css/ and in web-assistant-controls/css/, replace *main.css* with the new file 
-* Run **lessc ./web-assistant-controls/less/assistant.less ./web-assistant-controls/css/assistant.css && lessc ./web-speaker-controls/less/speaker.less ./web-speaker-controls/css/speaker.css** to generate specific CSS files
-* Now your can see your updated CSS
+* To update common stylesheet, run **lessc ./sources/css/main.less ./sources/css/main.css** from root directory
+* To update assistant stylesheet, run **lessc ./web-assistant-controls/css/main.less ./web-assistant-controls/css/main.css** from root directory
+* To update speaker stylesheet, run **lessc ./web-speaker-controls/css/main.less ./web-speaker-controls/css/main.css** from root directory
+* Yay
