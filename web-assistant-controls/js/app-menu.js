@@ -1,5 +1,5 @@
 /**
- * Alex Andrix @2023
+ * ANDRIX © 2023
  */
 
 // Menu controls
