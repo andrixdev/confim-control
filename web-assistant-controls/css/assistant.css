@@ -18,6 +18,11 @@ h2 {
 #visuals .visual {
   margin: 1rem 0.5rem;
 }
+#visuals .visual .visuals-reset {
+  border: solid 1px var(--text-color);
+  height: 80px;
+  width: 80px;
+}
 #visuals .switch {
   margin-bottom: 0;
 }
