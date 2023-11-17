@@ -204,15 +204,20 @@ header h2 {
 #menu.hidden {
   left: calc(100vw + 3px);
 }
-#menu p {
-  margin: 0;
+#menu p,
+#menu h2 {
+  font-size: 3rem;
+  font-weight: 200;
+  margin: 1rem 0;
+}
+#menu h2 {
+  margin-top: 3rem;
+}
+#menu p.conf-date {
+  font-size: 2rem;
 }
 #menu footer {
-  margin-top: 40px;
   width: 100%;
-}
-#menu footer #damien {
-  font-size: 3.2rem;
 }
 /* Menu burger */
 #burger {
