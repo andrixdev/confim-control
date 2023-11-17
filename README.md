@@ -2,7 +2,7 @@
 Control web app for immersive science talks under a dome
 
 # Version
-*See current branch and tags*
+*See current branch and tag*
 
 # User: Setup
 * Install Node (https://nodejs.org/)
