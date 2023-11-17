@@ -1,5 +1,8 @@
 # Confim Control
-Web app for immersive science talks under a dome
+Control web app for immersive science talks under a dome
+
+# Version
+*See current branch and tags*
 
 # User: Setup
 * Install Node (https://nodejs.org/)
