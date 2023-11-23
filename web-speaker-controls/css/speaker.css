@@ -107,6 +107,7 @@
 #steps .step {
   display: flex;
   flex-flow: row;
+  padding: 10px;
 }
 @media (max-width: 320px) {
   #steps .step {
@@ -119,7 +120,6 @@
 #steps .step:nth-of-type(2n+1) {
   background: var(--ui-bg-color-3);
 }
-#steps .step .cam,
 #steps .step .action,
 #steps .step .switch-action {
   user-select: none;
@@ -137,33 +137,9 @@
   font-size: 0.8rem;
   text-transform: uppercase;
 }
-#steps .step .cam:hover,
 #steps .step .action:hover,
 #steps .step .switch-action:hover {
   box-shadow: white 0 0 10px;
-}
-#steps .step .cam {
-  width: 60px;
-  min-width: 60px;
-  height: 60px;
-  font-size: 0.65rem;
-  opacity: 1;
-  background: var(--ui-bg-color-3);
-  color: white;
-  position: relative;
-}
-#steps .step .cam.active {
-  opacity: 1;
-  color: black;
-  background: white;
-  box-shadow: white 0 0 10px;
-}
-#steps .step .cam::before {
-  content: attr(data-cam-id);
-  font-size: 55px;
-  position: absolute;
-  top: 0;
-  opacity: 0.2;
 }
 #steps .step .action {
   width: 120px;
