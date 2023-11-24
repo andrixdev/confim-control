@@ -32,16 +32,17 @@ Array.from(document.getElementsByClassName('switch')).forEach((el) => {
 	})
 })
 
-// Handle constrained cam transitions
-let cams = document.getElementsByClassName('cam')
-let resetCams = () => {
-	Array.from(cams).forEach(c => {
+// Handle constrained steps display
+let sections = document.getElementsByClassName('section')
+let steps = document.getElementsByClassName('step')
+let resetSteps = () => {
+	Array.from(steps).forEach(c => {
 		c.classList.toggle('active', false)
 	})
 }
-Array.from(cams).forEach(c => {
-	c.addEventListener('click', () => {
-		resetCams()
-		c.classList.toggle('active', true)
+Array.from(sections).forEach(s => {
+	s.addEventListener('click', () => {
+		resetSteps()
+		s.parentNode.classList.toggle('active', true)
 	})
 })
