@@ -53,12 +53,11 @@
 			<div id="genome-step" class="step flexrow flexstart">
 				<img class="item-preview section flexselfstart" data-confim-id="4" src="./img/chromo-mini.png" alt="Genome" />
 
-				
-				<div class="flexcol">
+				<div class="flexcol fullwidth">
 					<div id="cam-speed" class="flexcol flexcenter flexwrap">
-						<input type="range" id="camera-speed" name="camspeed" min="-100" max="100" value="0" />
 						<label for="camspeed">Camera speed</label>
-						<p id="speed">0</p>
+						<input type="range" id="camera-speed" name="camspeed" min="-100" max="100" value="0" />
+						<div id="speeds" class="flexrow flexbetween"><p id="min-speed">-100</p><p id="speed">0</p><p id="max-speed">100</p></div>
 					</div>
 
 					<div class="flexrow flexstart flexwrap">
@@ -86,9 +85,9 @@
 							<p class="param-text">Spread</p>
 						</div>
 						<div class="visual flexcol flexstart">
-							<img class="item-preview" src="./img/anemone.png" alt="Rotation toggle" />
-							<div class="switch on" data-confim-id="67"><div class="switch-inner"></div></div>
-							<p class="param-text">Rotation</p>
+							<img class="item-preview" src="../sources/img/reset-icon.png" alt="Rotation toggle" />
+							<div class="switch off" data-confim-id="67"><div class="switch-inner"></div></div>
+							<p class="param-text">Stabilize</p>
 						</div>
 						<div class="visual flexcol flexstart">
 							<img class="item-preview" src="./img/random-toggle.png" alt="Random toggle" />

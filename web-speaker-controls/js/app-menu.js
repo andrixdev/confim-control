@@ -3,10 +3,14 @@
  */
 
 // Menu controls
+
 let menuNode = document.getElementById('menu')
 let titleNode = document.getElementById('title')
 let burgerNode = document.getElementById('burger')
 let bodyNode = document.getElementsByTagName('body')[0]
+
+let speakerName = "Daniel"
+
 let openMenu = () => {
 	burgerNode.classList = 'open'
 	titleNode.innerHTML = "Conférence Immersive - Menu"
@@ -16,7 +20,7 @@ let openMenu = () => {
 }
 let closeMenu = () => {
 	burgerNode.classList = ''
-	titleNode.innerHTML = "Conférence Immersive - Damien"
+	titleNode.innerHTML = "Conférence Immersive - " + speakerName
 	menuNode.classList = 'hidden'
 	bodyNode.classList = ''
 }

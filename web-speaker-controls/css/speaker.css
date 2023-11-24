@@ -181,7 +181,18 @@
 #cam-speed label {
   margin-top: 0.5rem;
 }
-#cam-speed p#speed {
-  text-align: center;
+#cam-speed #speeds {
+  width: 100%;
+}
+#cam-speed #speeds p {
   margin: 0;
+}
+#cam-speed #speeds p#min-speed {
+  padding-left: 5px;
+}
+#cam-speed #speeds p#speed {
+  font-size: 1.2rem;
+}
+#cam-speed #speeds p#max-speed {
+  padding-right: 15px;
 }

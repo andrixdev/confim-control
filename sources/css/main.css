@@ -76,6 +76,9 @@ h4 {
 .flexend {
   justify-content: flex-end;
 }
+.flexbetween {
+  justify-content: space-between;
+}
 .flexchildrenstart {
   align-items: flex-start;
 }
@@ -90,6 +93,9 @@ h4 {
 }
 .center {
   text-align: center;
+}
+.fullwidth {
+  width: 100%;
 }
 /* Generic elements */
 .switch {
