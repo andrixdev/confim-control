@@ -78,6 +78,9 @@ p, a, label, h1, h2, h3, h4 {
 .flexchildrenend {
     align-items: flex-end;
 }
+.flexselfstart {
+    align-self: start;
+}
 .manuscript {
     font-family: 'Tangerine', 'Comic Sans MS', serif;
 }
@@ -87,7 +90,7 @@ p, a, label, h1, h2, h3, h4 {
 
 /* Generic elements */
 .switch {
-    margin: 1rem 0;
+    margin: .5rem 0;
     width: 60px;
     min-width: 60px;
     height: 20px;
@@ -153,6 +156,20 @@ img.item-preview {
         width: 120px;
         height: 120px;
         margin: 3px 10px 3px 3px;
+    }
+}
+.visual {
+    margin: 1rem .5rem;
+
+    p.param-text {
+        margin: 0;
+        text-align: center;
+    }
+
+    .visuals-reset {
+        border: solid 1px var(--text-color);
+        height: 80px;
+        width: 80px;
     }
 }
 

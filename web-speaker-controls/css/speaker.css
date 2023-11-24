@@ -160,7 +160,28 @@
   background: linear-gradient(hsl(195, 83%, 40%), hsl(220, 73%, 30%));
   border-radius: 20px;
 }
+#steps .step#genome-step {
+  padding-bottom: 20px;
+}
+#steps #toggles {
+  margin-top: 15px;
+}
 .speaker img.item-preview:hover {
   box-shadow: var(--box-shadow-small);
   cursor: pointer;
+}
+#cam-speed {
+  margin: 1rem 0;
+  width: 100%;
+}
+#cam-speed input {
+  margin-top: 0.5rem;
+  width: 95%;
+}
+#cam-speed label {
+  margin-top: 0.5rem;
+}
+#cam-speed p#speed {
+  text-align: center;
+  margin: 0;
 }

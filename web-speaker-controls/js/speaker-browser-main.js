@@ -9,6 +9,27 @@ let activate = (id) => {
 		el.classList.toggle("active", isActive)
 	})
 }
+// Special params controls (display)
+Array.from(document.getElementsByClassName('switch')).forEach((el) => {
+	el.addEventListener('click', () => {
+		el.classList = "switch " + (el.classList.contains("on") ? "off" : "on")
+	})
+})
+// Handle constrained steps (display)
+let sections = document.getElementsByClassName('section')
+let steps = document.getElementsByClassName('step')
+let resetSteps = () => {
+	Array.from(steps).forEach(c => {
+		c.classList.toggle('active', false)
+	})
+}
+Array.from(sections).forEach(s => {
+	s.addEventListener('click', () => {
+		resetSteps()
+		s.parentNode.classList.toggle('active', true)
+	})
+})
+
 // Conference tiles controls (send OSC)
 Array.from(document.querySelectorAll('[data-confim-id]')).forEach((el) => {
 	let num = el.getAttribute('data-confim-id')
@@ -25,24 +46,20 @@ Array.from(document.querySelectorAll('[data-confim-id]')).forEach((el) => {
 		xhr.send("num=" + num)
 	})
 })
-// Special params controls (display)
-Array.from(document.getElementsByClassName('switch')).forEach((el) => {
-	el.addEventListener('click', () => {
-		el.classList = "switch " + (el.classList.contains("on") ? "off" : "on")
-	})
+// OSC send on slider input change
+let speedNode = document.getElementById('speed')
+document.getElementById('camera-speed').addEventListener('input', (ev) => {
+	let num = ev.target.value // [0, 100]
+
+	speedNode.innerHTML = num
+
+	let xhr = new XMLHttpRequest()
+	xhr.open("POST", location.origin + "/eh") // location is the browser's protocol, hostname and port number
+	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+	let oscRangeStart = 500
+	num = oscRangeStart - (-num)
+	xhr.send("num=" + num)
 })
 
-// Handle constrained steps display
-let sections = document.getElementsByClassName('section')
-let steps = document.getElementsByClassName('step')
-let resetSteps = () => {
-	Array.from(steps).forEach(c => {
-		c.classList.toggle('active', false)
-	})
-}
-Array.from(sections).forEach(s => {
-	s.addEventListener('click', () => {
-		resetSteps()
-		s.parentNode.classList.toggle('active', true)
-	})
-})
+

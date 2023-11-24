@@ -82,6 +82,9 @@ h4 {
 .flexchildrenend {
   align-items: flex-end;
 }
+.flexselfstart {
+  align-self: start;
+}
 .manuscript {
   font-family: 'Tangerine', 'Comic Sans MS', serif;
 }
@@ -90,7 +93,7 @@ h4 {
 }
 /* Generic elements */
 .switch {
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   width: 60px;
   min-width: 60px;
   height: 20px;
@@ -152,6 +155,18 @@ img.item-preview.section {
   width: 120px;
   height: 120px;
   margin: 3px 10px 3px 3px;
+}
+.visual {
+  margin: 1rem 0.5rem;
+}
+.visual p.param-text {
+  margin: 0;
+  text-align: center;
+}
+.visual .visuals-reset {
+  border: solid 1px var(--text-color);
+  height: 80px;
+  width: 80px;
 }
 /* Page skeleton */
 html,

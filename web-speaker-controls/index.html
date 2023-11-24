@@ -50,15 +50,71 @@
 				<img class="item-preview" data-confim-id="67" src="./img/chaosphere-1.png" alt="Chaosphere 1" />
 				<img class="item-preview" data-confim-id="66" src="./img/mitosis.png" alt="Mitosis" />
 			</div>
-			<div class="step flexrow flexstart">
-				<img class="item-preview section" data-confim-id="4" src="./img/chromo-mini.png" alt="Genome" />
-				<img class="item-preview" data-confim-id="66" src="./img/mode-0.png" alt="Genome mode 0" />
-				<img class="item-preview" data-confim-id="66" src="./img/mode-1.png" alt="Genome mode 1" />
-				<img class="item-preview" data-confim-id="66" src="./img/mode-2.png" alt="Genome mode 2" />
-				<img class="item-preview" data-confim-id="66" src="./img/mode-3.png" alt="Genome mode 3" />
+			<div id="genome-step" class="step flexrow flexstart">
+				<img class="item-preview section flexselfstart" data-confim-id="4" src="./img/chromo-mini.png" alt="Genome" />
+
+				
+				<div class="flexcol">
+					<div id="cam-speed" class="flexcol flexcenter flexwrap">
+						<input type="range" id="camera-speed" name="camspeed" min="-100" max="100" value="0" />
+						<label for="camspeed">Camera speed</label>
+						<p id="speed">0</p>
+					</div>
+
+					<div class="flexrow flexstart flexwrap">
+						<img class="item-preview" data-confim-id="66" src="./img/mode-0.png" alt="Genome mode 0" />
+						<img class="item-preview" data-confim-id="66" src="./img/mode-1.png" alt="Genome mode 1" />
+						<img class="item-preview" data-confim-id="66" src="./img/mode-2.png" alt="Genome mode 2" />
+						<img class="item-preview" data-confim-id="66" src="./img/mode-3.png" alt="Genome mode 3" />
+					</div>
+
+
+					<div id="toggles" class="flexrow flexstart flexwrap">
+						<div class="visual flexcol flexstart">
+							<img class="item-preview" src="./img/highlight-toggle.png" alt="Highlight toggle" />
+							<div class="switch off" data-confim-id="60"><div class="switch-inner"></div></div>
+							<p class="param-text">Highlight</p>
+						</div>
+						<div class="visual flexcol flexstart">
+							<img class="item-preview" src="./img/slice-toggle.png" alt="Slice toggle" />
+							<div class="switch off" data-confim-id="60"><div class="switch-inner"></div></div>
+							<p class="param-text">Slice</p>
+						</div>
+						<div class="visual flexcol flexstart">
+							<img class="item-preview" src="./img/spread-toggle.png" alt="Spread toggle" />
+							<div class="switch off" data-confim-id="60"><div class="switch-inner"></div></div>
+							<p class="param-text">Spread</p>
+						</div>
+						<div class="visual flexcol flexstart">
+							<img class="item-preview" src="./img/anemone.png" alt="Rotation toggle" />
+							<div class="switch on" data-confim-id="60"><div class="switch-inner"></div></div>
+							<p class="param-text">Rotation</p>
+						</div>
+						<div class="visual flexcol flexstart">
+							<img class="item-preview" src="./img/random-toggle.png" alt="Random toggle" />
+							<div class="switch off" data-confim-id="60"><div class="switch-inner"></div></div>
+							<p class="param-text">Randomness</p>
+						</div>
+						<div class="visual flexcol flexstart">
+							<img class="item-preview" src="./img/resources-toggle.png" alt="Resources toggle" />
+							<div class="switch off" data-confim-id="60"><div class="switch-inner"></div></div>
+							<p class="param-text">Resources</p>
+						</div>
+					</div>
+
+					<div class="flexrow flexstart flexwrap">
+						<img class="item-preview" data-confim-id="66" src="./img/vinaigrette-mini-by-daniel-jost.jpg" alt="Vinaigrette, by DJ" />
+						<img class="item-preview" data-confim-id="66" src="./img/equation-mini.jpg" alt="Equation" />
+					</div>
+
+					
+
+				</div>
+				
 			</div>
 			<div class="step flexrow flexstart">
 				<img class="item-preview section" data-confim-id="3" src="./img/chaosphere.png" alt="Structure" />
+				<img class="item-preview" data-confim-id="66" src="./img/cell.png" alt="Cell" />
 				<img class="item-preview" data-confim-id="67" src="./img/chaosphere-0.png" alt="Chaosphere 0" />
 				<img class="item-preview" data-confim-id="67" src="./img/chaosphere-1.png" alt="Chaosphere 1" />
 				<img class="item-preview" data-confim-id="67" src="./img/chaosphere-2.png" alt="Chaosphere 2" />
