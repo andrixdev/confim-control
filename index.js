@@ -35,7 +35,7 @@ app.post('/eh', (req, res) => {
   // [100, 199] for audio triggers
   // [200, 299] for video
   // [500, 600] for master sound volume 
-  let oscAddress = num < 100 ? '/visuals' : (num < 200 ? '/audio' : (num < 300 ? '/video' : '/master'))
+  let oscAddress = num < 100 ? '/visuals' : (num < 200 ? '/audio' : (num < 300 ? '/video' : (num <= 600 ? '/master' : '/speed')))
   client.send(oscAddress, num, () => {
     console.log('Message with number ' + num + ' was sent on address ' + oscAddress + ' to port 6999')
     //client.close();
