@@ -73,17 +73,6 @@ h2 {
 .audio#audio-play-4 {
   border-color: var(--audio-sample-color-4);
 }
-.video {
-  margin: 0.5rem 1rem 1rem;
-}
-.video.video-stop {
-  border-color: var(--video-color-1);
-}
-/* Highlight when playing */
-.audio-pause,
-.video-stop {
-  box-shadow: var(--box-shadow);
-}
 @keyframes rot {
   from {
     transform: rotate(0deg);

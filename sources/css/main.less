@@ -172,6 +172,22 @@ img.item-preview {
         width: 80px;
     }
 }
+.video {
+    margin: .5rem 1rem 1rem;
+
+    &.video-play {
+        border-color: white;
+    }
+    &.video-stop {
+        border-color: var(--video-color-1);
+    }
+}
+
+/* Highlight when playing */
+.audio-pause,
+.video-stop {
+    box-shadow: var(--box-shadow);
+}
 
 /* Page skeleton */
 html, body {

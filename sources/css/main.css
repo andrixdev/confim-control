@@ -168,6 +168,20 @@ img.item-preview.section {
   height: 80px;
   width: 80px;
 }
+.video {
+  margin: 0.5rem 1rem 1rem;
+}
+.video.video-play {
+  border-color: white;
+}
+.video.video-stop {
+  border-color: var(--video-color-1);
+}
+/* Highlight when playing */
+.audio-pause,
+.video-stop {
+  box-shadow: var(--box-shadow);
+}
 /* Page skeleton */
 html,
 body {

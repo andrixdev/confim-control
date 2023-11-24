@@ -88,9 +88,6 @@
 #audio-play-4 {
   border-color: var(--audio-sample-color-4);
 }
-#video-play-1 {
-  border-color: var(--video-color-1);
-}
 /* Highlight when playing */
 .audio-pause,
 .video-stop {
@@ -162,6 +159,9 @@
 }
 #steps .step#genome-step {
   padding-bottom: 20px;
+}
+#steps .step#genome-step .video {
+  margin: 5px;
 }
 #steps #toggles {
   margin-top: 15px;

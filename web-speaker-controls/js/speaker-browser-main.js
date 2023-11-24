@@ -29,6 +29,24 @@ Array.from(sections).forEach(s => {
 		s.parentNode.classList.toggle('active', true)
 	})
 })
+// Media play and pause toggles (display)
+let playNode1 = document.getElementById('video-play-2')
+let stopNode1 = document.getElementById('video-stop-2')
+
+let mediaNodes = [
+	[playNode1, stopNode1]
+]
+mediaNodes.forEach((couple) => {
+	let play = couple[0], stop = couple[1]
+	play.addEventListener('click', () => {
+		play.setAttribute('data-visibility', 'hidden')
+		stop.setAttribute('data-visibility', 'visible')
+	})
+	stop.addEventListener('click', () => {
+		stop.setAttribute('data-visibility', 'hidden')
+		play.setAttribute('data-visibility', 'visible')
+	})
+})
 
 // Conference tiles controls (send OSC)
 Array.from(document.querySelectorAll('[data-confim-id]')).forEach((el) => {

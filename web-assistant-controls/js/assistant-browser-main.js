@@ -71,13 +71,13 @@ let mediaNodes = [
 	[playNode3, stopNode3]
 ]
 mediaNodes.forEach((couple) => {
-	let play = couple[0], pause = couple[1]
+	let play = couple[0], stop = couple[1]
 	play.addEventListener('click', () => {
 		play.setAttribute('data-visibility', 'hidden')
-		pause.setAttribute('data-visibility', 'visible')
+		stop.setAttribute('data-visibility', 'visible')
 	})
-	pause.addEventListener('click', () => {
-		pause.setAttribute('data-visibility', 'hidden')
+	stop.addEventListener('click', () => {
+		stop.setAttribute('data-visibility', 'hidden')
 		play.setAttribute('data-visibility', 'visible')
 	})
 })
