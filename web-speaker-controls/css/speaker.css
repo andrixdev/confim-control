@@ -103,7 +103,7 @@
 }
 #steps .step {
   display: flex;
-  flex-flow: row;
+  flex-direction: row;
   padding: 10px;
 }
 @media (max-width: 320px) {
@@ -170,29 +170,37 @@
   box-shadow: var(--box-shadow-small);
   cursor: pointer;
 }
-#cam-speed {
+#cam-speed-container {
+  width: calc(100% - 140px);
+}
+@media (max-width: 640px) {
+  #cam-speed-container {
+    width: 100%;
+  }
+}
+#cam-speed-container #cam-speed {
   margin: 1rem 0;
   width: 100%;
 }
-#cam-speed input {
+#cam-speed-container #cam-speed input {
   margin-top: 0.5rem;
   width: 95%;
 }
-#cam-speed label {
+#cam-speed-container #cam-speed label {
   margin-top: 0.5rem;
 }
-#cam-speed #speeds {
+#cam-speed-container #cam-speed #speeds {
   width: 100%;
 }
-#cam-speed #speeds p {
+#cam-speed-container #cam-speed #speeds p {
   margin: 0;
 }
-#cam-speed #speeds p#min-speed {
+#cam-speed-container #cam-speed #speeds p#min-speed {
   padding-left: 5px;
 }
-#cam-speed #speeds p#speed {
+#cam-speed-container #cam-speed #speeds p#speed {
   font-size: 1.2rem;
 }
-#cam-speed #speeds p#max-speed {
+#cam-speed-container #cam-speed #speeds p#max-speed {
   padding-right: 15px;
 }

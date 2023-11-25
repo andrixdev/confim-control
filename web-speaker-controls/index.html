@@ -34,33 +34,33 @@
 
 		<!-- Steps -->
 		<div id="steps">
-			<div class="step flexrow flexstart active">
+			<div class="step flexrow flexstart flexwrap active">
 				<img class="item-preview section" data-confim-id="1" src="../sources/img/uranus-rhombus-mini.jpg" alt="Uranus Rhombus" />
 			</div>
-			<div class="step flexrow flexstart">
+			<div class="step flexrow flexstart flexwrap">
 				<img class="item-preview section" data-confim-id="2" src="./img/vitruvian-mini.jpg" alt="Vitruvian" />
 				<img class="item-preview" data-confim-id="73" src="./img/cell.png" alt="Cell" />
 				<img class="item-preview" data-confim-id="74" src="./img/dna.png" alt="Helix" />
 				<img class="item-preview" data-confim-id="75" src="./img/disk.png" alt="Chromodisk" />
 			</div>
-			<div class="step flexrow flexstart">
+			<div class="step flexrow flexstart flexwrap">
 				<img class="item-preview section" data-confim-id="3" src="./img/chaosphere.png" alt="Structure" />
 				<img class="item-preview" data-confim-id="76" src="./img/cell.png" alt="Cell" />
 				<img class="item-preview" data-confim-id="50" src="./img/chaosphere-0.png" alt="Chaosphere 0" />
 				<img class="item-preview" data-confim-id="51" src="./img/chaosphere-1.png" alt="Chaosphere 1" />
 				<img class="item-preview" data-confim-id="77" src="./img/mitosis.png" alt="Mitosis" />
 			</div>
-			<div id="genome-step" class="step flexrow flexstart">
+			<div id="genome-step" class="step flexrow flexstart flexwrap">
 				<img class="item-preview section flexselfstart" data-confim-id="4" src="./img/chromo-mini.png" alt="Genome" />
 
-				<div class="flexcol fullwidth">
+				<div id="cam-speed-container" class="flexcol">
 					<div id="cam-speed" class="flexcol flexcenter flexwrap">
 						<label for="camspeed">Camera speed</label>
 						<input type="range" id="camera-speed" name="camspeed" min="-100" max="100" value="0" />
 						<div id="speeds" class="flexrow flexbetween"><p id="min-speed">-100</p><p id="speed">0</p><p id="max-speed">100</p></div>
 					</div>
 
-					<div class="flexrow flexstart flexwrap">
+					<div class="flexrow flexcenter flexwrap">
 						<img class="item-preview" data-confim-id="60" src="./img/mode-0.png" alt="Genome mode 0" />
 						<img class="item-preview" data-confim-id="61" src="./img/mode-1.png" alt="Genome mode 1" />
 						<img class="item-preview" data-confim-id="62" src="./img/mode-2.png" alt="Genome mode 2" />
@@ -68,7 +68,7 @@
 					</div>
 
 
-					<div id="toggles" class="flexrow flexstart flexwrap">
+					<div id="toggles" class="flexrow flexcenter flexwrap">
 						<div class="visual flexcol flexstart">
 							<img class="item-preview" src="./img/highlight-toggle.png" alt="Highlight toggle" />
 							<div class="switch off" data-confim-id="64"><div class="switch-inner"></div></div>
@@ -101,7 +101,7 @@
 						</div>
 					</div>
 
-					<div class="flexrow flexstart flexwrap">
+					<div class="flexrow flexcenter flexwrap">
 						<img class="item-preview" data-confim-id="78" src="./img/vinaigrette-mini-by-daniel-jost.jpg" alt="Vinaigrette, by DJ" />
 						<img class="item-preview" data-confim-id="79" src="./img/equation-mini.jpg" alt="Equation" />
 						<div class="flexrow flexcenter">
@@ -115,51 +115,17 @@
 				</div>
 				
 			</div>
-			<div class="step flexrow flexstart">
+			<div class="step flexrow flexstart flexwrap">
 				<img class="item-preview section" data-confim-id="3" src="./img/chaosphere.png" alt="Structure" />
 				<img class="item-preview" data-confim-id="76" src="./img/cell.png" alt="Cell" />
 				<img class="item-preview" data-confim-id="50" src="./img/chaosphere-0.png" alt="Chaosphere 0" />
 				<img class="item-preview" data-confim-id="51" src="./img/chaosphere-1.png" alt="Chaosphere 1" />
 				<img class="item-preview" data-confim-id="52" src="./img/chaosphere-2.png" alt="Chaosphere 2" />
 			</div>
-			<div class="step flexrow flexstart">
+			<div class="step flexrow flexstart flexwrap">
 				<img class="item-preview section" data-confim-id="1" src="../sources/img/uranus-rhombus-mini.jpg" alt="Uranus Rhombus" />
 			</div>
 
-			<!--
-			<div class="step flexrow flexstart">
-				<div class="cam" data-confim-id="86" data-cam-id="6">HALF 1</div>
-				<div class="action" data-confim-id="51">activate colors</div>
-				<div class="switch-action" data-confim-id="68">LUCA</div>
-				<div class="switch-action" data-confim-id="69">LUCA text</div>
-			</div>
-			<div class="step flexrow flexstart">
-				<div class="cam" data-confim-id="87" data-cam-id="7">HALF 2</div>
-			</div>
-			<div class="step flexrow flexstart">
-				<div class="cam" data-confim-id="88" data-cam-id="8">BACK 3</div>
-				<div class="switch-action" data-confim-id="70">carousel</div>
-				<div class="switch-action" data-confim-id="67">group text</div>
-				<div class="switch-action" data-confim-id="66">superkingdom text</div>
-			</div>
-			<div class="step flexrow flexstart">
-				<div class="cam" data-confim-id="89" data-cam-id="9">CORNER</div>
-				<div class="switch-action" data-confim-id="71">scale and today</div>
-				<div class="switch-action" data-confim-id="72">extinctions 1</div>
-				<div class="switch-action" data-confim-id="73">extinctions 2</div>
-			</div>
-			<div class="step flexrow flexstart">
-				<div class="cam" data-confim-id="90" data-cam-id="10">BACK 4</div>
-				<div class="switch-action" data-confim-id="74">arcs</div>
-				<div class="switch-action" data-confim-id="75">rotifer</div>
-			</div>
-			<div class="step flexrow flexstart">
-				<div class="cam" data-confim-id="91" data-cam-id="11">THROUGH</div>
-			</div>
-			<div class="step flexrow flexstart">
-				<div class="cam" data-confim-id="92" data-cam-id="12">BACK 5</div>
-			</div>
-			-->
 		</div>
 		
 		<!-- Copyrights -->

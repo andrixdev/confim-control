@@ -47,13 +47,13 @@ p, a, label, h1, h2, h3, h4 {
 }
 .flexcol {
     display: flex;
-    flex-flow: column nowrap;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 .flexrow {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
@@ -75,7 +75,6 @@ p, a, label, h1, h2, h3, h4 {
 .flexbetween {
     justify-content: space-between;
 }
-
 .flexchildrenstart {
     align-items: flex-start;
 }
@@ -84,6 +83,10 @@ p, a, label, h1, h2, h3, h4 {
 }
 .flexselfstart {
     align-self: start;
+}
+.hoverable:hover {
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
 }
 .manuscript {
     font-family: 'Tangerine', 'Comic Sans MS', serif;
@@ -162,7 +165,7 @@ img.item-preview {
     &.section {
         width: 120px;
         height: 120px;
-        margin: 3px 10px 3px 3px;
+        margin: 3px 10px 10px 3px;
     }
 }
 .visual {
