@@ -187,15 +187,16 @@
     box-shadow: var(--box-shadow-small);
     cursor: pointer;
 }
-#cam-speed-container {
+#genome-content-container {
     width: calc(100% - 140px);
     @media (max-width: 640px) {
         width: 100%;
     }
-    #cam-speed {
+
+    #cam-speed,
+    #rotation-mode {
         margin: 1rem 0;
-        width: 100%;
-    
+
         input {
             margin-top: .5rem;
             width: 95%;
@@ -203,22 +204,31 @@
         label {
             margin-top: .5rem;
         }
-        #speeds {
+        #speeds,
+        #rotation-modes {
             width: 100%;
     
             p {
                 margin: 0;
             }
-            p#min-speed {
+            p.min {
                 padding-left: 5px;
+            }
+            p.mid {
+            }
+            p.max {
+                padding-right: 15px;
             }
             p#speed {
                 font-size: 1.2rem;
             }
-            p#max-speed {
-                padding-right: 15px;
-            }
         }
+    }
+    #cam-speed {
+        width: 80%;
+    }
+    #rotation-mode {
+        width: 50%;
     }
 }
 

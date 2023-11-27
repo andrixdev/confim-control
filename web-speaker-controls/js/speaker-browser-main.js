@@ -64,7 +64,8 @@ Array.from(document.querySelectorAll('[data-confim-id]')).forEach((el) => {
 		xhr.send("num=" + num)
 	})
 })
-// OSC send on slider input change
+
+// OSC send on slider input changes
 let speedNode = document.getElementById('speed')
 document.getElementById('camera-speed').addEventListener('input', (ev) => {
 	let num = ev.target.value // [-100, 100]
@@ -76,6 +77,17 @@ document.getElementById('camera-speed').addEventListener('input', (ev) => {
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
 	let oscRangeOffset = 800
+	num = oscRangeOffset - (-num)
+	xhr.send("num=" + num)
+})
+document.getElementById('rotation').addEventListener('input', (ev) => {
+	let num = ev.target.value // {0, 1, 2}
+
+	let xhr = new XMLHttpRequest()
+	xhr.open("POST", location.origin + "/eh") // location is the browser's protocol, hostname and port number
+	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+	let oscRangeOffset = 70
 	num = oscRangeOffset - (-num)
 	xhr.send("num=" + num)
 })
