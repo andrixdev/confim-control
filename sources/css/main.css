@@ -166,6 +166,10 @@ img.item-preview.section {
   height: 120px;
   margin: 3px 10px 10px 3px;
 }
+img.item-preview.mini-pioute {
+  width: 40px;
+  height: 40px;
+}
 .visual {
   margin: 1rem 0.5rem;
 }
