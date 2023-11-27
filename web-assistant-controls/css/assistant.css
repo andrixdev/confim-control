@@ -21,8 +21,8 @@ h2 {
   width: 25px;
   height: 25px;
   position: absolute;
-  top: 38px;
-  left: 39px;
+  top: calc(50% - 1rem - 22px);
+  left: calc(50% - 13px);
   margin: auto;
   display: none;
   pointer-events: none;
