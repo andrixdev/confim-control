@@ -128,16 +128,13 @@
         }
 
         &.active {
-            background: var(--ui-bg-color-1);
+            background: black;
         }
         &:nth-of-type(2n):not(.active) {
             background: var(--ui-bg-color-2);
         }
         &:nth-of-type(2n+1):not(.active) {
             background: var(--ui-bg-color-3);
-        }
-        &:not(.active) {
-            opacity: .3;
         }
         .action, .switch-action {
             user-select: none;
@@ -175,6 +172,8 @@
     }
     .step#genome-step {
         padding-bottom: 20px;
+    }
+    .step#vinaigrette-step {
         .video {
             margin: 5px;
         }

@@ -112,16 +112,13 @@
   }
 }
 #steps .step.active {
-  background: var(--ui-bg-color-1);
+  background: black;
 }
 #steps .step:nth-of-type(2n):not(.active) {
   background: var(--ui-bg-color-2);
 }
 #steps .step:nth-of-type(2n+1):not(.active) {
   background: var(--ui-bg-color-3);
-}
-#steps .step:not(.active) {
-  opacity: 0.3;
 }
 #steps .step .action,
 #steps .step .switch-action {
@@ -160,7 +157,7 @@
 #steps .step#genome-step {
   padding-bottom: 20px;
 }
-#steps .step#genome-step .video {
+#steps .step#vinaigrette-step .video {
   margin: 5px;
 }
 #steps #toggles {
