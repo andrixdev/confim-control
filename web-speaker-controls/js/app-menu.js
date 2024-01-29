@@ -1,5 +1,5 @@
 /**
- * ANDRIX © 2023
+ * ANDRIX © 2023-2024
  */
 
 // Menu controls
@@ -9,7 +9,7 @@ let titleNode = document.getElementById('title')
 let burgerNode = document.getElementById('burger')
 let bodyNode = document.getElementsByTagName('body')[0]
 
-let speakerName = "Daniel"
+let speakerName = "Fabien & Joshua"
 
 let openMenu = () => {
 	burgerNode.classList = 'open'

@@ -1,5 +1,5 @@
 /**
- * ANDRIX © 2023
+ * ANDRIX © 2023-2024
  */
 
 // Conference tiles controls (display)

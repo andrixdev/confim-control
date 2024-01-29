@@ -1,4 +1,4 @@
-/* ANDRIX © 2023 */
+/* ANDRIX © 2023-2024 */
 /* Specific */
 #content.speaker > div:not(#c) {
   padding: 5px;
@@ -154,11 +154,8 @@
   background: linear-gradient(hsl(195, 83%, 40%), hsl(220, 73%, 30%));
   border-radius: 20px;
 }
-#steps .step#genome-step {
+#steps .step#brain-step {
   padding-bottom: 20px;
-}
-#steps .step#vinaigrette-step .video {
-  margin: 5px;
 }
 #steps #toggles {
   margin-top: 15px;
@@ -167,60 +164,60 @@
   box-shadow: var(--box-shadow-small);
   cursor: pointer;
 }
-#genome-content-container {
+#brain-content-container {
   width: calc(100% - 140px);
 }
 @media (max-width: 640px) {
-  #genome-content-container {
+  #brain-content-container {
     width: 100%;
   }
 }
-#genome-content-container #cam-speed,
-#genome-content-container #rotation-mode {
+#brain-content-container #cam-speed,
+#brain-content-container #rotation-mode {
   margin: 1rem 0;
 }
-#genome-content-container #cam-speed input,
-#genome-content-container #rotation-mode input {
+#brain-content-container #cam-speed input,
+#brain-content-container #rotation-mode input {
   margin-top: 0.5rem;
   width: 95%;
 }
-#genome-content-container #cam-speed label,
-#genome-content-container #rotation-mode label {
+#brain-content-container #cam-speed label,
+#brain-content-container #rotation-mode label {
   margin-top: 0.5rem;
 }
-#genome-content-container #cam-speed #speeds,
-#genome-content-container #rotation-mode #speeds,
-#genome-content-container #cam-speed #rotation-modes,
-#genome-content-container #rotation-mode #rotation-modes {
+#brain-content-container #cam-speed #speeds,
+#brain-content-container #rotation-mode #speeds,
+#brain-content-container #cam-speed #rotation-modes,
+#brain-content-container #rotation-mode #rotation-modes {
   width: 100%;
 }
-#genome-content-container #cam-speed #speeds p,
-#genome-content-container #rotation-mode #speeds p,
-#genome-content-container #cam-speed #rotation-modes p,
-#genome-content-container #rotation-mode #rotation-modes p {
+#brain-content-container #cam-speed #speeds p,
+#brain-content-container #rotation-mode #speeds p,
+#brain-content-container #cam-speed #rotation-modes p,
+#brain-content-container #rotation-mode #rotation-modes p {
   margin: 0;
 }
-#genome-content-container #cam-speed #speeds p.min,
-#genome-content-container #rotation-mode #speeds p.min,
-#genome-content-container #cam-speed #rotation-modes p.min,
-#genome-content-container #rotation-mode #rotation-modes p.min {
+#brain-content-container #cam-speed #speeds p.min,
+#brain-content-container #rotation-mode #speeds p.min,
+#brain-content-container #cam-speed #rotation-modes p.min,
+#brain-content-container #rotation-mode #rotation-modes p.min {
   padding-left: 5px;
 }
-#genome-content-container #cam-speed #speeds p.max,
-#genome-content-container #rotation-mode #speeds p.max,
-#genome-content-container #cam-speed #rotation-modes p.max,
-#genome-content-container #rotation-mode #rotation-modes p.max {
+#brain-content-container #cam-speed #speeds p.max,
+#brain-content-container #rotation-mode #speeds p.max,
+#brain-content-container #cam-speed #rotation-modes p.max,
+#brain-content-container #rotation-mode #rotation-modes p.max {
   padding-right: 15px;
 }
-#genome-content-container #cam-speed #speeds p#speed,
-#genome-content-container #rotation-mode #speeds p#speed,
-#genome-content-container #cam-speed #rotation-modes p#speed,
-#genome-content-container #rotation-mode #rotation-modes p#speed {
+#brain-content-container #cam-speed #speeds p#speed,
+#brain-content-container #rotation-mode #speeds p#speed,
+#brain-content-container #cam-speed #rotation-modes p#speed,
+#brain-content-container #rotation-mode #rotation-modes p#speed {
   font-size: 1.2rem;
 }
-#genome-content-container #cam-speed {
+#brain-content-container #cam-speed {
   width: 80%;
 }
-#genome-content-container #rotation-mode {
+#brain-content-container #rotation-mode {
   width: 50%;
 }
