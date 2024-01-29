@@ -32,11 +32,13 @@ app.post('/eh', (req, res) => {
 
   // Shoot an OSC message to port 6999
   // Addresses :
-  // [0, 100] for visual triggers
-  // [100, 199] for audio triggers
-  // [200, 299] for video
+  // [0, 199] for visual triggers
+  // [200, 299] for audio triggers
+  // [300, 399] for video
   // [500, 600] for master sound volume 
-  let oscAddress = num < 100 ? '/visuals' : (num < 200 ? '/audio' : (num < 300 ? '/video' : (num <= 600 ? '/master' : '/speed')))
+  // [700, 900] for cam speed
+  // [1000, 1100] for eeg signal
+  let oscAddress = num < 200 ? '/visuals' : (num < 300 ? '/audio' : (num < 400 ? '/video' : (num <= 600 ? '/master' : (num <= 900 ? '/speed' : '/eeg'))))
   client.send(oscAddress, num, () => {
     console.log('Message with number ' + num + ' was sent on address ' + oscAddress + ' to port 6999')
     //client.close();

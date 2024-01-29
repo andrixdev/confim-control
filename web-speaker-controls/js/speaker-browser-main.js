@@ -34,7 +34,7 @@ let playNode1 = document.getElementById('video-play-2')
 let stopNode1 = document.getElementById('video-stop-2')
 
 let mediaNodes = [
-	[playNode1, stopNode1]
+	//[playNode1, stopNode1]
 ]
 mediaNodes.forEach((couple) => {
 	let play = couple[0], stop = couple[1]
