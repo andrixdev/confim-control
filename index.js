@@ -38,7 +38,21 @@ app.post('/eh', (req, res) => {
   // [500, 600] for master sound volume 
   // [700, 900] for cam speed
   // [1000, 1100] for eeg signal
-  let oscAddress = num < 200 ? '/visuals' : (num < 300 ? '/audio' : (num < 400 ? '/video' : (num <= 600 ? '/master' : (num <= 900 ? '/speed' : '/eeg'))))
+  let oscAddress = '/null'
+  if (num >= 0 && num < 200) {
+    oscAddress = '/visuals'
+  } else if (num < 300) {
+    oscAddress = '/visuals'
+  } else if (num < 400) {
+    oscAddress = '/video'
+  } else if (num >= 500 && num <= 600) {
+    oscAddress = '/master'
+  } else if (num >= 700 && num <=  900) {
+    oscAddress = '/speed'
+  } else if (num >= 1000 && num <= 1100) {
+    oscAddress = '/eeg'
+  }
+  
   client.send(oscAddress, num, () => {
     console.log('Message with number ' + num + ' was sent on address ' + oscAddress + ' to port 6999')
     //client.close();
