@@ -106,8 +106,19 @@
 				<div class="action" data-confim-id="110">Myel</div>
 				<div class="action" data-confim-id="111">Demyel</div>
 				<div class="action" data-confim-id="112">Vessels</div>
+				<div class="action" data-confim-id="1000">(TOBIND) Myel flame mode</div>
 
 				<div id="brain-content-container" class="flexcol">
+
+					<div id="brain-opacity" class="confim-slider flexcol flexcenter flexwrap">
+						<label for="brain-opa">Brain opacity</label>
+						<input type="range" id="brain-opacity-range" name="brain-opa" min="0" max="100" value="50" />
+						<div class="confim-slider-values flexrow flexbetween">
+							<p class="min">0</p>
+							<p id="opa" class="mid">0</p>
+							<p class="max">100</p>
+						</div>
+					</div>
 
 					<div id="cam-speed" class="flexcol flexcenter flexwrap">
 						<label for="camspeed">Camera speed</label>

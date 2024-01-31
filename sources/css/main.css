@@ -347,3 +347,29 @@ header h2 {
   bottom: 0;
   width: 100%;
 }
+/* Sliders */
+.confim-slider {
+  margin: 1rem 0;
+}
+.confim-slider input {
+  margin-top: 0.5rem;
+  width: 95%;
+}
+.confim-slider label {
+  margin-top: 0.5rem;
+}
+.confim-slider .confim-slider-values {
+  width: 100%;
+}
+.confim-slider .confim-slider-values p {
+  margin: 0;
+}
+.confim-slider .confim-slider-values p.min {
+  padding-left: 5px;
+}
+.confim-slider .confim-slider-values p.max {
+  padding-right: 15px;
+}
+.confim-slider .confim-slider-values p#speed {
+  font-size: 1.2rem;
+}

@@ -66,6 +66,25 @@ Array.from(document.querySelectorAll('[data-confim-id]')).forEach((el) => {
 })
 
 // OSC send on slider input changes
+// Brain opacity
+let brainOpaNode = document.getElementById('opa')
+document.getElementById('brain-opacity-range').addEventListener('input', (ev) => {
+	let num = ev.target.value // [0, 100]
+
+	brainOpaNode.innerHTML = num
+
+	let xhr = new XMLHttpRequest()
+	xhr.open("POST", location.origin + "/eh") // location is the browser's protocol, hostname and port number
+	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+	let oscRangeOffset = 1000
+	num = oscRangeOffset - (-num)
+	xhr.send("num=" + num)
+})
+
+
+
+// Cam speed
 let speedNode = document.getElementById('speed')
 document.getElementById('camera-speed').addEventListener('input', (ev) => {
 	let num = ev.target.value // [-100, 100]
@@ -80,6 +99,8 @@ document.getElementById('camera-speed').addEventListener('input', (ev) => {
 	num = oscRangeOffset - (-num)
 	xhr.send("num=" + num)
 })
+
+// Rotation mode
 document.getElementById('rotation').addEventListener('input', (ev) => {
 	let num = ev.target.value // {0, 1, 2}
 
