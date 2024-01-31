@@ -43,7 +43,7 @@ app.post('/eh', (req, res) => {
   if (num >= 0 && num < 200) {
     oscAddress = '/visuals'
   } else if (num < 300) {
-    oscAddress = '/visuals'
+    oscAddress = '/audio'
   } else if (num < 400) {
     oscAddress = '/video'
   } else if (num >= 500 && num <= 600) {
