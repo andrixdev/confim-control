@@ -85,6 +85,7 @@ document.getElementById('brain-opacity-range').addEventListener('input', (ev) =>
 
 
 // Cam speed
+/*
 let speedNode = document.getElementById('speed')
 document.getElementById('camera-speed').addEventListener('input', (ev) => {
 	let num = ev.target.value // [-100, 100]
@@ -112,5 +113,4 @@ document.getElementById('rotation').addEventListener('input', (ev) => {
 	num = oscRangeOffset - (-num)
 	xhr.send("num=" + num)
 })
-
-
+*/
