@@ -53,6 +53,7 @@
 				<div class="action" data-confim-id="151">NEXT</div>
 				<div class="action" data-confim-id="152">ANSWER</div>
 				<div class="action" data-confim-id="153">HIDE</div>
+				<div class="action" data-confim-id="154">Guess</div>
 			</div>
 
 			<!-- Chapter 3 -->
@@ -60,15 +61,19 @@
 				<img class="item-preview section" data-confim-id="3" src="../sources/img/uranus-rhombus.png" alt="Physics" />
 				<br/>
 				
-				<div class="action" data-confim-id="65">Image CT</div>
-				<div class="action" data-confim-id="66">Image XPCT</div>
+				<div class="action" data-confim-id="60">Image CT</div>
+				<div class="action" data-confim-id="61">Image XPCT</div>
 				<div class="action" data-confim-id="103">Refraction anim</div>
-				<div class="action" data-confim-id="60">absorption mode</div>
-				<div class="action" data-confim-id="61">refraction mode</div>
-				<div class="action" data-confim-id="62">screen OFF</div>
-				<div class="action" data-confim-id="63">screen CLOSE</div>
-				<div class="action" data-confim-id="64">screen FAR</div>
-				<div class="action" data-confim-id="104">Function</div>
+				<div class="action" data-confim-id="62">absorption mode</div>
+				<div class="action" data-confim-id="63">refraction mode</div>
+				<div class="action" data-confim-id="64">screen OFF</div>
+				<div class="action" data-confim-id="65">screen CLOSE</div>
+				<div class="action" data-confim-id="66">screen FAR</div>
+				<div class="action" data-confim-id="67">Image CTagain</div>
+				<div class="action" data-confim-id="68">Image XPCTagain</div>
+				<div class="action" data-confim-id="69">Image Shadow</div>
+				<div class="action" data-confim-id="699">Image Straw</div>
+				<div class="action" data-confim-id="6999">Image Pool</div>
 				<!--
 				<div class="flexcol">
 					<img class="item-preview" data-confim-id="50" src="./img/chaosphere.png" alt="Chaosphere" />
@@ -84,12 +89,11 @@
 			<!-- Chapter 4 -->
 			<div class="step flexrow flexstart flexwrap">
 				<img class="item-preview section" data-confim-id="4" src="../sources/img/uranus-rhombus.png" alt="Synchrotron" />
-				<div class="action" data-confim-id="73">ESRF image</div>
-				<div class="action" data-confim-id="74">SOLEIL image</div>
-				<div class="action" data-confim-id="105">Synchrotron</div>
+				<div class="action" data-confim-id="72">ESRF image</div>
+				<div class="action" data-confim-id="73">SOLEIL image</div>
+				<div class="action" data-confim-id="104">Synchrotron</div>
 				<div class="action" data-confim-id="70">Outer ring</div>
 				<div class="action" data-confim-id="71">Beams</div>
-				<div class="action" data-confim-id="72">Sky Mode</div>
 				<!--
 				<img class="item-preview" data-confim-id="83" src="./img/cell.png" alt="Cell" />
 				-->
@@ -98,17 +102,18 @@
 			<!-- Chapter 5 -->
 			<div class="step flexrow flexstart flexwrap">
 				<img class="item-preview section" data-confim-id="5" src="../sources/img/uranus-rhombus.png" alt="Synchrotron" />
-				<div class="action" data-confim-id="107">Brain film 1</div>
-				<div class="action" data-confim-id="108">Brain film 2</div>
-				<div class="action" data-confim-id="109">Brain film 3</div>
+				<div class="action" data-confim-id="106">Brain film 1</div>
+				<div class="action" data-confim-id="107">Brain film 2</div>
+				<div class="action" data-confim-id="108">Brain film 3</div>
 			</div>
 
 			<!-- Chapter 6 -->
 			<div id="brain-step" class="step flexrow flexstart flexwrap">
 				<img class="item-preview section flexselfstart" data-confim-id="6" src="../sources/img/uranus-rhombus.png" alt="Brain"/>
 				
-				<div class="action" data-confim-id="110">Contour</div>
-				<div class="action" data-confim-id="111">White matter</div>
+				<div class="action" data-confim-id="109">Envelope</div>
+				<div class="action" data-confim-id="110">Corpus</div>
+				<div class="action" data-confim-id="111">Antcom</div>
 				<div class="action" data-confim-id="112">Orientation</div>
 				<div class="action" data-confim-id="113">Myel</div>
 				<div class="action" data-confim-id="114">Demyel</div>
@@ -127,13 +132,27 @@
 						</div>
 					</div>
 
-					<!--
-					<div id="cam-speed" class="flexcol flexcenter flexwrap">
-						<label for="camspeed">Camera speed</label>
-						<input type="range" id="camera-speed" name="camspeed" min="-100" max="100" value="0" />
-						<div id="speeds" class="flexrow flexbetween"><p class="min">-100</p><p id="speed" class="mid">0</p><p class="max">100</p></div>
+					<div id="camera-speed" class="confim-slider flexcol flexcenter flexwrap">
+						<label for="cam-speed">Cam speed</label>
+						<input type="range" id="cam-speed-range" name="cam-speed" min="-100" max="100" value="0" step="1"/>
+						<div class="confim-slider-values flexrow flexbetween">
+							<p class="min">-100</p>
+							<p id="speed" class="mid">0</p>
+							<p class="max">100</p>
+						</div>
 					</div>
 
+					<div id="brain-rotation" class="confim-slider flexcol flexcenter flexwrap">
+						<label for="brain-rot">Rotation mode</label>
+						<input type="range" id="brain-rot-range" name="brain-rot" min="0" max="8" value="0" step="1"/>
+						<div class="confim-slider-values flexrow flexbetween">
+							<p class="min"></p>
+							<p id="rot" class="mid">0</p>
+							<p class="max"></p>
+						</div>
+					</div>
+
+					<!--
 					<div class="flexrow flexcenter flexwrap">
 						<img class="item-preview" data-confim-id="60" src="./img/mode-0.png" alt="Genome mode 0" />
 						<img class="item-preview" data-confim-id="61" src="./img/mode-1.png" alt="Genome mode 1" />
@@ -183,13 +202,12 @@
 			<!-- Chapter 4 (again) -->
 			<div class="step flexrow flexstart flexwrap">
 				<img class="item-preview section" data-confim-id="4" src="../sources/img/uranus-rhombus.png" alt="Synchrotron" />
-				<div class="action" data-confim-id="73">ESRF image</div>
-				<div class="action" data-confim-id="74">SOLEIL image</div>
-				<div class="action" data-confim-id="105">Synchrotron</div>
+				<div class="action" data-confim-id="72">ESRF image</div>
+				<div class="action" data-confim-id="73">SOLEIL image</div>
+				<div class="action" data-confim-id="104">Synchrotron</div>
 				<div class="action" data-confim-id="70">Outer ring</div>
 				<div class="action" data-confim-id="71">Beams</div>
-				<div class="action" data-confim-id="72">Sky Mode</div>
-				<div class="action" data-confim-id="106">Silhouettes</div>
+				<div class="action" data-confim-id="105">Silhouettes</div>
 			</div>
 
 			<!-- Chapter 1 (again) -->

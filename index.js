@@ -38,6 +38,7 @@ app.post('/eh', (req, res) => {
   // [500, 600] for master sound volume 
   // [700, 900] for cam speed
   // [1000, 1100] for brain opacity
+  // [1200, 1210] for brain rotation mode
   // [2000, 2100] for eeg signal
   let oscAddress = '/null'
   if (num >= 0 && num < 200) {
@@ -52,6 +53,8 @@ app.post('/eh', (req, res) => {
     oscAddress = '/speed'
   } else if (num >= 1000 && num <= 1100) {
     oscAddress = '/opacity'
+  } else if (num >= 1200 && num <= 1210) {
+    oscAddress = '/rotation'
   } else if (num >= 2000 && num <= 2100) {
     oscAddress = '/eeg'
   }

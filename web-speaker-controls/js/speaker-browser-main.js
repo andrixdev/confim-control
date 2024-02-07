@@ -81,16 +81,12 @@ document.getElementById('brain-opacity-range').addEventListener('input', (ev) =>
 	num = oscRangeOffset - (-num)
 	xhr.send("num=" + num)
 })
-
-
-
 // Cam speed
-/*
-let speedNode = document.getElementById('speed')
-document.getElementById('camera-speed').addEventListener('input', (ev) => {
+let camSpeedNode = document.getElementById('speed')
+document.getElementById('cam-speed-range').addEventListener('input', (ev) => {
 	let num = ev.target.value // [-100, 100]
 
-	speedNode.innerHTML = num
+	camSpeedNode.innerHTML = num
 
 	let xhr = new XMLHttpRequest()
 	xhr.open("POST", location.origin + "/eh") // location is the browser's protocol, hostname and port number
@@ -100,17 +96,18 @@ document.getElementById('camera-speed').addEventListener('input', (ev) => {
 	num = oscRangeOffset - (-num)
 	xhr.send("num=" + num)
 })
+// Brain rotation mode
+let brainRotNode = document.getElementById('rot')
+document.getElementById('brain-rot-range').addEventListener('input', (ev) => {
+	let num = ev.target.value // [0, 8]
 
-// Rotation mode
-document.getElementById('rotation').addEventListener('input', (ev) => {
-	let num = ev.target.value // {0, 1, 2}
+	brainRotNode.innerHTML = num
 
 	let xhr = new XMLHttpRequest()
 	xhr.open("POST", location.origin + "/eh") // location is the browser's protocol, hostname and port number
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-	let oscRangeOffset = 70
+	let oscRangeOffset = 1200
 	num = oscRangeOffset - (-num)
 	xhr.send("num=" + num)
 })
-*/
