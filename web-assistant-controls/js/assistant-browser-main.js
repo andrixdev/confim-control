@@ -68,13 +68,16 @@ let playNode4 = document.getElementById('audio-play-4')
 let stopNode4 = document.getElementById('audio-stop-4')
 let playNode5 = document.getElementById('video-play-1')
 let stopNode5 = document.getElementById('video-stop-1')
+let playNode6 = document.getElementById('video-play-2')
+let stopNode6 = document.getElementById('video-stop-2')
 
 let mediaNodes = [
 	[playNode1, stopNode1],
 	[playNode2, stopNode2],
 	[playNode3, stopNode3],
 	[playNode4, stopNode4],
-	[playNode5, stopNode5]
+	[playNode5, stopNode5],
+	[playNode6, stopNode6]
 ]
 mediaNodes.forEach((couple) => {
 	let play = couple[0], stop = couple[1]
