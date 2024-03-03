@@ -67,9 +67,6 @@ h4 {
 .flexcenter {
   justify-content: center;
 }
-.flexbetween {
-  justify-content: space-between;
-}
 .flexstart {
   justify-content: flex-start;
 }
