@@ -12,7 +12,29 @@ let activate = (id) => {
 // Special params controls (display)
 Array.from(document.getElementsByClassName('switch')).forEach((el) => {
 	el.addEventListener('click', () => {
-		el.classList = "switch " + (el.classList.contains("on") ? "off" : "on")
+		if (el.classList.contains("on")) {
+			// Toggle
+			el.classList = "switch off"
+			// Display/hide corresponding image
+			if (el.hasAttribute("data-switch-off-img-id")) {
+				let imgOffId = el.getAttribute("data-switch-off-img-id")
+				let imgOnId = el.getAttribute("data-switch-on-img-id")
+				document.getElementById(imgOnId).style.display = "none"
+				document.getElementById(imgOffId).style.display = "inherit"
+			}
+			
+		} else {
+			// Toggle
+			el.classList = "switch on"
+			// Display/hide corresponding image
+			if (el.hasAttribute("data-switch-off-img-id")) {
+				let imgOffId = el.getAttribute("data-switch-off-img-id")
+				let imgOnId = el.getAttribute("data-switch-on-img-id")
+				document.getElementById(imgOffId).style.display = "none"
+				document.getElementById(imgOnId).style.display = "inherit"
+			}
+		}
+		
 	})
 })
 // Handle constrained steps (display)

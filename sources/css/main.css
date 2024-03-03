@@ -135,6 +135,9 @@ h4 {
 .switch.on .switch-inner {
   left: 45px;
 }
+img[data-switch-on-img] {
+  display: none;
+}
 .tile {
   width: 90px;
   height: 90px;
@@ -169,6 +172,10 @@ img.item-preview.section {
 img.item-preview.mini-pioute {
   width: 40px;
   height: 40px;
+}
+img.item-preview.semi-pioute {
+  width: 60px;
+  height: 60px;
 }
 .visual {
   margin: 1rem 0.5rem;
