@@ -72,19 +72,31 @@
 					<div class="flexrow flexstart flexwrap">
 						
 					</div>
-					<div class="flexrow flexstart flexwrap">
+					<div class="flexcol flexchildrenstart flexwrap">
+						<!-- Mode toggle -->
 						<div class="visual flexcol flexstart">
 							<img class="item-preview" data-switch-off-img id="switch-img-abs" src="./img/absorption.png" alt="Absorption" />
 							<img class="item-preview" data-switch-on-img id="switch-img-refrac" src="./img/refraction.png" alt="Refraction" />
 							<div class="switch off" data-confim-id="112" data-switch-off-img-id="switch-img-abs" data-switch-on-img-id="switch-img-refrac"><div class="switch-inner"></div></div>
-							<p class="param-text">Absorption/Refraction</p>
 						</div>
+
+						<!-- Screen position range -->
+						<div class="flexrow flexstart flexwrap">
+							<img class="item-preview" src="./img/screen.jpg" alt="Screen" />
+	
+							<div id="screen-position" class="confim-slider flexcol flexcenter flexwrap">
+								<label for="screen-pos">Screen position</label>
+								<input type="range" id="screen-position-range" name="screen-pos" min="0" max="2" value="0" step="1" />
+								<div class="confim-slider-values flexrow flexbetween">
+									<p class="min">OFF</p>
+									<p class="mid">FAR</p>
+									<p class="max">CLOSE</p>
+								</div>
+							</div>
+						</div>
+
 					</div>
-					<div class="flexrow flexstart flexwrap">
-						<div class="action" data-confim-id="114">screen OFF</div>
-						<div class="action" data-confim-id="115">screen CLOSE</div>
-						<div class="action" data-confim-id="116">screen FAR</div>
-					</div>
+					
 					<div class="flexrow flexstart flexwrap">
 						<img class="item-preview semi-pioute" data-confim-id="117" src="./img/physics-CT.png" alt="CT again" />
 						<img class="item-preview semi-pioute" data-confim-id="118" src="./img/physics-XPCT.png" alt="XPCT again" />
@@ -98,25 +110,33 @@
 
 			<!-- Chapter 5 -->
 			<div class="step flexrow flexstart flexwrap">
-				<img class="item-preview section" data-confim-id="5" src="./img/synchrotron.jpg" alt="Synchrotron" />
-				<div class="action" data-confim-id="130">ESRF image</div>
-				<div class="action" data-confim-id="131">SOLEIL image</div>
-				<div class="action" data-confim-id="54">Synchrotron</div>
-				<div class="action" data-confim-id="132">Outer ring</div>
-				<div class="action" data-confim-id="133">Beams</div>
+				<img class="item-preview section" data-confim-id="5" src="./img/family-pictures.jpg" alt="Family pictures" />
+				<img class="item-preview" data-confim-id="130" src="./img/esrf.jpg" alt="ESRF" />
+				<img class="item-preview" data-confim-id="131" src="./img/soleil.jpg" alt="Synchrotron SOLEIL" />
 			</div>
 
 			<!-- Chapter 6 -->
 			<div class="step flexrow flexstart flexwrap">
-				<img class="item-preview section" data-confim-id="6" src="./img/brain-films.jpg" alt="Brain films" />
-				<div class="action" data-confim-id="56">Brain film 1</div>
-				<div class="action" data-confim-id="57">Brain film 2</div>
-				<div class="action" data-confim-id="58">Brain film 3</div>
+				<img class="item-preview section" data-confim-id="6" src="./img/synchrotron.jpg" alt="Synchrotron" />
+				<!-- Beams toggle -->
+				<div class="visual flexcol flexstart">
+					<img class="item-preview" data-switch-off-img id="switch-img-nude" src="./img/synchronude.png" alt="Nude Synchrotron" />
+					<img class="item-preview" data-switch-on-img id="switch-img-full" src="./img/synchrotron.jpg" alt="Full Synchrotron" />
+					<div class="switch off" data-confim-id="133" data-switch-off-img-id="switch-img-nude" data-switch-on-img-id="switch-img-full"><div class="switch-inner"></div></div>
+				</div>
 			</div>
 
 			<!-- Chapter 7 -->
+			<div class="step flexrow flexstart flexwrap" id="brain-films">
+				<img class="item-preview section" data-confim-id="7" src="./img/brain-films.jpg" alt="Brain films" />
+				<img class="item-preview cuts" data-confim-id="56" src="./img/brain-axial.png" alt="Brain video Axial" />
+				<img class="item-preview cuts" data-confim-id="57" src="./img/brain-sagittal.png" alt="Brain video Sagittal" />
+				<img class="item-preview cuts" data-confim-id="58" src="./img/brain-coronal.png" alt="Brain video Coronal" />
+			</div>
+
+			<!-- Chapter 8 -->
 			<div id="brain-step" class="step flexrow flexstart flexwrap">
-				<img class="item-preview section flexselfstart" data-confim-id="7" src="./img/brain.jpg" alt="Brain"/>
+				<img class="item-preview section flexselfstart" data-confim-id="8" src="./img/brain.jpg" alt="Brain"/>
 				
 				<div class="action" data-confim-id="59">Envelope</div>
 				<div class="action" data-confim-id="60">Corpus</div>
@@ -206,9 +226,9 @@
 				
 			</div>
 
-			<!-- Chapter 5 (again) -->
+			<!-- Chapter 6 (again) -->
 			<div class="step flexrow flexstart flexwrap">
-				<img class="item-preview section" data-confim-id="5" src="./img/synchrotron.jpg" alt="Synchrotron" />
+				<img class="item-preview section" data-confim-id="6" src="./img/synchrotron.jpg" alt="Synchrotron" />
 				<div class="action" data-confim-id="130">ESRF image</div>
 				<div class="action" data-confim-id="131">SOLEIL image</div>
 				<div class="action" data-confim-id="54">Synchrotron</div>

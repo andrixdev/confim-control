@@ -36,6 +36,10 @@
   user-select: none;
   margin-left: 1rem;
 }
+#brain-films img.cuts {
+  height: 65px;
+  width: 105px;
+}
 /* Music */
 .music-tracks .music-track {
   position: relative;
