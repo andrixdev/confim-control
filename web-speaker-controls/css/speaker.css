@@ -182,3 +182,20 @@
 #brain-content-container #rotation-mode {
   width: 50%;
 }
+#camera-speed label {
+  text-align: center;
+}
+#camera-speed label span {
+  display: block;
+  opacity: 0.5;
+}
+#cam-reset img {
+  margin: 25px 15px 15px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+#cam-reset img:hover {
+  box-shadow: white 0 0 5px;
+}

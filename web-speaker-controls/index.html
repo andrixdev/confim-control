@@ -86,7 +86,7 @@
 	
 							<div id="screen-position" class="confim-slider flexcol flexcenter flexwrap">
 								<label for="screen-pos">Screen position</label>
-								<input type="range" id="screen-position-range" name="screen-pos" min="0" max="2" value="2" step="1" />
+								<input type="range" id="screen-position-range" name="screen-pos" min="0" max="2" value="0" step="1" />
 								<div class="confim-slider-values flexrow flexbetween">
 									<p class="min">OFF</p>
 									<p class="mid">FAR</p>
@@ -99,8 +99,8 @@
 					
 					<div class="flexrow flexstart flexwrap">
 						<img class="item-preview semi-pioute" data-confim-id="117" src="./img/physics-CT.png" alt="CT again" />
-						<img class="item-preview semi-pioute" data-confim-id="118" src="./img/physics-XPCT.png" alt="XPCT again" />
 						<img class="item-preview semi-pioute" data-confim-id="119" src="./img/physics-shadow.jpeg" alt="Shadow" />
+						<img class="item-preview semi-pioute" data-confim-id="118" src="./img/physics-XPCT.png" alt="XPCT again" />
 						<img class="item-preview semi-pioute" data-confim-id="120" src="./img/physics-glass.jpg" alt="Straw" />
 						<img class="item-preview semi-pioute" data-confim-id="121" src="./img/physics-pool.jpg" alt="Pool" />
 					</div>
@@ -144,12 +144,12 @@
 				<img class="item-preview section flexselfstart" data-confim-id="8" src="./img/brain.jpg" alt="Brain"/>
 				
 				<div class="action" data-confim-id="57">Envelope</div>
+				<div class="action" data-confim-id="63">Vessels</div>
 				<div class="action" data-confim-id="58">Corpus</div>
 				<div class="action" data-confim-id="59">Antcom</div>
 				<div class="action" data-confim-id="60">Orientation</div>
 				<div class="action" data-confim-id="61">Myel</div>
 				<div class="action" data-confim-id="62">Demyel</div>
-				<div class="action" data-confim-id="63">Vessels</div>
 				<div class="action" data-confim-id="140">Myel flame mode</div>
 
 				<div id="brain-content-container" class="flexcol">
@@ -164,23 +164,36 @@
 						</div>
 					</div>
 
-					<div id="camera-speed" class="confim-slider flexcol flexcenter flexwrap">
-						<label for="cam-speed">Cam speed</label>
-						<input type="range" id="cam-speed-range" name="cam-speed" min="-100" max="100" value="0" step="10"/>
-						<div class="confim-slider-values flexrow flexbetween">
-							<p class="min">-100</p>
-							<p id="speed" class="mid">0</p>
-							<p class="max">100</p>
+					<div class="flexrow flexcenter flexwrap">
+						<div id="camera-speed" class="confim-slider flexcol flexcenter flexwrap">
+							<label for="cam-speed">Cam speed<span id="speed">0 Joshua.s<sup>-1</sup></span></label>
+							<input type="range" id="cam-speed-range" name="cam-speed" min="0" max="6" value="3" step="1"/>
+							<div class="confim-slider-values flexrow flexbetween">
+								<p class="min">-100</p>
+								<p>-30</p>
+								<p>-10</p>
+								<p class="mid">0</p>
+								<p>10</p>
+								<p>30</p>
+								<p class="max">100</p>
+							</div>
+						</div>
+
+						<div id="cam-reset">
+							<img data-confim-id="901" src="./img/reset-cam-icon.jpg" alt="Cam reset" />
 						</div>
 					</div>
+					
 
 					<div id="brain-rotation" class="confim-slider flexcol flexcenter flexwrap">
 						<label for="brain-rot">Rotation mode</label>
-						<input type="range" id="brain-rot-range" name="brain-rot" min="0" max="8" value="0" step="1"/>
+						<input type="range" id="brain-rot-range" name="brain-rot" min="0" max="3" value="0" step="1"/>
 						<div class="confim-slider-values flexrow flexbetween">
-							<p class="min"></p>
-							<p id="rot" class="mid">0</p>
-							<p class="max"></p>
+							<p class="min">FREE Y</p>
+							<p>Y 270°</p>
+							<p>FREE X</p>
+							<!--<p id="rot" class="mid">0</p>-->
+							<p class="max">X 90°</p>
 						</div>
 					</div>
 

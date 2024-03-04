@@ -368,6 +368,8 @@ header h2 {
 }
 .confim-slider .confim-slider-values p {
   margin: 0;
+  width: 3rem;
+  text-align: center;
 }
 .confim-slider .confim-slider-values p#speed {
   font-size: 1.2rem;

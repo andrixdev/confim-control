@@ -120,10 +120,21 @@ document.getElementById('brain-opacity-range').addEventListener('input', (ev) =>
 })
 // Cam speed
 let camSpeedNode = document.getElementById('speed')
-document.getElementById('cam-speed-range').addEventListener('input', (ev) => {
-	let num = ev.target.value // [-100, 100]
+let camSpeedRange = document.getElementById('cam-speed-range')
+camSpeedRange.addEventListener('input', (ev) => {
+	let inp = ev.target.value // [|0, 6|]
+	let num // [-100, 100]
 
-	camSpeedNode.innerHTML = num
+	if (inp == 0) num = -100
+	else if (inp == 1) num = -30
+	else if (inp == 2) num = -10
+	else if (inp == 3) num = 0
+	else if (inp == 4) num = 10
+	else if (inp == 5) num = 30
+	else if (inp == 6) num = 100 
+	else console.error("Camera speed input value " + inp + " not recognized.")
+
+	camSpeedNode.innerHTML = num + " Joshua.s<sup>-1</sup>"
 
 	let xhr = new XMLHttpRequest()
 	xhr.open("POST", location.origin + "/eh") // location is the browser's protocol, hostname and port number
@@ -133,12 +144,18 @@ document.getElementById('cam-speed-range').addEventListener('input', (ev) => {
 	num = oscRangeOffset - (-num)
 	xhr.send("num=" + num)
 })
-// Brain rotation mode
-let brainRotNode = document.getElementById('rot')
-document.getElementById('brain-rot-range').addEventListener('input', (ev) => {
-	let num = ev.target.value // [0, 8]
+// Cam reset
+document.getElementById('cam-reset').addEventListener('click', () => {
+	camSpeedRange.value = 3
+	camSpeedNode.innerHTML = "0 Joshua.s<sup>-1</sup>"
 
-	brainRotNode.innerHTML = num
+})
+// Brain rotation mode
+//let brainRotNode = document.getElementById('rot')
+document.getElementById('brain-rot-range').addEventListener('input', (ev) => {
+	let num = ev.target.value // [0, 3]
+
+	//brainRotNode.innerHTML = num
 
 	let xhr = new XMLHttpRequest()
 	xhr.open("POST", location.origin + "/eh") // location is the browser's protocol, hostname and port number
