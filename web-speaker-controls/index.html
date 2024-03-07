@@ -22,12 +22,7 @@
 <body>
 
 	<header>
-		<h2 id="title" class="manuscript">Conférence Immersive - Fabien & Joshua</h2>
-		<nav id="burger">
-			<div class="bar bar-1"></div>
-			<div class="bar bar-2"></div>
-			<div class="bar bar-3"></div>
-		</nav>
+		<h2 id="title" class="manuscript speaker">Conférence Immersive - Fabien & Joshua</h2>
 	</header>
 
 	<div id="content" class="speaker">
@@ -140,27 +135,29 @@
 			</div>
 
 			<!-- Chapter 8 -->
-			<div id="brain-step" class="step flexrow flexstart flexwrap">
-				<img class="item-preview section flexselfstart" data-confim-id="8" src="./img/brain.png" alt="Brain"/>
+			<div id="brain-step" class="step flexcol">
+				<div class="flexrow flexstart flexwrap">
+					<img class="item-preview section flexselfstart" data-confim-id="8" src="./img/brain.png" alt="Brain"/>
 				
-				<img class="item-preview" data-confim-id="54" src="./img/brain-envelope.png" alt="Envelope" />
-				<img class="item-preview" data-confim-id="55" src="./img/brain-vessels.png" alt="Vessels" />
-				<img class="item-preview" data-confim-id="56" src="./img/brain-corpus.png" alt="Corpus" />
-				<img class="item-preview" data-confim-id="57" src="./img/brain-antcom.png" alt="Antcom" />
-				<img class="item-preview" data-confim-id="58" src="./img/brain-orientation.png" alt="Orientation" />
-				<img class="item-preview" data-confim-id="59" src="./img/brain-myel.png" alt="Myel" />
-				<img class="item-preview" data-confim-id="60" src="./img/brain-demyel.png" alt="Demyel" />
-				<img class="item-preview" data-confim-id="140" src="./img/brain-flame.png" alt="Myel flame mode" />
-
-				<!-- Vessels transparent mode toggle -->
-				<div class="visual flexcol flexstart">
-					<img class="item-preview" data-switch-off-img id="switch-img-vessels" src="./img/brain-vessels-bright.png" alt="Vessels Bright" />
-					<img class="item-preview" data-switch-on-img id="switch-img-vessels-tr" src="./img/brain-vessels-transparent.png" alt="Vessels transparent" />
-					<div class="switch off" data-confim-id="141" data-switch-off-img-id="switch-img-vessels" data-switch-on-img-id="switch-img-vessels-tr"><div class="switch-inner"></div></div>
+					<img class="item-preview" data-confim-id="54" src="./img/brain-envelope.png" alt="Envelope" />
+					<img class="item-preview" data-confim-id="55" src="./img/brain-vessels.png" alt="Vessels" />
+					<img class="item-preview" data-confim-id="56" src="./img/brain-corpus.png" alt="Corpus" />
+					<img class="item-preview" data-confim-id="57" src="./img/brain-antcom.png" alt="Antcom" />
+					<img class="item-preview" data-confim-id="58" src="./img/brain-orientation.png" alt="Orientation" />
+					<img class="item-preview" data-confim-id="59" src="./img/brain-myel.png" alt="Myel" />
+					<img class="item-preview" data-confim-id="60" src="./img/brain-demyel.png" alt="Demyel" />
+					<img class="item-preview" data-confim-id="140" src="./img/brain-flame.png" alt="Myel flame mode" />
+	
+					<!-- Vessels transparent mode toggle -->
+					<div class="visual flexcol flexstart">
+						<img class="item-preview" data-switch-off-img id="switch-img-vessels" src="./img/brain-vessels-bright.png" alt="Vessels Bright" />
+						<img class="item-preview" data-switch-on-img id="switch-img-vessels-tr" src="./img/brain-vessels-transparent.png" alt="Vessels transparent" />
+						<div class="switch off" data-confim-id="141" data-switch-off-img-id="switch-img-vessels" data-switch-on-img-id="switch-img-vessels-tr"><div class="switch-inner"></div></div>
+					</div>
 				</div>
-				
+
 				<!-- Slider inputs -->
-				<div id="brain-content-container" class="flexcol">
+				<div id="brain-content-container" class="flexcol flexwrap">
 
 					<div class="flexcol flexcenter">
 						<div id="camera-speed" class="confim-slider flexcol flexcenter flexwrap">
@@ -204,51 +201,8 @@
 						</div>
 					</div>
 
-					<!--
-					<div class="flexrow flexcenter flexwrap">
-						<img class="item-preview" data-confim-id="60" src="./img/mode-0.png" alt="Genome mode 0" />
-						<img class="item-preview" data-confim-id="61" src="./img/mode-1.png" alt="Genome mode 1" />
-						<img class="item-preview" data-confim-id="63" src="./img/mode-3.png" alt="Genome mode 3" />
-						<img class="item-preview" data-confim-id="62" src="./img/mode-2-bis.jpg" alt="Genome mode 2" />
-					</div>
-
-					<div id="toggles" class="flexrow flexcenter flexwrap">
-						<div class="visual flexcol flexstart">
-							<img class="item-preview" src="./img/highlight-toggle-2.jpg" alt="Highlight toggle" />
-							<div class="switch off" data-confim-id="64"><div class="switch-inner"></div></div>
-							<p class="param-text">Highlight</p>
-						</div>
-						<div class="visual flexcol flexstart">
-							<img class="item-preview" src="./img/slice-toggle-2.jpg" alt="Slice toggle" />
-							<div class="switch off" data-confim-id="65"><div class="switch-inner"></div></div>
-							<p class="param-text">Slice</p>
-						</div>
-						<div class="visual flexcol flexstart">
-							<img class="item-preview" src="./img/spread-toggle-2.jpg" alt="Spread toggle" />
-							<div class="switch off" data-confim-id="66"><div class="switch-inner"></div></div>
-							<p class="param-text">Spread</p>
-						</div>
-						<div class="visual flexcol flexstart">
-							<img class="item-preview" src="./img/random-toggle-2.png" alt="Random toggle" />
-							<div class="switch off" data-confim-id="67"><div class="switch-inner"></div></div>
-							<p class="param-text">Randomness</p>
-						</div>
-						<div class="visual flexcol flexstart">
-							<img class="item-preview" src="./img/resources-toggle-2.jpg" alt="Resources toggle" />
-							<div class="switch off" data-confim-id="68"><div class="switch-inner"></div></div>
-							<p class="param-text">Resources</p>
-						</div>
-					</div>
-
-					<div id="rotation-mode" class="flexcol flexcenter flexwrap">
-						<label for="rotation">Rotation mode</label>
-						<input type="range" id="rotation" name="rotation" min="0" max="2" setp="1" value="0" />
-						<div id="rotation-modes" class="flexrow flexbetween"><p class="min">free</p><p class="mid">π/2</p><p class="max">π</p></div>
-					</div>
-					-->
-
 				</div>
-				
+
 			</div>
 
 			<!-- Chapter 1 (again) -->
@@ -266,20 +220,11 @@
 		</div>
 
 	</div>
-
-	<div id="menu" class="hidden">
-		<h2 class="manuscript center">Le cerveau aux rayons X</h2>
-		<footer>
-			<p class="manuscript center">Fabien Chauveau & Joshua Gobé</p>
-			<p class="manuscript center conf-date">Conférence du 21 mars 2024</p>
-		</footer>
-	</div>
 	
 <!-- Scripts for libraries -->
 <!-- None! -->
 
 <!-- Our scripts -->
 <script type="text/javascript" src="./js/speaker-browser-main.js"></script>
-<script type="text/javascript" src="./js/app-menu.js"></script>
 
 </body>

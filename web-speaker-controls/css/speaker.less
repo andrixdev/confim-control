@@ -2,8 +2,9 @@
 /* ANDRIX © 2023-2024 */
 
 /* Specific */
-#content.speaker > div:not(#c) {
-    padding: 5px;
+h2#title.speaker {
+    font-size: 1.5rem;
+    padding-top: 0.45em;
 }
 #items-container {
     display: grid;
@@ -25,107 +26,49 @@
         }
     }
 }
-#animations {
-    .anim {
-        cursor: pointer;
-        width: auto;
-        margin: 1rem 0;        
-    
-        img {
-            width: 80px;
-            height: 80px;
-        }
-        p.anim-text {
-            color: var(--text-color);
-            font-size: 1.3rem;
-            user-select: none;
-            margin-left: 1rem;
-        }
-    }
-}
 #brain-films img.cuts {
     height: 65px;
     width: 105px;
 }
-
-/* Music */
-.music-tracks {
-    .music-track {
-        position: relative;
-        margin-bottom: 10px;
-        margin-right: 10px;
+/* Sliders */
+.confim-slider {
+    margin: 1rem;
+    
+    input {
+        margin-top: .5rem;
+        width: 400px;
+        max-width: calc(85vw - 2rem);
     }
-
-    .stop-icon {
-        background: white;
-        width: 25px;
-        height: 25px;
-        position: absolute;
-        top: 38px;
-        left: 38px;
-        margin: auto;
-        display: none;
-        pointer-events: none;
+    label {
+        margin-top: .5rem;
     }
-    .audio-stop[data-visibility="visible"] + .stop-icon {
-        display: inherit;
-    }
-}
-#audio {
-    #master {
-        margin-bottom: 2rem;
+    .confim-slider-values {
+        width: 100%;
 
-        input {
-            width: 70%;
+        p {
+            margin: 0;
+            width: 3rem;
+            text-align: center;
+        }
+        p.min {
+            //padding-left: 5px;
+        }
+        p.mid {
+            //padding: 0 10px;
+        }
+        p.max {
+            //padding-right: 15px;
+        }
+        p#speed {
+            font-size: 1.2rem;
         }
     }
-    .audio-stop {
-        border-color: transparent;
-        box-shadow: var(--box-shadow);
-        animation: rot 3s linear infinite;
 
-        & + p {
-            text-shadow: var(--text-color) 0 0 10px;
-        }
-    }
-}
-.audio {
-    border-radius: 50%;
-}
-#audio-play-0 {
-    border-color: var(--audio-sample-color-0);
-}
-#audio-play-1 {
-    border-color: var(--audio-sample-color-1);
-}
-#audio-play-2 {
-    border-color: var(--audio-sample-color-2);
-}
-#audio-play-3 {
-    border-color: var(--audio-sample-color-3);
-}
-#audio-play-4 {
-    border-color: var(--audio-sample-color-4);
-}
-/* Highlight when playing */
-.audio-pause,
-.video-stop {
-    box-shadow: var(--box-shadow);
-}
-
-@keyframes rot {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
 }
 
 #steps {
     .step {
         display: flex;
-        flex-direction: row;
         padding: 10px;
         @media (max-width: 320px) {
             flex-wrap: wrap;
@@ -185,27 +128,16 @@
     box-shadow: var(--box-shadow-small);
     cursor: pointer;
 }
-#brain-content-container {
-    width: calc(100% - 140px);
-    @media (max-width: 640px) {
-        width: 100%;
-    }
-
-    #cam-speed {
-        width: 80%;
-    }
-    #rotation-mode {
-        width: 50%;
-    }
-}
-#screen-position-range {
-    
-}
-#camera-speed label {
+.confim-slider#camera-speed label {
     text-align: center;
     span {
         display: block;
         opacity: 0.5;
+    }
+}
+.confim-slider#camera-speed .confim-slider-values {
+    @media (max-width: 450px) {
+        display: none;
     }
 }
 #cam-reset {

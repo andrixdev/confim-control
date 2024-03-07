@@ -53,7 +53,12 @@ Array.from(tracks).forEach((el) => {
 // Special params controls (display)
 Array.from(document.getElementsByClassName('switch')).forEach((el) => {
 	el.addEventListener('click', () => {
-		el.classList = "switch " + (el.classList.contains("on") ? "off" : "on")
+		// Detect those with same confim-id
+		let all = document.querySelectorAll("[data-confim-id='" + el.getAttribute('data-confim-id') + "']")
+		all.forEach(el => {
+			el.classList.toggle('on')
+			el.classList.toggle('off')
+		})
 	})
 })
 

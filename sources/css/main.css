@@ -1,4 +1,4 @@
-/* ANDRIX © 2023 */
+/* ANDRIX © 2023-2024 */
 :root {
   --ui-bg-color-1: #080808;
   --ui-bg-color-2: #131313;
@@ -245,132 +245,14 @@ header h2 {
 #content > div:nth-of-type(2n+1) {
   background: var(--ui-bg-color-3);
 }
-/* Menu and its content */
-#menu {
-  height: calc(100vh - 60px - 2px);
-  width: calc(100vw - 4px);
-  background: var(--ui-bg-color-3);
-  position: absolute;
-  left: 2px;
-  top: 60px;
-  transition: left 200ms ease-in-out;
-}
-#menu.hidden {
-  left: calc(100vw + 3px);
-}
-#menu p,
-#menu h2 {
-  font-size: 3rem;
-  font-weight: 200;
-  margin: 1rem 0;
-}
-#menu h2 {
-  margin-top: 3rem;
-}
-#menu p.conf-date {
-  font-size: 2rem;
-}
-#menu footer {
-  width: 100%;
-}
-/* Menu burger */
-#burger {
-  height: 60px;
-  width: 60px;
-  background: var(--ui-bg-color-3);
-  position: absolute;
-  right: 0;
-  top: 0;
-  cursor: pointer;
-}
-#burger .bar {
-  background: white;
-  border-radius: 1px;
-  width: 30px;
-  height: 4px;
-  position: absolute;
-  left: 15px;
-  transition: transform 200ms, height 200ms, left 150ms;
-}
-#burger .bar-1 {
-  top: 18px;
-  transform-origin: 0 0;
-}
-#burger .bar-2 {
-  top: 28px;
-  transition: height 200ms;
-}
-#burger .bar-3 {
-  top: 38px;
-  transform-origin: 0 4px;
-}
-#burger.open .bar {
-  left: 21px;
-}
-#burger.open .bar-1 {
-  transform: rotate(45deg);
-}
-#burger.open .bar-2 {
-  height: 0;
-  transition: height 0ms;
-}
-#burger.open .bar-3 {
-  transform: rotate(-45deg);
-}
 /* Copyrights */
 #c p {
   opacity: 0.5;
 }
-/* A tiny section for the welcome page (move to own file later if it grows big) */
-.welcome#content {
-  margin-top: 0;
-}
-.welcome #confim-control {
+/* Text indications */
+p.indication {
+  font-size: 0.85rem;
+  width: 5em;
   text-align: center;
-  background: black !important;
-  /* Flemme de spécificité */
-  padding-top: 1.5rem;
-}
-.welcome #confim-control h1 {
-  font-weight: 200;
-  margin: 0;
-}
-.welcome #confim-control p {
-  margin-top: 0.5em;
-}
-.welcome #sub-apps {
-  margin-top: 40px;
-}
-.welcome #sub-apps p {
-  font-size: 1.5rem;
-  margin: 20px;
-  text-transform: uppercase;
-}
-.welcome #c {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-/* Sliders */
-.confim-slider {
-  margin: 1rem;
-}
-.confim-slider input {
-  margin-top: 0.5rem;
-  width: 300px;
-  max-width: calc(85vw - 2rem);
-}
-.confim-slider label {
-  margin-top: 0.5rem;
-}
-.confim-slider .confim-slider-values {
-  width: 100%;
-}
-.confim-slider .confim-slider-values p {
-  margin: 0;
-  width: 3rem;
-  text-align: center;
-}
-.confim-slider .confim-slider-values p#speed {
-  font-size: 1.2rem;
+  font-style: italic;
 }

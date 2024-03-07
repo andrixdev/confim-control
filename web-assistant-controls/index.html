@@ -23,11 +23,6 @@
 
 	<header>
 		<h2 id="title" class="manuscript">Conférence Immersive - Assistant</h2>
-		<nav id="burger">
-			<div class="bar bar-1"></div>
-			<div class="bar bar-2"></div>
-			<div class="bar bar-3"></div>
-		</nav>
 	</header>
 
 	<div id="content" class="assistant">
@@ -112,14 +107,22 @@
 		</div>
 
 		<div id="video">
-			<h2 class="center manuscript">Video clips</h2>
+			<h2 class="center manuscript">Intro & Video clips</h2>
 			<div class="flexrow flexcenter flexwrap">
+				<div class="visual flexcol flexstart">
+					<img class="item-preview" src="./img/credits.png" alt="Main credits" />
+					<div class="switch off" data-confim-id="50"><div class="switch-inner"></div></div>
+					<p class="param-text">Main<br/>credits</p>
+				</div>
 				<div class="visual flexcol flexcenter">
 					<img class="tile visuals-reset" data-confim-id="0" src="../sources/img/reset-icon-inverted.png" alt="Visuals Reset" />
 					<p>Reset</p>
 				</div>
 				<img class="tile video video-play" data-confim-id="303" id="video-play-2" data-visibility="visible" src="./img/brainweek-play.png" alt="Video Play 2"/>
 				<img class="tile video video-stop" data-confim-id="305" id="video-stop-2" data-visibility="hidden" src="./img/brainweek-stop.png" alt="Video Stop 2"/>
+				<div>
+					<p class="indication">prise de parole CNRS</p>
+				</div>
 				<img class="tile video video-play" data-confim-id="300" id="video-play-1" data-visibility="visible" src="./img/cnrs-play-43s.png" alt="Video Play 1"/>
 				<img class="tile video video-stop" data-confim-id="302" id="video-stop-1" data-visibility="hidden" src="./img/cnrs-stop.png" alt="Video Stop 1"/>
 			</div>
@@ -132,20 +135,11 @@
 		</div>
 
 	</div>
-
-	<div id="menu" class="hidden">
-		<h2 class="manuscript center">Le cerveau aux rayons X</h2>
-		<footer>
-			<p class="manuscript center">Fabien Chauveau & Joshua Gobé</p>
-			<p class="manuscript center conf-date">Conférence du 21 mars 2024</p>
-		</footer>
-	</div>
 	
 <!-- Scripts for libraries -->
 <!-- None! -->
 
 <!-- Our scripts -->
 <script type="text/javascript" src="./js/assistant-browser-main.js"></script>
-<script type="text/javascript" src="./js/app-menu.js"></script>
 
 </body>
