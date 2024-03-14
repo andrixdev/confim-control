@@ -8,7 +8,8 @@ h2 {
 /* Specific */
 #visuals,
 #audio,
-#video {
+#video,
+#special-brain-controls {
     padding: 1rem 0 .5rem;
 }
 
@@ -84,5 +85,31 @@ h2 {
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+.confim-slider#camera-speed label {
+    text-align: center;
+    span {
+        display: block;
+        opacity: 0.5;
+    }
+}
+.confim-slider#camera-speed .confim-slider-values {
+    @media (max-width: 450px) {
+        display: none;
+    }
+}
+#cam-reset {
+    img {
+        margin-bottom: 15px;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+        border-radius: 50%;
+
+        &:hover {
+            box-shadow: white 0 0 5px;
+        }
     }
 }

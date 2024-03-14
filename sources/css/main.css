@@ -161,6 +161,10 @@ img.item-preview {
   margin: 5px;
   border: solid 1px rgba(255, 255, 255, 0.4);
 }
+img.item-preview:hover {
+  box-shadow: var(--box-shadow-small);
+  cursor: pointer;
+}
 img.item-preview.section {
   width: 120px;
   height: 120px;
@@ -255,4 +259,27 @@ p.indication {
   width: 5em;
   text-align: center;
   font-style: italic;
+}
+/* Sliders */
+.confim-slider {
+  margin: 1rem;
+}
+.confim-slider input {
+  margin-top: 0.5rem;
+  width: 400px;
+  max-width: calc(85vw - 2rem);
+}
+.confim-slider label {
+  margin-top: 0.5rem;
+}
+.confim-slider .confim-slider-values {
+  width: 100%;
+}
+.confim-slider .confim-slider-values p {
+  margin: 0;
+  width: 3rem;
+  text-align: center;
+}
+.confim-slider .confim-slider-values p#speed {
+  font-size: 1.2rem;
 }

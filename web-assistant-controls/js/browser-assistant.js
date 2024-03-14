@@ -2,20 +2,6 @@
  * ANDRIX © 2023-2024
  */
 
-// OSC send on clicks
-Array.from(document.querySelectorAll('[data-confim-id]')).forEach((el) => {
-	let num = el.getAttribute('data-confim-id')
-
-	el.addEventListener('click', (e) => {
-		let xhr = new XMLHttpRequest()
-		xhr.open("POST", location.origin + "/eh") // location is the browser's protocol, hostname and port number
-		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-		xhr.onreadystatechange = function() {
-			if (this.readyState === XMLHttpRequest.DONE && this.status === 200) { }
-		}
-		xhr.send("num=" + num)
-	})
-})
 // OSC send on slider input change
 document.getElementById('master-volume').addEventListener('input', (ev) => {
 	let num = ev.target.value // [0, 100]
@@ -50,18 +36,6 @@ Array.from(tracks).forEach((el) => {
 	})
 })*/
 
-// Special params controls (display)
-Array.from(document.getElementsByClassName('switch')).forEach((el) => {
-	el.addEventListener('click', () => {
-		// Detect those with same confim-id
-		let all = document.querySelectorAll("[data-confim-id='" + el.getAttribute('data-confim-id') + "']")
-		all.forEach(el => {
-			el.classList.toggle('on')
-			el.classList.toggle('off')
-		})
-	})
-})
-
 // Media play and pause toggles
 let playNode1 = document.getElementById('audio-play-1')
 let stopNode1 = document.getElementById('audio-stop-1')
@@ -95,3 +69,70 @@ mediaNodes.forEach((couple) => {
 		play.setAttribute('data-visibility', 'visible')
 	})
 })
+
+// OSC send on slider input changes - Brain opacity
+let brainOpaNode = document.getElementById('opa')
+document.getElementById('brain-opacity-range').addEventListener('input', (ev) => {
+	let num = ev.target.value // [0, 100]
+
+	brainOpaNode.innerHTML = num
+
+	let xhr = new XMLHttpRequest()
+	xhr.open("POST", location.origin + "/eh") // location is the browser's protocol, hostname and port number
+	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+	let oscRangeOffset = 1000
+	num = oscRangeOffset - (-num)
+	xhr.send("num=" + num)
+})
+
+// OSC send on slider input changes - Cam speed
+let camSpeedNode = document.getElementById('speed')
+let camSpeedRange = document.getElementById('cam-speed-range')
+camSpeedRange.addEventListener('input', (ev) => {
+	let inp = ev.target.value // [|0, 6|]
+	let num // [-100, 100]
+
+	if (inp == 0) num = -100
+	else if (inp == 1) num = -30
+	else if (inp == 2) num = -10
+	else if (inp == 3) num = 0
+	else if (inp == 4) num = 10
+	else if (inp == 5) num = 30
+	else if (inp == 6) num = 100 
+	else console.error("Camera speed input value " + inp + " not recognized.")
+
+	camSpeedNode.innerHTML = num + " Joshua.s<sup>-1</sup>"
+
+	let xhr = new XMLHttpRequest()
+	xhr.open("POST", location.origin + "/eh") // location is the browser's protocol, hostname and port number
+	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+	let oscRangeOffset = 800
+	num = oscRangeOffset - (-num)
+	xhr.send("num=" + num)
+})
+
+// Cam reset (UI)
+document.getElementById('cam-reset').addEventListener('click', () => {
+	camSpeedRange.value = 3
+	camSpeedNode.innerHTML = "0 Joshua.s<sup>-1</sup>"
+
+})
+
+// OSC send on slider input changes - Brain rotation mode
+//let brainRotNode = document.getElementById('rot')
+document.getElementById('brain-rot-range').addEventListener('input', (ev) => {
+	let num = ev.target.value // [0, 3]
+
+	//brainRotNode.innerHTML = num
+
+	let xhr = new XMLHttpRequest()
+	xhr.open("POST", location.origin + "/eh") // location is the browser's protocol, hostname and port number
+	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+	let oscRangeOffset = 1200
+	num = oscRangeOffset - (-num)
+	xhr.send("num=" + num)
+})
+

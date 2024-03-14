@@ -163,6 +163,11 @@ img.item-preview {
     margin: 5px;
     border: solid 1px rgba(255, 255, 255, .4);
 
+    &:hover {
+        box-shadow: var(--box-shadow-small);
+        cursor: pointer;
+    }
+
     &.section {
         width: 120px;
         height: 120px;
@@ -270,4 +275,39 @@ p.indication {
     width: 5em;
     text-align: center;
     font-style: italic;
+}
+
+/* Sliders */
+.confim-slider {
+    margin: 1rem;
+    
+    input {
+        margin-top: .5rem;
+        width: 400px;
+        max-width: calc(85vw - 2rem);
+    }
+    label {
+        margin-top: .5rem;
+    }
+    .confim-slider-values {
+        width: 100%;
+
+        p {
+            margin: 0;
+            width: 3rem;
+            text-align: center;
+        }
+        p.min {
+            //padding-left: 5px;
+        }
+        p.mid {
+            //padding: 0 10px;
+        }
+        p.max {
+            //padding-right: 15px;
+        }
+        p#speed {
+            font-size: 1.2rem;
+        }
+    }
 }

@@ -136,73 +136,10 @@
 
 			<!-- Chapter 8 -->
 			<div id="brain-step" class="step flexcol">
-				<div class="flexrow flexstart flexwrap">
-					<img class="item-preview section flexselfstart" data-confim-id="8" src="./img/brain.png" alt="Brain"/>
-				
-					<img class="item-preview" data-confim-id="54" src="./img/brain-envelope.png" alt="Envelope" />
-					<img class="item-preview" data-confim-id="55" src="./img/brain-vessels.png" alt="Vessels" />
-					<img class="item-preview" data-confim-id="56" src="./img/brain-corpus.png" alt="Corpus" />
-					<img class="item-preview" data-confim-id="57" src="./img/brain-antcom.png" alt="Antcom" />
-					<img class="item-preview" data-confim-id="58" src="./img/brain-orientation.png" alt="Orientation" />
-					<img class="item-preview" data-confim-id="59" src="./img/brain-myel.png" alt="Myel" />
-					<img class="item-preview" data-confim-id="60" src="./img/brain-demyel.png" alt="Demyel" />
-					<img class="item-preview" data-confim-id="140" src="./img/brain-flame.png" alt="Myel flame mode" />
-	
-					<!-- Vessels transparent mode toggle -->
-					<div class="visual flexcol flexstart">
-						<img class="item-preview" data-switch-off-img id="switch-img-vessels" src="./img/brain-vessels-bright.png" alt="Vessels Bright" />
-						<img class="item-preview" data-switch-on-img id="switch-img-vessels-tr" src="./img/brain-vessels-transparent.png" alt="Vessels transparent" />
-						<div class="switch off" data-confim-id="141" data-switch-off-img-id="switch-img-vessels" data-switch-on-img-id="switch-img-vessels-tr"><div class="switch-inner"></div></div>
-					</div>
+				<div class="flexrow flexstart flexwrap fullwidth">
+					<img class="item-preview section flexselfstart" data-confim-id="8" src="../sources/img/brain.png" alt="Brain"/>
+					<p><i>  Controlled by Assistant</i></p>
 				</div>
-
-				<!-- Slider inputs -->
-				<div id="brain-content-container" class="flexcol flexwrap">
-
-					<div class="flexcol flexcenter">
-						<div id="camera-speed" class="confim-slider flexcol flexcenter flexwrap">
-							<label for="cam-speed">Cam speed<span id="speed">0 Joshua.s<sup>-1</sup></span></label>
-							<input type="range" id="cam-speed-range" name="cam-speed" min="0" max="6" value="3" step="1"/>
-							<div class="confim-slider-values flexrow flexbetween">
-								<p class="min">-100</p>
-								<p>-30</p>
-								<p>-10</p>
-								<p class="mid">0</p>
-								<p>10</p>
-								<p>30</p>
-								<p class="max">100</p>
-							</div>
-						</div>
-
-						<div id="cam-reset">
-							<img data-confim-id="901" src="./img/reset-cam-icon.jpg" alt="Cam reset" />
-						</div>
-					</div>
-					
-					<div id="brain-opacity" class="confim-slider flexcol flexcenter flexwrap">
-						<label for="brain-opa">Envelope opacity</label>
-						<input type="range" id="brain-opacity-range" name="brain-opa" min="0" max="100" value="50" />
-						<div class="confim-slider-values flexrow flexbetween">
-							<p class="min">0</p>
-							<p id="opa" class="mid">50</p>
-							<p class="max">100</p>
-						</div>
-					</div>
-
-					<div id="brain-rotation" class="confim-slider flexcol flexcenter flexwrap">
-						<label for="brain-rot">Rotation mode</label>
-						<input type="range" id="brain-rot-range" name="brain-rot" min="0" max="3" value="0" step="1"/>
-						<div class="confim-slider-values flexrow flexbetween">
-							<p class="min">FREE Y</p>
-							<p>Y 270°</p>
-							<p>FREE X</p>
-							<!--<p id="rot" class="mid">0</p>-->
-							<p class="max">X 90°</p>
-						</div>
-					</div>
-
-				</div>
-
 			</div>
 
 			<!-- Chapter 1 (again) -->
@@ -225,6 +162,7 @@
 <!-- None! -->
 
 <!-- Our scripts -->
-<script type="text/javascript" src="./js/speaker-browser-main.js"></script>
+<script type="text/javascript" src="../sources/js/browser-main.js"></script>
+<script type="text/javascript" src="./js/browser-speaker.js"></script>
 
 </body>

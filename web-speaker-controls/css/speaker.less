@@ -6,64 +6,9 @@ h2#title.speaker {
     font-size: 1.5rem;
     padding-top: 0.45em;
 }
-#items-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-auto-rows: minmax(100px, auto);
-    gap: 20px;
-
-    img.confim-click {
-        width: 200px;
-        max-width: 100%;
-        justify-self: center;
-        outline: solid 2px rgba(255, 255, 255, .7);
-        cursor: pointer;
-        border-radius: 2px;
-
-        &.active {
-            outline: solid 3px white;
-            box-shadow: var(--box-shadow);
-        }
-    }
-}
 #brain-films img.cuts {
     height: 65px;
     width: 105px;
-}
-/* Sliders */
-.confim-slider {
-    margin: 1rem;
-    
-    input {
-        margin-top: .5rem;
-        width: 400px;
-        max-width: calc(85vw - 2rem);
-    }
-    label {
-        margin-top: .5rem;
-    }
-    .confim-slider-values {
-        width: 100%;
-
-        p {
-            margin: 0;
-            width: 3rem;
-            text-align: center;
-        }
-        p.min {
-            //padding-left: 5px;
-        }
-        p.mid {
-            //padding: 0 10px;
-        }
-        p.max {
-            //padding-right: 15px;
-        }
-        p#speed {
-            font-size: 1.2rem;
-        }
-    }
-
 }
 
 #steps {
@@ -122,34 +67,5 @@ h2#title.speaker {
     }
     #toggles {
         margin-top: 15px;
-    }
-}
-.speaker img.item-preview:hover {
-    box-shadow: var(--box-shadow-small);
-    cursor: pointer;
-}
-.confim-slider#camera-speed label {
-    text-align: center;
-    span {
-        display: block;
-        opacity: 0.5;
-    }
-}
-.confim-slider#camera-speed .confim-slider-values {
-    @media (max-width: 450px) {
-        display: none;
-    }
-}
-#cam-reset {
-    img {
-        margin-bottom: 15px;
-        width: 70px;
-        height: 70px;
-        cursor: pointer;
-        border-radius: 50%;
-
-        &:hover {
-            box-shadow: white 0 0 5px;
-        }
     }
 }
