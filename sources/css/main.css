@@ -108,7 +108,7 @@ h4 {
   user-select: none;
   border-radius: 30px;
   cursor: pointer;
-  outline: solid 1.5px rgba(255, 255, 255, 0.7);
+  border: solid 1.5px rgba(255, 255, 255, 0.7);
   position: relative;
   transition: background-color 200ms;
 }

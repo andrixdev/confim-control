@@ -87,13 +87,14 @@ h2 {
     display: none;
   }
 }
-#cam-reset img {
+#cam-resets img {
+  margin: auto 10px;
   margin-bottom: 15px;
   width: 70px;
   height: 70px;
   cursor: pointer;
   border-radius: 50%;
 }
-#cam-reset img:hover {
+#cam-resets img:hover {
   box-shadow: white 0 0 5px;
 }

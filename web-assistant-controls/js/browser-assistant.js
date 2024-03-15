@@ -90,9 +90,11 @@ document.getElementById('brain-opacity-range').addEventListener('input', (ev) =>
 let camSpeedNode = document.getElementById('speed')
 let camSpeedRange = document.getElementById('cam-speed-range')
 camSpeedRange.addEventListener('input', (ev) => {
-	let inp = ev.target.value // [|0, 6|]
+	//let inp = ev.target.value // [|0, 6|]
+	let inp = ev.target.value // [-100, 100]
 	let num // [-100, 100]
 
+	/*
 	if (inp == 0) num = -100
 	else if (inp == 1) num = -30
 	else if (inp == 2) num = -10
@@ -101,6 +103,10 @@ camSpeedRange.addEventListener('input', (ev) => {
 	else if (inp == 5) num = 30
 	else if (inp == 6) num = 100 
 	else console.error("Camera speed input value " + inp + " not recognized.")
+	*/
+
+	// Widen precision around 0
+	num = Math.round(100 * Math.sign(inp) * Math.pow(Math.abs(inp / 100), 2))
 
 	camSpeedNode.innerHTML = num + " Joshua.s<sup>-1</sup>"
 
@@ -114,10 +120,11 @@ camSpeedRange.addEventListener('input', (ev) => {
 })
 
 // Cam reset (UI)
-document.getElementById('cam-reset').addEventListener('click', () => {
-	camSpeedRange.value = 3
-	camSpeedNode.innerHTML = "0 Joshua.s<sup>-1</sup>"
-
+Array.from(document.getElementsByClassName('cam-reset')).forEach(el => {
+	el.addEventListener('click', () => {
+		camSpeedRange.value = 0
+		camSpeedNode.innerHTML = "0 Joshua.s<sup>-1</sup>"
+	})
 })
 
 // OSC send on slider input changes - Brain rotation mode
