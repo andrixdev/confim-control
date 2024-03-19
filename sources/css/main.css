@@ -266,7 +266,7 @@ p.indication {
 }
 .confim-slider input {
   margin-top: 0.5rem;
-  width: 400px;
+  width: 500px;
   max-width: calc(85vw - 2rem);
 }
 .confim-slider label {
