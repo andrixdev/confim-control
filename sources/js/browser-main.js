@@ -22,9 +22,20 @@ Array.from(document.getElementsByClassName('switch')).forEach((el) => {
 	el.addEventListener('click', () => {
 		// Detect those with same confim-id
 		let all = document.querySelectorAll("[data-confim-id='" + el.getAttribute('data-confim-id') + "']")
-		all.forEach(el => {
-			el.classList.toggle('on')
-			el.classList.toggle('off')
+		all.forEach(el2 => {
+			// Toggle
+			el2.classList.toggle('on')
+			el2.classList.toggle('off')
+
+			// Display/hide corresponding image
+			if (el2.hasAttribute("data-switch-off-img-id") && el2.hasAttribute("data-switch-on-img-id")) {
+				let imgOffId = el2.getAttribute("data-switch-off-img-id")
+				let imgOnId = el2.getAttribute("data-switch-on-img-id")
+				let isOn = el2.classList.contains("on")
+				document.getElementById(imgOnId).style.display = isOn ? "inherit" : "none"
+				document.getElementById(imgOffId).style.display = isOn ? "none" : "inherit"
+			}
+
 		})
 	})
 })
