@@ -79,11 +79,22 @@
 					<img class="tile visuals-reset" data-confim-id="0" src="../sources/img/reset-icon-inverted.png" alt="Visuals Reset" />
 					<p>Reset</p>
 				</div>
+				<div>
+					<p class="indication red">LIGHTS OFF<br/>MUSIC OFF</p>
+				</div>
 				<img class="tile video video-play" data-confim-id="303" id="video-play-2" data-visibility="visible" src="./img/brainweek-play.png" alt="Video Play 2"/>
 				<img class="tile video video-stop" data-confim-id="305" id="video-stop-2" data-visibility="hidden" src="./img/brainweek-stop.png" alt="Video Stop 2"/>
+
+				<div>
+					<p class="indication red">LIGHTS ON</p>
+				</div>
 				<div>
 					<p class="indication">prise de parole CNRS</p>
 				</div>
+				<div>
+					<p class="indication red">LIGHTS OFF</p>
+				</div>
+
 				<img class="tile video video-play" data-confim-id="300" id="video-play-1" data-visibility="visible" src="./img/cnrs-play-43s.png" alt="Video Play 1"/>
 				<img class="tile video video-stop" data-confim-id="302" id="video-stop-1" data-visibility="hidden" src="./img/cnrs-stop.png" alt="Video Stop 1"/>
 			</div>
@@ -153,17 +164,29 @@
 				</div>
 
 				<!-- Slider inputs -->
+				<div id="brain-rotation" class="confim-slider flexcol flexcenter flexwrap">
+					<label for="brain-rot">Rotation mode</label>
+					<input type="range" id="brain-rot-range" name="brain-rot" min="0" max="3" value="0" step="1"/>
+					<div class="confim-slider-values flexrow flexbetween">
+						<p class="min">FREE Y</p>
+						<p>Y 270°</p>
+						<!--<p id="rot" class="mid">0</p>-->
+						<p>X -90°</p>
+						<p class="max">FREE X</p>
+					</div>
+				</div>
+				
 				<div class="flexcol flexcenter">
 					<div id="camera-speed" class="confim-slider flexcol flexcenter flexwrap">
 						<label for="cam-speed">Cam speed<span id="speed">0 Joshua.s<sup>-1</sup></span></label>
-						<input type="range" id="cam-speed-range" name="cam-speed" min="-100" max="100" value="0" step="1"/>
+						<input type="range" id="cam-speed-range" name="cam-speed" min="-100" max="100" value="0" step="0.1"/>
 						<div class="confim-slider-values flexrow flexbetween">
 							<p class="min">-100</p>
-							<p>-40</p>
-							<p>-10</p>
+							<p>-30</p>
+							<p>-6</p>
 							<p class="mid" id="speed">0</p>
-							<p>10</p>
-							<p>40</p>
+							<p>6</p>
+							<p>30</p>
 							<p class="max">100</p>
 						</div>
 					</div>
@@ -185,17 +208,6 @@
 					</div>
 				</div>
 
-				<div id="brain-rotation" class="confim-slider flexcol flexcenter flexwrap">
-					<label for="brain-rot">Rotation mode</label>
-					<input type="range" id="brain-rot-range" name="brain-rot" min="0" max="3" value="0" step="1"/>
-					<div class="confim-slider-values flexrow flexbetween">
-						<p class="min">FREE Y</p>
-						<p>Y 270°</p>
-						<!--<p id="rot" class="mid">0</p>-->
-						<p>X -90°</p>
-						<p class="max">FREE X</p>
-					</div>
-				</div>
 			</div>
 		</div>
 

@@ -106,7 +106,7 @@ camSpeedRange.addEventListener('input', (ev) => {
 	*/
 
 	// Widen precision around 0
-	num = Math.round(100 * Math.sign(inp) * Math.pow(Math.abs(inp / 100), 2))
+	num = Math.round(100 * Math.sign(inp) * Math.pow(Math.abs(inp / 100), 2.5) * 10) / 10
 
 	camSpeedNode.innerHTML = num + " Joshua.s<sup>-1</sup>"
 

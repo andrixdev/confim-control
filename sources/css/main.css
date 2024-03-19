@@ -260,6 +260,10 @@ p.indication {
   text-align: center;
   font-style: italic;
 }
+p.indication.red {
+  color: red;
+  font-size: bold;
+}
 /* Sliders */
 .confim-slider {
   margin: 1rem;
