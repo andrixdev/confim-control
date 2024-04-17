@@ -75,26 +75,3 @@ h2 {
     transform: rotate(360deg);
   }
 }
-.confim-slider#camera-speed label {
-  text-align: center;
-}
-.confim-slider#camera-speed label span {
-  display: block;
-  opacity: 0.5;
-}
-@media (max-width: 450px) {
-  .confim-slider#camera-speed .confim-slider-values {
-    display: none;
-  }
-}
-#cam-resets img {
-  margin: auto 10px;
-  margin-bottom: 15px;
-  width: 70px;
-  height: 70px;
-  cursor: pointer;
-  border-radius: 50%;
-}
-#cam-resets img:hover {
-  box-shadow: white 0 0 5px;
-}

@@ -4,10 +4,6 @@ h2#title.speaker {
   font-size: 1.5rem;
   padding-top: 0.45em;
 }
-#brain-films img.cuts {
-  height: 65px;
-  width: 105px;
-}
 #steps .step {
   display: flex;
   padding: 10px;
@@ -59,9 +55,6 @@ h2#title.speaker {
   color: white;
   background: linear-gradient(hsl(195, 83%, 40%), hsl(220, 73%, 30%));
   border-radius: 20px;
-}
-#steps .step#brain-step {
-  padding-bottom: 20px;
 }
 #steps #toggles {
   margin-top: 15px;

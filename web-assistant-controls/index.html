@@ -37,13 +37,13 @@
 				
 				<div class="flexcol flexcenter" style="margin: 10px; padding-top: 6px;/* Temporary */">
 					<img class="tile" data-confim-id="1" src="../sources/img/digital-embrace.jpg" alt="Digital Embrace" />
-					<p class="center">Digital<br/>Embrace</p>
+					<p class="center">Intro<br/>Object</p>
 				</div>
 
 				<div class="visual flexcol flexstart">
 					<img class="item-preview" src="../sources/img/digital-embrace.jpg" alt="EEG sensitive" />
-					<div class="switch off" data-confim-id="100"><div class="switch-inner"></div></div>
-					<p class="param-text">EEG<br/>sensitive</p>
+					<div class="switch off" data-confim-id="110"><div class="switch-inner"></div></div>
+					<p class="param-text">Intro<br/>toggle</p>
 				</div>
 
 				<div class="visual flexcol flexstart">
@@ -80,14 +80,9 @@
 					<p>Reset</p>
 				</div>
 				<div>
-					<p class="indication red">LIGHTS OFF<br/>MUSIC OFF</p>
+					<p class="indication red">MUSIC OFF</p>
 				</div>
-				<img class="tile video video-play" data-confim-id="303" id="video-play-2" data-visibility="visible" src="./img/brainweek-play.png" alt="Video Play 2"/>
-				<img class="tile video video-stop" data-confim-id="305" id="video-stop-2" data-visibility="hidden" src="./img/brainweek-stop.png" alt="Video Stop 2"/>
 
-				<div>
-					<p class="indication red">LIGHTS ON</p>
-				</div>
 				<div>
 					<p class="indication">prise de parole CNRS</p>
 				</div>
@@ -115,7 +110,7 @@
 					<img class="tile audio audio-play" data-confim-id="203" id="audio-play-2" data-visibility="visible" src="./img/music-play.jpg" alt="Audio Play 2"/>
 					<img class="tile audio audio-stop" data-confim-id="204" id="audio-stop-2" data-visibility="hidden" src="./img/music.jpg" alt="Audio Stop 2"/>
 					<div class="stop-icon"></div>
-					<p>Quizzy</p>
+					<p>Music 2</p>
 				</div>
 
 				<div class="music-track flexcol flexcenter flexwrap">
@@ -129,85 +124,13 @@
 					<img class="tile audio audio-play" data-confim-id="207" id="audio-play-4" data-visibility="visible" src="./img/music-play.jpg" alt="Audio Play 4"/>
 					<img class="tile audio audio-stop" data-confim-id="208" id="audio-stop-4" data-visibility="hidden" src="./img/music.jpg" alt="Audio Stop 4"/>
 					<div class="stop-icon"></div>
-					<p>In Cerebro</p>
+					<p>Music 4</p>
 				</div>
 
 			</div>
 			<div id="master" class="flexcol flexcenter flexwrap">
 				<input type="range" id="master-volume" name="volume" min="0" max="100" value="100" />
 				<label for="volume">Master volume</label>
-			</div>
-		</div>
-
-		<div id="special-brain-controls">
-			<h2 class="center manuscript">Special brain controls</h2>
-			
-			<div id="brain-content-container" class="flexcol">
-				<div class="flexrow flexstart flexwrap">
-					<img class="item-preview section flexselfstart" data-confim-id="8" src="../sources/img/brain.png" alt="Brain"/>
-				
-					<img class="item-preview" data-confim-id="54" src="./img/brain-envelope.png" alt="Envelope" />
-					<img class="item-preview" data-confim-id="55" src="./img/brain-vessels.png" alt="Vessels" />
-					<img class="item-preview" data-confim-id="56" src="./img/brain-corpus.png" alt="Corpus" />
-					<img class="item-preview" data-confim-id="57" src="./img/brain-antcom.png" alt="Antcom" />
-					<img class="item-preview" data-confim-id="58" src="./img/brain-orientation.png" alt="Orientation" />
-					<img class="item-preview" data-confim-id="59" src="./img/brain-myel.png" alt="Myel" />
-					<img class="item-preview" data-confim-id="60" src="./img/brain-demyel.png" alt="Demyel" />
-					<img class="item-preview" data-confim-id="140" src="./img/brain-flame.png" alt="Myel flame mode" />
-	
-					<!-- Vessels transparent mode toggle -->
-					<div class="visual flexcol flexstart">
-						<img class="item-preview" data-switch-off-img id="switch-img-vessels" src="./img/brain-vessels-bright.png" alt="Vessels Bright" />
-						<img class="item-preview" data-switch-on-img id="switch-img-vessels-tr" src="./img/brain-vessels-transparent.png" alt="Vessels transparent" />
-						<div class="switch off" data-confim-id="141" data-switch-off-img-id="switch-img-vessels" data-switch-on-img-id="switch-img-vessels-tr"><div class="switch-inner"></div></div>
-					</div>
-				</div>
-
-				<!-- Slider inputs -->
-				<div id="brain-rotation" class="confim-slider flexcol flexcenter flexwrap">
-					<label for="brain-rot">Rotation mode</label>
-					<input type="range" id="brain-rot-range" name="brain-rot" min="0" max="3" value="0" step="1"/>
-					<div class="confim-slider-values flexrow flexbetween">
-						<p class="min">FREE Y</p>
-						<p>Y 270°</p>
-						<!--<p id="rot" class="mid">0</p>-->
-						<p>X -90°</p>
-						<p class="max">FREE X</p>
-					</div>
-				</div>
-				
-				<div class="flexcol flexcenter">
-					<div id="camera-speed" class="confim-slider flexcol flexcenter flexwrap">
-						<label for="cam-speed">Cam speed<span id="speed">0 Joshua.s<sup>-1</sup></span></label>
-						<input type="range" id="cam-speed-range" name="cam-speed" min="-100" max="100" value="0" step="0.1"/>
-						<div class="confim-slider-values flexrow flexbetween">
-							<p class="min">-100</p>
-							<p>-30</p>
-							<p>-6</p>
-							<p class="mid" id="speed">0</p>
-							<p>6</p>
-							<p>30</p>
-							<p class="max">100</p>
-						</div>
-					</div>
-
-					<div id="cam-resets" class="flexrow flexcenter flexwrap">
-						<img class="cam-reset" data-confim-id="901" src="./img/reset-cam-icon-left.jpg" alt="Cam reset start" />
-						<img class="cam-reset" data-confim-id="902" src="./img/reset-cam-icon.jpg" alt="Cam reset halfway" />
-						<img class="cam-reset" data-confim-id="903" src="./img/reset-cam-icon-right.jpg" alt="Cam reset end" />
-					</div>
-				</div>
-				
-				<div id="brain-opacity" class="confim-slider flexcol flexcenter flexwrap">
-					<label for="brain-opa">Envelope opacity</label>
-					<input type="range" id="brain-opacity-range" name="brain-opa" min="0" max="100" value="50" />
-					<div class="confim-slider-values flexrow flexbetween">
-						<p class="min">0</p>
-						<p id="opa" class="mid">50</p>
-						<p class="max">100</p>
-					</div>
-				</div>
-
 			</div>
 		</div>
 
