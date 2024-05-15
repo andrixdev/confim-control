@@ -23,6 +23,7 @@
 
 	<header>
 		<h2 id="title" class="manuscript">Conférence Immersive - Assistant</h2>
+		<div id="loadbar"><div id="loadbar-inner"></div></div>
 	</header>
 
 	<div id="content" class="assistant">
@@ -35,15 +36,9 @@
 					<p>Reset</p>
 				</div>
 				
-				<div class="flexcol flexcenter" style="margin: 10px; padding-top: 6px;/* Temporary */">
-					<img class="tile" data-confim-id="1" src="../sources/img/digital-embrace.jpg" alt="Digital Embrace" />
+				<div class="flexcol flexcenter" style="margin: 10px; padding-top: 12px;/* Temporary */">
+					<img class="tile" data-confim-id="1" src="../sources/img/enceladus-default.jpg" alt="Enceladus" />
 					<p class="center">Enceladus</p>
-				</div>
-
-				<div class="visual flexcol flexstart">
-					<img class="item-preview" src="../sources/img/digital-embrace.jpg" alt="Flourish" />
-					<div class="switch off" data-confim-id="110"><div class="switch-inner"></div></div>
-					<p class="param-text">Enceladus<br/>blossom</p>
 				</div>
 
 				<div class="visual flexcol flexstart">
@@ -141,6 +136,8 @@
 		</div>
 
 	</div>
+
+	<div id="overlay"></div> <!-- Prevents double-taps -->
 	
 <!-- Scripts for libraries -->
 <!-- None! -->

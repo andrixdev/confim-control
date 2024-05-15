@@ -252,7 +252,24 @@ header {
         padding-left: .8em;
         font-size: 2rem;
     }
+    #loadbar {
+        width: 100%;
+        height: 5px;
+        position: absolute;
+        bottom: 0;
+    
+        #loadbar-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: var(--main-blue);
+            transition: width 1ms ease-out; // Duratoin is overriden at will in JS
+        }
+    }
 }
+
 #content {
     margin-top: 60px;
 
@@ -268,6 +285,16 @@ header {
             background: var(--ui-bg-color-3);
         }
     }
+}
+#overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 5;
+    background: rgba(0, 0, 0, .5);
+    top: 0;
+    left: 0;
+    display: none;
 }
 
 /* Copyrights */
