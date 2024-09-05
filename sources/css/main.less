@@ -277,7 +277,7 @@ header {
         font-size: 2.5rem;
     }
 
-    & > div {
+    & > div:not(#c) {
         &:nth-of-type(2n) {
             background: var(--ui-bg-color-2);
         }
@@ -299,6 +299,8 @@ header {
 
 /* Copyrights */
 #c {
+    background-color: var(--ui-bg-color-1);
+
     p {
         opacity: 0.5;
         font-size: .5rem;

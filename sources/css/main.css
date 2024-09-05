@@ -265,10 +265,10 @@ header #loadbar #loadbar-inner {
 #content h2 {
   font-size: 2.5rem;
 }
-#content > div:nth-of-type(2n) {
+#content > div:not(#c):nth-of-type(2n) {
   background: var(--ui-bg-color-2);
 }
-#content > div:nth-of-type(2n+1) {
+#content > div:not(#c):nth-of-type(2n+1) {
   background: var(--ui-bg-color-3);
 }
 #overlay {
@@ -282,6 +282,9 @@ header #loadbar #loadbar-inner {
   display: none;
 }
 /* Copyrights */
+#c {
+  background-color: var(--ui-bg-color-1);
+}
 #c p {
   opacity: 0.5;
   font-size: 0.5rem;
