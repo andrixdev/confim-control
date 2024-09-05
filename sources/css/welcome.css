@@ -26,6 +26,7 @@
 }
 .welcome #conf-info {
   background: var(--ui-bg-color-1);
+  padding: 0.5em 1em 2em;
 }
 .welcome #conf-info h2,
 .welcome #conf-info p {
