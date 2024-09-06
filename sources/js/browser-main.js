@@ -1,5 +1,5 @@
 /**
- * ANDRIX © 2023-2024
+ * ANDRIX © 2024
  */
 
 // Special params controls (display)
