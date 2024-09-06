@@ -36,8 +36,3 @@
 .welcome #conf-info p {
   font-size: 1.4rem;
 }
-.welcome #c {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
