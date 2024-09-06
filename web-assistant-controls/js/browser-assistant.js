@@ -15,6 +15,10 @@ Array.from(document.querySelectorAll('[data-confim-id]')).forEach((el) => {
 			if (this.readyState === XMLHttpRequest.DONE && this.status === 200) { }
 		}
 		xhr.send("num=" + num)
+
+		// Front-end loading time
+		if (num >= 1 && num <= 49) animateLoadbar(2000) // 2 seconds (see Unity Chameleon.cs duration)
+		else animateLoadbar(250) // Enough to prevent double-click
 	})
 })
 
