@@ -1,5 +1,9 @@
 /* ANDRIX © 2024 */
 /* Specific */
+header h2#title.speaker {
+  font-size: 1.5rem;
+  padding-top: 0.45em;
+}
 #content.speaker > div:not(#c) {
   padding: 5px;
 }

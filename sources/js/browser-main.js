@@ -15,6 +15,10 @@ Array.from(document.querySelectorAll('[data-confim-id]')).forEach((el) => {
 			if (this.readyState === XMLHttpRequest.DONE && this.status === 200) { }
 		}
 		xhr.send("num=" + num)
+
+		// Front-end loading time
+		if (num >= 1 && num <= 49) animateLoadbar(2000) // 2 seconds (see Unity Chameleon.cs duration)
+		else animateLoadbar(250) // Enough to prevent double-click
 	})
 })
 
@@ -24,3 +28,18 @@ Array.from(document.getElementsByClassName('switch')).forEach((el) => {
 		el.classList = "switch " + (el.classList.contains("on") ? "off" : "on")
 	})
 })
+
+// Loadbar animation
+let load = document.getElementById('loadbar-inner')
+let overlay = document.getElementById('overlay')
+let animateLoadbar = (duration) => {
+	overlay.style.display = 'inherit';
+	load.style.transitionDuration = duration + 'ms'
+	load.style.width = '100%'
+
+	setTimeout(() => {
+		load.style.transitionDuration = '1ms'
+		load.style.width = '0%'
+		overlay.style.display = 'none'
+	}, duration)
+}

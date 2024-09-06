@@ -226,6 +226,8 @@ header {
     top: 0;
     background: var(--ui-bg-color-1);
     border-bottom: solid 1px rgba(255, 255, 255, .2);
+    padding-bottom: 0;
+    overflow: hidden;
 
     h2 {
         font-weight: 100;
@@ -235,6 +237,23 @@ header {
         padding-top: .3em;
         padding-left: .8em;
         font-size: 2rem;
+    }
+
+    #loadbar {
+        width: 100%;
+        height: 5px;
+        position: absolute;
+        bottom: 0;
+    
+        #loadbar-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: var(--main-blue);
+            transition: width 1ms ease-out; // Duratoin is overriden at will in JS
+        }
     }
 }
 #content {
@@ -269,4 +288,15 @@ header {
     p:last-of-type {
         margin-bottom: 1em;
     }
+}
+
+#overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 5;
+    background: rgba(0, 0, 0, .5);
+    top: 0;
+    left: 0;
+    display: none;
 }
