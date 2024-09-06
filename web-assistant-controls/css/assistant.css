@@ -53,6 +53,10 @@ h2 {
   border-radius: 10px;
   padding: 5px 0;
 }
+#audio #master p,
+#audio #master .square-btn {
+  z-index: 1;
+}
 #audio #master p {
   margin: 0 0.5rem;
   font-size: 0.85rem;

@@ -23,16 +23,45 @@ Array.from(document.querySelectorAll('[data-confim-id]')).forEach((el) => {
 })
 
 // OSC send on slider input change
-document.getElementById('master-volume').addEventListener('input', (ev) => {
-	let num = ev.target.value // [0, 100]
+let volume = 100
+let minusminus = document.getElementById('minusminus')
+let minus = document.getElementById('minus')
+let plus = document.getElementById('plus')
+let plusplus = document.getElementById('plusplus')
+let vol = document.getElementById('vol')
+let container = document.getElementById('master-container')
+let updateVolume = () => {
+	// Update front-end text
+	vol.innerHTML = volume
 
+	// Update front-end color gradient
+	let hue = 200 + 80 * 10 * Math.sqrt(volume) / 100
+	container.style.background = 'linear-gradient(90deg, hsl(200, 70%, 40%) 0%, hsl(' + hue + ', 70%, 40%) ' + volume + '%, black ' + volume + '%)'
+
+	// Send XHR
 	let xhr = new XMLHttpRequest()
 	xhr.open("POST", location.origin + "/eh") // location is the browser's protocol, hostname and port number
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
 	let oscRangeStart = 500
-	num = oscRangeStart - (-num)
+	let num = oscRangeStart - (-volume)
 	xhr.send("num=" + num)
+}
+minusminus.addEventListener('click', () => {
+	volume = Math.max(0, volume - 5)
+	updateVolume()
+})
+minus.addEventListener('click', () => {
+	volume = Math.max(0, volume - 1)
+	updateVolume()
+})
+plus.addEventListener('click', () => {
+	volume = Math.min(100, volume + 1)
+	updateVolume()
+})
+plusplus.addEventListener('click', () => {
+	volume = Math.min(100, volume + 5)
+	updateVolume()
 })
 
 // Media play and pause toggles
