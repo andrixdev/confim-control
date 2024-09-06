@@ -191,6 +191,30 @@ img.item-preview.mini-pioute {
 .video.video-stop {
   border-color: var(--video-color-1);
 }
+.square-btn {
+  margin: 0.25rem;
+  width: 50px;
+  min-width: 50px;
+  height: 35px;
+  user-select: none;
+  border-radius: 20px;
+  cursor: pointer;
+  border: solid 1.5px rgba(255, 255, 255, 0.7);
+  background-color: black;
+  color: white;
+  transition: background-color 70ms ease-out;
+  font-size: 30px;
+  text-align: center;
+  padding: 8.5px 0 9.5px 3px;
+  letter-spacing: 3px;
+}
+.square-btn:hover {
+  background-color: var(--main-blue);
+}
+.square-btn.minus {
+  padding-top: 6px;
+  padding-bottom: 12px;
+}
 /* Highlight when playing */
 .audio-pause,
 .video-stop {
