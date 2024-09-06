@@ -1,5 +1,5 @@
 /**
- * ANDRIX © 2023
+ * ANDRIX © 2024
  */
 
 // Conference tiles controls (display)
@@ -9,7 +9,8 @@ let activate = (id) => {
 		el.classList.toggle("active", isActive)
 	})
 }
-// Conference tiles controls (send OSC)
+
+// OSC send on clicks (SPEAKER version)
 Array.from(document.querySelectorAll('[data-confim-id]')).forEach((el) => {
 	let num = el.getAttribute('data-confim-id')
 
@@ -23,12 +24,6 @@ Array.from(document.querySelectorAll('[data-confim-id]')).forEach((el) => {
 			if (this.readyState === XMLHttpRequest.DONE && this.status === 200) { }
 		}
 		xhr.send("num=" + num)
-	})
-})
-// Special params controls (display)
-Array.from(document.getElementsByClassName('switch')).forEach((el) => {
-	el.addEventListener('click', () => {
-		el.classList = "switch " + (el.classList.contains("on") ? "off" : "on")
 	})
 })
 

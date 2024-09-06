@@ -1,5 +1,5 @@
 /**
- * ANDRIX © 2023
+ * ANDRIX © 2024
  */
 
 import { Client } from 'node-osc'
@@ -15,6 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use('/speaker', express.static('web-speaker-controls'))
 app.use('/assistant', express.static('web-assistant-controls'))
 app.use('/sources', express.static('sources'))
+app.use('/', express.static('.'))
 
 app.listen(port, () => {
   console.log(`Confim Control app listening on port ${port} for browser input`)
