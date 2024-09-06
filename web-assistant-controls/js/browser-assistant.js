@@ -2,39 +2,48 @@
  * ANDRIX © 2023-2024
  */
 
-// OSC send on slider input change
-document.getElementById('master-volume').addEventListener('input', (ev) => {
-	let num = ev.target.value // [0, 100]
+// OSC send on master volume change
+let volume = 100
+let minusminus = document.getElementById('minusminus')
+let minus = document.getElementById('minus')
+let plus = document.getElementById('plus')
+let plusplus = document.getElementById('plusplus')
+let vol = document.getElementById('vol')
+let container = document.getElementById('master-container')
+let updateVolume = () => {
+	// Update front-end text
+	vol.innerHTML = volume
 
+	// Update front-end color gradient
+	let hue = 200 + 80 * 10 * Math.sqrt(volume) / 100
+	container.style.background = 'linear-gradient(90deg, hsl(200, 70%, 40%) 0%, hsl(' + hue + ', 70%, 40%) ' + volume + '%, black ' + volume + '%)'
+
+	// Send XHR
 	let xhr = new XMLHttpRequest()
 	xhr.open("POST", location.origin + "/eh") // location is the browser's protocol, hostname and port number
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
 	let oscRangeStart = 500
-	num = oscRangeStart - (-num)
+	let num = oscRangeStart - (-volume)
 	xhr.send("num=" + num)
+}
+minusminus.addEventListener('click', () => {
+	volume = Math.max(0, volume - 5)
+	updateVolume()
+})
+minus.addEventListener('click', () => {
+	volume = Math.max(0, volume - 1)
+	updateVolume()
+})
+plus.addEventListener('click', () => {
+	volume = Math.min(100, volume + 1)
+	updateVolume()
+})
+plusplus.addEventListener('click', () => {
+	volume = Math.min(100, volume + 5)
+	updateVolume()
 })
 
-// Music track tiles state toggle
-/*let activate = (id) => {
-	Array.from(document.getElementsByClassName('music-track')).forEach((el) => {
-		let itsMe = el.getAttribute('data-confim-id') == id
-		el.classList.toggle("active", itsMe)
-		el.src = itsMe ? "./img/music.jpg" : "./img/music-play.jpg"
-	})
-}*/
-
-// UI music tracks toggles
-/*let tracks = document.getElementsByClassName('music-track')
-Array.from(tracks).forEach((el) => {
-	el.addEventListener('click', (ev) => {
-		Array.from(tracks).forEach((tr) => {
-			let itsMe = tr.getAttribute('data-confim-id') == ev.target.getAttribute('data-confim-id')
-			tr.classList.toggle("active", itsMe)
-			//tr.src = itsMe ? "./img/music.jpg" : "./img/music-play.jpg"
-		})
-	})
-})*/
 
 // Media play and pause toggles
 let playNode1 = document.getElementById('audio-play-1')
