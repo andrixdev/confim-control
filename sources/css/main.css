@@ -215,6 +215,9 @@ img.item-preview.mini-pioute {
   padding-top: 6px;
   padding-bottom: 12px;
 }
+.square-btn.minus:hover {
+  background-color: var(--audio-sample-color-4);
+}
 /* Highlight when playing */
 .audio-pause,
 .video-stop {
