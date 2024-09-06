@@ -23,7 +23,7 @@ Array.from(document.querySelectorAll('[data-confim-id]')).forEach((el) => {
 })
 
 // OSC send on slider input change
-let volume = 100
+let volume = 50
 let minusminus = document.getElementById('minusminus')
 let minus = document.getElementById('minus')
 let plus = document.getElementById('plus')
