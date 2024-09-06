@@ -1,4 +1,4 @@
-/* ANDRIX © 2023-2024 */
+/* ANDRIX © 2024 */
 h2 {
   margin: 0.5rem 0;
 }
@@ -37,7 +37,7 @@ h2 {
 }
 #audio #master #master-container {
   width: 100%;
-  background: linear-gradient(90deg, #1f7ead 0%, #7e1fad 100%, #000000 100%);
+  background: linear-gradient(90deg, #1f7ead 0%, #461fad 50%, black 50%);
   border-radius: 10px;
   padding: 5px 0;
 }
