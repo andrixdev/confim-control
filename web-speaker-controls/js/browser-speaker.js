@@ -9,12 +9,7 @@ let activate = (id) => {
 		el.classList.toggle("active", isActive)
 	})
 }
-// Special params controls (display)
-Array.from(document.getElementsByClassName('switch')).forEach((el) => {
-	el.addEventListener('click', () => {
-		el.classList = "switch " + (el.classList.contains("on") ? "off" : "on")
-	})
-})
+
 // Handle constrained steps (display)
 let sections = document.getElementsByClassName('section')
 let steps = document.getElementsByClassName('step')
@@ -29,6 +24,7 @@ Array.from(sections).forEach(s => {
 		s.parentNode.classList.toggle('active', true)
 	})
 })
+
 // Media play and pause toggles (display)
 let playNode1 = document.getElementById('video-play-2')
 let stopNode1 = document.getElementById('video-stop-2')

@@ -29,34 +29,6 @@ document.getElementById('master-volume').addEventListener('input', (ev) => {
 	xhr.send("num=" + num)
 })
 
-// Music track tiles state toggle
-/*let activate = (id) => {
-	Array.from(document.getElementsByClassName('music-track')).forEach((el) => {
-		let itsMe = el.getAttribute('data-confim-id') == id
-		el.classList.toggle("active", itsMe)
-		el.src = itsMe ? "./img/music.jpg" : "./img/music-play.jpg"
-	})
-}*/
-
-// UI music tracks toggles
-/*let tracks = document.getElementsByClassName('music-track')
-Array.from(tracks).forEach((el) => {
-	el.addEventListener('click', (ev) => {
-		Array.from(tracks).forEach((tr) => {
-			let itsMe = tr.getAttribute('data-confim-id') == ev.target.getAttribute('data-confim-id')
-			tr.classList.toggle("active", itsMe)
-			//tr.src = itsMe ? "./img/music.jpg" : "./img/music-play.jpg"
-		})
-	})
-})*/
-
-// Special params controls (display)
-Array.from(document.getElementsByClassName('switch')).forEach((el) => {
-	el.addEventListener('click', () => {
-		el.classList = "switch " + (el.classList.contains("on") ? "off" : "on")
-	})
-})
-
 // Media play and pause toggles
 let playNode1 = document.getElementById('audio-play-1')
 let stopNode1 = document.getElementById('audio-stop-1')
