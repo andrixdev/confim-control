@@ -10,6 +10,28 @@ let activate = (id) => {
 	})
 }
 
+// OSC send on clicks (SPEAKER VERSION)
+Array.from(document.querySelectorAll('[data-confim-id]')).forEach((el) => {
+	let num = el.getAttribute('data-confim-id')
+
+	el.addEventListener('click', (e) => {
+		activate(num)
+		
+		// Send XHR with OSC number
+		let xhr = new XMLHttpRequest()
+		xhr.open("POST", location.origin + "/eh") // location is the browser's protocol, hostname and port number
+		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		xhr.onreadystatechange = function() {
+			if (this.readyState === XMLHttpRequest.DONE && this.status === 200) { }
+		}
+		xhr.send("num=" + num)
+
+		// Front-end loading time
+		if (num >= 1 && num <= 49) animateLoadbar(2000) // 2 seconds (see Unity Chameleon.cs duration)
+		else animateLoadbar(250) // Enough to prevent double-click
+	})
+})
+
 // Handle constrained steps (display)
 let sections = document.getElementsByClassName('section')
 let steps = document.getElementsByClassName('step')
@@ -41,23 +63,6 @@ mediaNodes.forEach((couple) => {
 	stop.addEventListener('click', () => {
 		stop.setAttribute('data-visibility', 'hidden')
 		play.setAttribute('data-visibility', 'visible')
-	})
-})
-
-// Conference tiles controls (send OSC)
-Array.from(document.querySelectorAll('[data-confim-id]')).forEach((el) => {
-	let num = el.getAttribute('data-confim-id')
-
-	el.addEventListener('click', (e) => {
-		activate(num)
-		
-		let xhr = new XMLHttpRequest()
-		xhr.open("POST", location.origin + "/eh") // location is the browser's protocol, hostname and port number
-		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-		xhr.onreadystatechange = function() {
-			if (this.readyState === XMLHttpRequest.DONE && this.status === 200) { }
-		}
-		xhr.send("num=" + num)
 	})
 })
 

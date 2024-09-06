@@ -36,7 +36,7 @@ h2 {
 }
 #audio #master #master-container {
   width: 100%;
-  background: linear-gradient(90deg, #1f7ead 0%, #7e1fad 100%, #000000 100%);
+  background: linear-gradient(90deg, #1f7ead 0%, #461fad 50%, black 50%);
   border-radius: 10px;
   padding: 5px 0;
 }
