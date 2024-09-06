@@ -1,4 +1,4 @@
-/* ANDRIX © 2023 */
+/* ANDRIX © 2024 */
 :root {
   --ui-bg-color-1: #080808;
   --ui-bg-color-2: #131313;
@@ -327,34 +327,4 @@ header h2 {
 }
 #c p:last-of-type {
   margin-bottom: 1em;
-}
-/* A tiny section for the welcome page (move to own file later if it grows big) */
-.welcome#content {
-  margin-top: 0;
-}
-.welcome #confim-control {
-  text-align: center;
-  background: black !important;
-  /* Flemme de spécificité */
-  padding-top: 1.5rem;
-}
-.welcome #confim-control h1 {
-  font-weight: 200;
-  margin: 0;
-}
-.welcome #confim-control p {
-  margin-top: 0.5em;
-}
-.welcome #sub-apps {
-  margin-top: 40px;
-}
-.welcome #sub-apps p {
-  font-size: 1.5rem;
-  margin: 20px;
-  text-transform: uppercase;
-}
-.welcome #c {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 }
