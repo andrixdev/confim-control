@@ -1,5 +1,5 @@
 /**
- * ANDRIX © 2024
+ * ANDRIX © 2024-2025
  */
 
 import { Client } from 'node-osc'
@@ -8,7 +8,7 @@ import bodyParser from 'body-parser'
 
 const app = express()
 
-const port = 8082
+const port = 9005
 const client = new Client('127.0.0.1', 6999)
 app.use(bodyParser.urlencoded({ extended: true }))
 

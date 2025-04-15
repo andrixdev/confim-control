@@ -1,5 +1,5 @@
 /**
- * ANDRIX © 2024
+ * ANDRIX © 2025
  */
 
 // Highlight sections on section tile click
