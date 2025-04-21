@@ -1,5 +1,5 @@
 /**
- * ANDRIX © 2024-2025
+ * ANDRIX © 2025
  */
 
 import { Client } from 'node-osc'
@@ -49,9 +49,9 @@ app.post('/eh', (req, res) => {
   } else if (num >= 500 && num <= 600) {
     oscAddress = '/master'
   } else {
-    console.error("Confim " + conferenceId + " web app trying to send an unrecognized OSC number: " + num);
+    console.error("Confim " + conferenceId + " web app trying to send an unrecognized OSC number: " + num)
   }
-  
+
   client.send(oscAddress, num, () => {
     console.log("Message with number " + num + " was sent on address " + oscAddress + " to port " + unityPort + " for Unity")
     //client.close();
