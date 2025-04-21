@@ -10,7 +10,7 @@ Control web app for immersive science talks under a dome
 * Clone this repository on your machine (on GitHub or with Git installed on your machine)
 * Run **npm install** in main directory to download dependencies
 * Run **node .** in main directory to boot Node server with index.js
-* Open *localhost:9005* in Google Chrome or Mozilla FireFox to open the application
+* Open *localhost:9007* in Google Chrome or Mozilla FireFox to open the application
 
 # Developer: Contributing
 * Install Git (https://git-scm.com/downloads)
