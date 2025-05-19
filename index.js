@@ -35,16 +35,22 @@ app.post('/eh', (req, res) => {
 
   // Shoot an OSC message to Unity port
   // Addresses :
-  // [0, 199] for visual triggers
-  // [200, 299] for audio triggers
-  // [300, 399] for video
+  // 0 for reset
+  // [1-49] for chapters
+  // [100, 299] for visual triggers
+  // [300, 399] for audio triggers
+  // [400, 499] for video
   // [500, 600] for master sound volume
   let oscAddress = '/null'
-  if (num >= 0 && num < 200) {
+  if (num == 0) {
+    oscAddress = '/reset'
+  } else if (num >= 1 && num <= 49) {
+    oscAddress = '/chapter'
+  } else if (num >= 100 && num <= 299) {
     oscAddress = '/visuals'
-  } else if (num < 300) {
+  } else if (num >= 300 && num <= 399) {
     oscAddress = '/audio'
-  } else if (num < 400) {
+  } else if (num >= 400 && num <= 499) {
     oscAddress = '/video'
   } else if (num >= 500 && num <= 600) {
     oscAddress = '/master'
