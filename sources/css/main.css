@@ -38,6 +38,11 @@
   src: local("Raleway Thin"), url("../../sources/fonts/Raleway-Thin.ttf");
   font-weight: 100;
 }
+@font-face {
+  font-family: "Rationale";
+  src: local("Rationale"), url("../../sources/fonts/Rationale-Regular.ttf");
+  font-weight: 400;
+}
 /* Helpers */
 p,
 a,

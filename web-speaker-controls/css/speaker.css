@@ -34,6 +34,7 @@ header h2#title.speaker {
   width: 100px;
   margin: 0 -23px 0 -25px;
   opacity: 0.1;
+  text-align: center;
 }
 #chapters .chapter.active .chapter-number {
   opacity: 0.8;
