@@ -1,18 +1,18 @@
 /**
- * ANDRIX © 2023-2024
+ * ANDRIX © 2023-2025
  */
 
-// Highlight sections on section tile click
-let sections = document.getElementsByClassName('section')
-let steps = document.getElementsByClassName('step')
-let resetSteps = () => {
-	Array.from(steps).forEach(c => {
+// Highlight chapters on item click
+let chapterItems = document.getElementsByClassName('chapter-item')
+let chapters = document.getElementsByClassName('chapter')
+let resetChapters = () => {
+	Array.from(chapters).forEach(c => {
 		c.classList.toggle('active', false)
 	})
 }
-Array.from(sections).forEach(s => {
+Array.from(chapterItems).forEach(s => {
 	s.addEventListener('click', () => {
-		resetSteps()
+		resetChapters()
 		s.parentNode.classList.toggle('active', true)
 	})
 })

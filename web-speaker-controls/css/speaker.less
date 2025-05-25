@@ -12,10 +12,11 @@ h2#title.speaker {
     width: 105px;
 }
 
-#steps {
-    .step {
+#chapters {
+    .chapter {
         display: flex;
-        padding: 10px;
+		align-items: center;
+		padding: 10px 10px 10px 0;
         @media (max-width: 320px) {
             flex-wrap: wrap;
         }
@@ -29,41 +30,22 @@ h2#title.speaker {
         &:nth-of-type(2n+1):not(.active) {
             background: var(--ui-bg-color-3);
         }
-        .action, .switch-action {
-            user-select: none;
-            cursor: pointer;
-            margin: 3px;
-            border-radius: 2px;
-            border: solid 1.5px white;
+        .chapter-number {
+            font-family: Rationale, Raleway, Comic Sans MS, sans-serif;
+            font-size: 120px;
+            transform: scale(0.4, 1);
+            color: var(--text-color);
+            width: 100px;
+            margin: 0 -23px 0 -25px;
+            opacity: 0.1;
             text-align: center;
-            font-family: 'Raleway', 'Comic Sans MS', serif;
-            display: flex;
-            flex-flow: row;
-            align-items: center;
-            justify-content: center;
-            padding: 5px;
-            font-size: .8rem;
-            text-transform: uppercase;
-
-            &:hover {
-                box-shadow: var(--box-shadow-small);
-            }
         }
-        .action {
-            width: 120px;
-            height: 60px;
-            color: white;
-            background: linear-gradient(hsl(20, 80%, 40%), hsl(355, 80%, 40%));
-        }
-        .switch-action {
-            width: 130px;
-            height: 60px;
-            color: white;
-            background: linear-gradient(hsl(195, 83%, 40%), hsl(220, 73%, 30%));
-            border-radius: 20px;
+        &.active .chapter-number {
+            opacity: .8;
+            text-shadow: #FFF5 0 0 20px;
         }
     }
-    .step#brain-step {
+    .chapter#brain-chapter {
         padding-bottom: 20px;
     }
     #toggles {

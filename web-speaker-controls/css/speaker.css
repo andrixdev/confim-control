@@ -8,61 +8,42 @@ h2#title.speaker {
   height: 65px;
   width: 105px;
 }
-#steps .step {
+#chapters .chapter {
   display: flex;
-  padding: 10px;
+  align-items: center;
+  padding: 10px 10px 10px 0;
 }
 @media (max-width: 320px) {
-  #steps .step {
+  #chapters .chapter {
     flex-wrap: wrap;
   }
 }
-#steps .step.active {
+#chapters .chapter.active {
   background: black;
 }
-#steps .step:nth-of-type(2n):not(.active) {
+#chapters .chapter:nth-of-type(2n):not(.active) {
   background: var(--ui-bg-color-2);
 }
-#steps .step:nth-of-type(2n+1):not(.active) {
+#chapters .chapter:nth-of-type(2n+1):not(.active) {
   background: var(--ui-bg-color-3);
 }
-#steps .step .action,
-#steps .step .switch-action {
-  user-select: none;
-  cursor: pointer;
-  margin: 3px;
-  border-radius: 2px;
-  border: solid 1.5px white;
+#chapters .chapter .chapter-number {
+  font-family: Rationale, Raleway, Comic Sans MS, sans-serif;
+  font-size: 120px;
+  transform: scale(0.4, 1);
+  color: var(--text-color);
+  width: 100px;
+  margin: 0 -23px 0 -25px;
+  opacity: 0.1;
   text-align: center;
-  font-family: 'Raleway', 'Comic Sans MS', serif;
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-  font-size: 0.8rem;
-  text-transform: uppercase;
 }
-#steps .step .action:hover,
-#steps .step .switch-action:hover {
-  box-shadow: var(--box-shadow-small);
+#chapters .chapter.active .chapter-number {
+  opacity: 0.8;
+  text-shadow: #FFF5 0 0 20px;
 }
-#steps .step .action {
-  width: 120px;
-  height: 60px;
-  color: white;
-  background: linear-gradient(hsl(20, 80%, 40%), hsl(355, 80%, 40%));
-}
-#steps .step .switch-action {
-  width: 130px;
-  height: 60px;
-  color: white;
-  background: linear-gradient(hsl(195, 83%, 40%), hsl(220, 73%, 30%));
-  border-radius: 20px;
-}
-#steps .step#brain-step {
+#chapters .chapter#brain-chapter {
   padding-bottom: 20px;
 }
-#steps #toggles {
+#chapters #toggles {
   margin-top: 15px;
 }

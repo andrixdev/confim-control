@@ -22,23 +22,25 @@
 <body>
 
 	<header>
-		<h2 id="title" class="manuscript speaker">Conférence Immersive - Fabien & Joshua</h2>
+		<h2 id="title" class="speaker">Conférence Immersive - Fabien & Joshua</h2>
 		<div id="loadbar"><div id="loadbar-inner"></div></div>
 	</header>
 
 	<div id="content" class="speaker">
 
-		<!-- Steps -->
-		<div id="steps">
+		<!-- Chapters -->
+		<div id="chapters">
 
 			<!-- Chapter 1 -->
-			<div class="step flexrow flexstart flexwrap active">
-				<img class="item-preview section" data-confim-id="1" src="../sources/img/digital-embrace.jpg" alt="Digital Embrace" />
+			<div class="chapter flexrow flexstart flexwrap active">
+				<div class="chapter-number">1</div>
+				<img class="item-preview chapter-item" data-confim-id="1" src="../sources/img/digital-embrace.jpg" alt="Digital Embrace" />
 			</div>
 
 			<!-- Chapter 2 -->
-			<div class="step flexrow flexstart flexwrap flexchildrenstart">
-				<img class="item-preview section" data-confim-id="2" src="./img/quizz.jpg" alt="Quizz" />
+			<div class="chapter flexrow flexstart flexwrap flexchildrenstart">
+				<div class="chapter-number">2</div>
+				<img class="item-preview chapter-item" data-confim-id="2" src="./img/quizz.jpg" alt="Quizz" />
 				<div>
 					<div class="flexrow flexcenter flexwrap">
 						<img class="item-preview semi-pioute" data-confim-id="160" src="./img/quiz-init.jpg" alt="Quizz init" />
@@ -53,15 +55,17 @@
 			</div>
 
 			<!-- Chapter 3 -->
-			<div class="step flexrow flexstart flexwrap">
-				<img class="item-preview section" data-confim-id="3" src="./img/transition-all.jpg" alt="Transition" />
+			<div class="chapter flexrow flexstart flexwrap">
+				<div class="chapter-number">3</div>
+				<img class="item-preview chapter-item" data-confim-id="3" src="./img/transition-all.jpg" alt="Transition" />
 				<img class="item-preview" data-confim-id="110" src="./img/physics-CT.png" alt="CT" />
 				<img class="item-preview" data-confim-id="111" src="./img/physics-XPCT.png" alt="XPCT" />
 			</div>
 
 			<!-- Chapter 4 -->
-			<div class="step flexrow flexstart flexwrap flexchildrenstart">
-				<img class="item-preview section" data-confim-id="4" src="./img/physics.jpg" alt="Physics" />
+			<div class="chapter flexrow flexstart flexwrap flexchildrenstart">
+				<div class="chapter-number">4</div>
+				<img class="item-preview chapter-item" data-confim-id="4" src="./img/physics.jpg" alt="Physics" />
 				<br/>
 				
 				<div class="flexcol flexchildrenstart">
@@ -82,7 +86,7 @@
 	
 							<div id="screen-position" class="confim-slider flexcol flexcenter flexwrap">
 								<label for="screen-pos">Screen position</label>
-								<input type="range" id="screen-position-range" name="screen-pos" min="0" max="2" value="0" step="1" />
+								<input type="range" id="screen-position-range" name="screen-pos" min="0" max="2" value="0" chapter="1" />
 								<div class="confim-slider-values flexrow flexbetween">
 									<p class="min">OFF</p>
 									<p class="mid">FAR</p>
@@ -105,15 +109,17 @@
 			</div>
 
 			<!-- Chapter 5 -->
-			<div class="step flexrow flexstart flexwrap">
-				<img class="item-preview section" data-confim-id="5" src="./img/family-pictures.jpg" alt="Family pictures" />
+			<div class="chapter flexrow flexstart flexwrap">
+				<div class="chapter-number">5</div>
+				<img class="item-preview chapter-item" data-confim-id="5" src="./img/family-pictures.jpg" alt="Family pictures" />
 				<img class="item-preview" data-confim-id="130" src="./img/esrf.jpg" alt="ESRF" />
 				<img class="item-preview" data-confim-id="131" src="./img/soleil.jpg" alt="Synchrotron SOLEIL" />
 			</div>
 
 			<!-- Chapter 6 -->
-			<div class="step flexrow flexstart flexwrap">
-				<img class="item-preview section" data-confim-id="6" src="./img/synchrotron.jpg" alt="Synchrotron" />
+			<div class="chapter flexrow flexstart flexwrap">
+				<div class="chapter-number">6</div>
+				<img class="item-preview chapter-item" data-confim-id="6" src="./img/synchrotron.jpg" alt="Synchrotron" />
 
 				<!-- Beams toggle -->
 				<div class="visual flexcol flexstart">
@@ -128,24 +134,27 @@
 			</div>
 
 			<!-- Chapter 7 -->
-			<div class="step flexrow flexstart flexwrap" id="brain-films">
-				<img class="item-preview section" data-confim-id="7" src="./img/brain-films.jpg" alt="Brain films" />
+			<div class="chapter flexrow flexstart flexwrap" id="brain-films">
+				<div class="chapter-number">7</div>
+				<img class="item-preview chapter-item" data-confim-id="7" src="./img/brain-films.jpg" alt="Brain films" />
 				<img class="item-preview cuts" data-confim-id="90" src="./img/brain-axial.png" alt="Brain video Axial" />
 				<img class="item-preview cuts" data-confim-id="91" src="./img/brain-sagittal.png" alt="Brain video Sagittal" />
 				<img class="item-preview cuts" data-confim-id="92" src="./img/brain-coronal.png" alt="Brain video Coronal" />
 			</div>
 
 			<!-- Chapter 8 -->
-			<div id="brain-step" class="step flexcol">
+			<div id="brain-chapter" class="chapter flexrow">
+				<div class="chapter-number">8</div>
 				<div class="flexrow flexstart flexwrap fullwidth">
-					<img class="item-preview section flexselfstart" data-confim-id="8" src="../sources/img/brain.png" alt="Brain"/>
+					<img class="item-preview chapter-item flexselfstart" data-confim-id="8" src="../sources/img/brain.png" alt="Brain"/>
 					<p><i>  Controlled by Assistant</i></p>
 				</div>
 			</div>
 
 			<!-- Chapter 1 (again) -->
-			<div class="step flexrow flexstart flexwrap active">
-				<img class="item-preview section" data-confim-id="1" src="../sources/img/digital-embrace.jpg" alt="Digital Embrace" />
+			<div class="chapter flexrow flexstart flexwrap active">
+				<div class="chapter-number">1</div>
+				<img class="item-preview chapter-item" data-confim-id="1" src="../sources/img/digital-embrace.jpg" alt="Digital Embrace" />
 			</div>
 
 		</div>
@@ -155,7 +164,7 @@
 			<div class="flexcol">
 				<p>Confim Control</p>
 				<p>ANDRIX ® 2025</p>
-				<p>conf-03-v1.1</p>
+				<p>conf-03-v1.2</p>
 			</div>
 		</div>
 
