@@ -4,7 +4,6 @@
 /* Specific */
 header h2#title.speaker {
     font-size: 1.5rem;
-    padding-top: 0.45em;
 }
 #content.speaker > div:not(#c) {
     padding: 5px;
@@ -125,10 +124,11 @@ header h2#title.speaker {
     }
 }
 
-#steps {
-    .step {
+#chapters {
+    .chapter {
         display: flex;
         flex-flow: row;
+        align-items: center;
         @media (max-width: 320px) {
             flex-wrap: wrap;
         }
@@ -195,7 +195,7 @@ header h2#title.speaker {
             height: 60px;
             color: white;
             background: linear-gradient(hsl(195, 83%, 40%), hsl(220, 73%, 30%));
-            border-radius: 20px;
+            border-radius: 2px;
         }
     }
 }

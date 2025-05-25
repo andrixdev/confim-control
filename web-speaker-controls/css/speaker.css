@@ -2,7 +2,6 @@
 /* Specific */
 header h2#title.speaker {
   font-size: 1.5rem;
-  padding-top: 0.45em;
 }
 #content.speaker > div:not(#c) {
   padding: 5px;
@@ -108,24 +107,25 @@ header h2#title.speaker {
     transform: rotate(360deg);
   }
 }
-#steps .step {
+#chapters .chapter {
   display: flex;
   flex-flow: row;
+  align-items: center;
 }
 @media (max-width: 320px) {
-  #steps .step {
+  #chapters .chapter {
     flex-wrap: wrap;
   }
 }
-#steps .step:nth-of-type(2n) {
+#chapters .chapter:nth-of-type(2n) {
   background: var(--ui-bg-color-2);
 }
-#steps .step:nth-of-type(2n+1) {
+#chapters .chapter:nth-of-type(2n+1) {
   background: var(--ui-bg-color-3);
 }
-#steps .step .cam,
-#steps .step .action,
-#steps .step .switch-action {
+#chapters .chapter .cam,
+#chapters .chapter .action,
+#chapters .chapter .switch-action {
   user-select: none;
   cursor: pointer;
   margin: 3px;
@@ -141,12 +141,12 @@ header h2#title.speaker {
   font-size: 0.8rem;
   text-transform: uppercase;
 }
-#steps .step .cam:hover,
-#steps .step .action:hover,
-#steps .step .switch-action:hover {
+#chapters .chapter .cam:hover,
+#chapters .chapter .action:hover,
+#chapters .chapter .switch-action:hover {
   box-shadow: white 0 0 10px;
 }
-#steps .step .cam {
+#chapters .chapter .cam {
   width: 60px;
   min-width: 60px;
   height: 60px;
@@ -156,29 +156,29 @@ header h2#title.speaker {
   color: white;
   position: relative;
 }
-#steps .step .cam.active {
+#chapters .chapter .cam.active {
   opacity: 1;
   color: black;
   background: white;
   box-shadow: white 0 0 10px;
 }
-#steps .step .cam::before {
+#chapters .chapter .cam::before {
   content: attr(data-cam-id);
   font-size: 55px;
   position: absolute;
   top: 0;
   opacity: 0.2;
 }
-#steps .step .action {
+#chapters .chapter .action {
   width: 120px;
   height: 60px;
   color: white;
   background: linear-gradient(hsl(20, 80%, 40%), hsl(355, 80%, 40%));
 }
-#steps .step .switch-action {
+#chapters .chapter .switch-action {
   width: 130px;
   height: 60px;
   color: white;
   background: linear-gradient(hsl(195, 83%, 40%), hsl(220, 73%, 30%));
-  border-radius: 20px;
+  border-radius: 2px;
 }
