@@ -42,7 +42,7 @@
 }
 /* Helpers */
 p, a, label, h1, h2, h3, h4 {
-    font-family: 'Raleway', 'Comic Sans MS', serif;
+    font-family: 'Rationale', 'Raleway', 'Comic Sans MS', serif;
     color: var(--text-color);
 }
 .flexcol {
@@ -168,10 +168,11 @@ img.item-preview {
         cursor: pointer;
     }
 
-    &.section {
+    &.chapter-item {
         width: 140px;
         height: 140px;
-        margin: 3px 10px 10px 3px;
+        margin: 10px 10px 10px 0;
+        cursor: pointer;
     }
     &.semi-pioute {
         width: 80px;
@@ -264,7 +265,7 @@ body {
     overflow-x: hidden;
 }
 header {
-    height: 60px;
+    height: 4.2em;
     width: 100vw;
     z-index: 10;
     position: fixed;
@@ -278,9 +279,8 @@ header {
         font-size: 30px;
         line-height: 40px;
         margin: 0;
-        padding-top: .3em;
-        padding-left: .8em;
-        font-size: 2rem;
+        padding: .5em .5em .5em 1em;
+        font-size: 1.8rem;
     }
     #loadbar {
         width: 100%;
@@ -333,7 +333,7 @@ header {
 
     p {
         opacity: 0.5;
-        font-size: .5rem;
+        font-size: .8rem;
         margin: 0;
     }
     p:nth-of-type(1) {

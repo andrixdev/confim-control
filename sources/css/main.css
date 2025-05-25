@@ -46,7 +46,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Raleway', 'Comic Sans MS', serif;
+  font-family: 'Rationale', 'Raleway', 'Comic Sans MS', serif;
   color: var(--text-color);
 }
 .flexcol {
@@ -165,10 +165,11 @@ img.item-preview:hover {
   box-shadow: var(--box-shadow-small);
   cursor: pointer;
 }
-img.item-preview.section {
+img.item-preview.chapter-item {
   width: 140px;
   height: 140px;
-  margin: 3px 10px 10px 3px;
+  margin: 10px 10px 10px 0;
+  cursor: pointer;
 }
 img.item-preview.semi-pioute {
   width: 80px;
@@ -253,7 +254,7 @@ body {
   overflow-x: hidden;
 }
 header {
-  height: 60px;
+  height: 4.2em;
   width: 100vw;
   z-index: 10;
   position: fixed;
@@ -267,9 +268,8 @@ header h2 {
   font-size: 30px;
   line-height: 40px;
   margin: 0;
-  padding-top: 0.3em;
-  padding-left: 0.8em;
-  font-size: 2rem;
+  padding: 0.5em 0.5em 0.5em 1em;
+  font-size: 1.8rem;
 }
 header #loadbar {
   width: 100%;
@@ -314,7 +314,7 @@ header #loadbar #loadbar-inner {
 }
 #c p {
   opacity: 0.5;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   margin: 0;
 }
 #c p:nth-of-type(1) {
