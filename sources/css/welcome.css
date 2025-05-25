@@ -6,7 +6,7 @@
   text-align: center;
   background: black !important;
   /* Flemme de spécificité */
-  padding-top: 1.5rem;
+  padding: 1.5rem 0 0.75rem;
 }
 .welcome #confim-control h1 {
   font-weight: 200;
@@ -16,7 +16,6 @@
   margin-top: 0.5em;
 }
 .welcome #sub-apps {
-  margin-top: 40px;
   padding: 1em 0 1.5em;
 }
 .welcome #sub-apps p {
