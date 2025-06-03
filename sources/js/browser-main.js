@@ -22,27 +22,44 @@ Array.from(document.querySelectorAll('[data-confim-id]')).forEach((el) => {
 	})
 })
 
-// Special params controls (display)
+let toggleSwitch = (switchNode) => {
+	// Toggle
+	switchNode.classList.toggle('on')
+	switchNode.classList.toggle('off')
+
+	// Display/hide corresponding image
+	if (switchNode.hasAttribute("data-switch-off-img-id") && switchNode.hasAttribute("data-switch-on-img-id")) {
+		let imgOffId = switchNode.getAttribute("data-switch-off-img-id")
+		let imgOnId = switchNode.getAttribute("data-switch-on-img-id")
+		let isOn = switchNode.classList.contains("on")
+		document.getElementById(imgOnId).style.display = isOn ? "inherit" : "none"
+		document.getElementById(imgOffId).style.display = isOn ? "none" : "inherit"
+	}
+}
+
+// Joint toggle of identical switches
 Array.from(document.getElementsByClassName('switch')).forEach((el) => {
 	el.addEventListener('click', () => {
 		// Detect those with same confim-id
 		let all = document.querySelectorAll("[data-confim-id='" + el.getAttribute('data-confim-id') + "']")
 		all.forEach(el2 => {
-			// Toggle
-			el2.classList.toggle('on')
-			el2.classList.toggle('off')
-
-			// Display/hide corresponding image
-			if (el2.hasAttribute("data-switch-off-img-id") && el2.hasAttribute("data-switch-on-img-id")) {
-				let imgOffId = el2.getAttribute("data-switch-off-img-id")
-				let imgOnId = el2.getAttribute("data-switch-on-img-id")
-				let isOn = el2.classList.contains("on")
-				document.getElementById(imgOnId).style.display = isOn ? "inherit" : "none"
-				document.getElementById(imgOffId).style.display = isOn ? "none" : "inherit"
-			}
-
+			toggleSwitch(el2)
 		})
 	})
+})
+
+// Switch on/off all molecules at once
+let setAllMoleculeSwitches = (targetState) => {
+	Array.from(document.getElementsByClassName("molecule-switch")).forEach(el => {
+		if (el.classList.contains(targetState == true ? 'off' : 'on')) toggleSwitch(el)
+	})
+}
+
+document.getElementById("all-molecules-off").addEventListener('click', () => {
+	setAllMoleculeSwitches(false)
+})
+document.getElementById("all-molecules-on").addEventListener('click', () => {
+	setAllMoleculeSwitches(true)
 })
 
 // Loadbar animation
