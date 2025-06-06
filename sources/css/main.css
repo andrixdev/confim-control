@@ -9,7 +9,9 @@
   --audio-sample-color-1: hsl(200, 83%, 43%);
   --audio-sample-color-2: hsl(230, 70%, 63%);
   --audio-sample-color-3: hsl(260, 90%, 53%);
-  --audio-sample-color-4: hsl(290, 50%, 53%);
+  --audio-sample-color-4: hsl(280, 50%, 53%);
+  --audio-sample-color-5: hsl(310, 50%, 53%);
+  --audio-sample-color-6: hsl(340, 50%, 53%);
   --video-color-1: hsl(5, 83%, 42%);
   --box-shadow: white 0 0 20px 2px;
   --box-shadow-small: white 0 0 10px;
