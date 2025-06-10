@@ -271,7 +271,7 @@ body {
     overflow-x: hidden;
 }
 header {
-    height: 4.2em;
+    height: 70px;
     width: 100vw;
     z-index: 10;
     position: fixed;
@@ -279,6 +279,8 @@ header {
     background: var(--ui-bg-color-1);
     border-bottom: solid 1px rgba(255, 255, 255, .2);
     overflow: hidden;
+    display: flex;
+    align-items: center;
 
     h2 {
         font-weight: 100;
@@ -322,6 +324,22 @@ header {
         }
     }
 }
+
+@media (max-width: 500px) {
+    /* Header height */
+    header {
+        height: 110px;
+        justify-content: center;
+
+        h2 {
+            text-align: center;
+        }
+    }
+    #content {
+        margin-top: 110px;
+    }
+}
+
 #overlay {
     width: 100%;
     height: 100%;

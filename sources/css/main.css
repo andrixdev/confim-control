@@ -259,7 +259,7 @@ body {
   overflow-x: hidden;
 }
 header {
-  height: 4.2em;
+  height: 70px;
   width: 100vw;
   z-index: 10;
   position: fixed;
@@ -267,6 +267,8 @@ header {
   background: var(--ui-bg-color-1);
   border-bottom: solid 1px rgba(255, 255, 255, 0.2);
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 header h2 {
   font-weight: 100;
@@ -302,6 +304,19 @@ header #loadbar #loadbar-inner {
 }
 #content > div:not(#c):nth-of-type(2n+1) {
   background: var(--ui-bg-color-3);
+}
+@media (max-width: 500px) {
+  /* Header height */
+  header {
+    height: 110px;
+    justify-content: center;
+  }
+  header h2 {
+    text-align: center;
+  }
+  #content {
+    margin-top: 110px;
+  }
 }
 #overlay {
   width: 100%;
