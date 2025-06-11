@@ -5,7 +5,7 @@
 const config = {
     "conferenceId": 2,
     "browserPort": 9002,
-    "unityPort": 6999
+    "unityPort": 7102
 }
 
 export default config
