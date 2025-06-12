@@ -55,11 +55,15 @@ let setAllMoleculeSwitches = (targetState) => {
 	})
 }
 
-document.getElementById("all-molecules-off").addEventListener('click', () => {
-	setAllMoleculeSwitches(false)
+Array.from(document.getElementsByClassName("all-molecules-off")).forEach(e => {
+	e.addEventListener('click', () => {
+		setAllMoleculeSwitches(false)
+	})
 })
-document.getElementById("all-molecules-on").addEventListener('click', () => {
-	setAllMoleculeSwitches(true)
+Array.from(document.getElementsByClassName("all-molecules-on")).forEach(e => {
+	e.addEventListener('click', () => {
+		setAllMoleculeSwitches(true)
+	})
 })
 
 // Loadbar animation

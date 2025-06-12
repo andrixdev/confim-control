@@ -39,8 +39,9 @@
 				<!-- Molecules -->
 				<div class="flexcol">
 					<div class="flexrow flexwrap">
-						<img class="item-preview" id="all-molecules-on" data-confim-id="251" src="../sources/img/pool-fill.png" alt="Pool fill" />
-						<img class="item-preview" id="all-molecules-off" data-confim-id="250" src="../sources/img/pool-clear.png" alt="Pool clear" />
+						<img class="item-preview all-molecules-on" data-confim-id="251" src="../sources/img/pool-fill.png" alt="Pool fill" />
+						<img class="item-preview all-molecules-off" data-confim-id="250" src="../sources/img/pool-clear.png" alt="Pool clear" />
+						<img class="item-preview" data-confim-id="270" src="../sources/img/pool-reset-physics.png" alt="Pool reset physics" />
 					</div>
 
 					<div class="flexrow flexwrap flexcenter">
@@ -140,6 +141,26 @@
 				<div class="chapter-number">4</div>
 				<img class="item-preview chapter-item" data-confim-id="5" src="./img/electrolysis.jpg" alt="Electrolysis" />
 				<div class="flexcol">
+
+					<div class="flexrow flexwrap flexcenter">
+						<!-- Molecule water -->
+						<div class="flexcol flexstart">
+							<img class="item-preview" data-switch-off-img id="switch-img-default" src="../sources/img/molecule-water.png" alt="Water molecule" />
+							<img class="item-preview" data-switch-on-img id="switch-img-default-same-actually" src="../sources/img/molecule-water.png" alt="Water molecule" />
+							<div class="switch molecule-switch on" data-confim-id="252" data-switch-off-img-id="switch-img-default" data-switch-on-img-id="switch-img-default-same-actually"><div class="switch-inner"></div></div>
+						</div>
+						
+						<!-- Molecule KOH -->
+						<div class="flexcol flexstart">
+							<img class="item-preview" data-switch-off-img id="switch-img-default" src="../sources/img/molecule-koh.png" alt="KOH molecule" />
+							<img class="item-preview" data-switch-on-img id="switch-img-default-same-actually" src="../sources/img/molecule-koh.png" alt="KOH molecule" />
+							<div class="switch molecule-switch on" data-confim-id="253" data-switch-off-img-id="switch-img-default" data-switch-on-img-id="switch-img-default-same-actually"><div class="switch-inner"></div></div>
+						</div>
+
+						<img class="item-preview all-molecules-off" data-confim-id="250" src="../sources/img/pool-clear.png" alt="Pool clear" />
+					
+					</div>
+
 					<div class="flexrow flexwrap flexcenter">
 						<img class="item-preview" data-confim-id="113" src="./img/electrolysis-electrodes.png" alt="Electrodes" />
 						<img class="item-preview" data-confim-id="114" src="./img/electrolysis-wire.jpg" alt="Wires" />
@@ -147,25 +168,6 @@
 						<img class="item-preview" data-confim-id="116" src="./img/electrolysis-bubbles-oxygen.png" alt="Oxygen bubbles" />
 						<img class="item-preview" data-confim-id="200" src="./img/electrolysis-membrane.png" alt="Membrane" />
 						<img class="item-preview" data-confim-id="201" src="./img/electrolysis-bubbles-angle.png" alt="Bubbles angle" />
-					</div>
-
-					<div class="flexrow flexwrap flexcenter">
-						<!-- Molecule water -->
-						<div class="flexcol flexstart">
-							<img class="item-preview" data-switch-off-img id="switch-img-default" src="../sources/img/molecule-water.png" alt="Water molecule" />
-							<img class="item-preview" data-switch-on-img id="switch-img-default-same-actually" src="../sources/img/molecule-water.png" alt="Water molecule" />
-							<div class="switch molecule-switch off" data-confim-id="252" data-switch-off-img-id="switch-img-default" data-switch-on-img-id="switch-img-default-same-actually"><div class="switch-inner"></div></div>
-						</div>
-						
-						<!-- Molecule KOH -->
-						<div class="flexcol flexstart">
-							<img class="item-preview" data-switch-off-img id="switch-img-default" src="../sources/img/molecule-koh.png" alt="KOH molecule" />
-							<img class="item-preview" data-switch-on-img id="switch-img-default-same-actually" src="../sources/img/molecule-koh.png" alt="KOH molecule" />
-							<div class="switch molecule-switch off" data-confim-id="253" data-switch-off-img-id="switch-img-default" data-switch-on-img-id="switch-img-default-same-actually"><div class="switch-inner"></div></div>
-						</div>
-
-						<img class="item-preview" id="all-molecules-off" data-confim-id="250" src="../sources/img/pool-clear.png" alt="Pool clear" />
-					
 					</div>
 
 				</div>
@@ -181,31 +183,37 @@
 			<div class="chapter flexrow flexstart flexwrap">
 				<div class="chapter-number">6</div>
 				<img class="item-preview chapter-item" data-confim-id="7" src="./img/extracted-molecules.png" alt="Extracted molecules" />
-				<img class="item-preview" data-confim-id="117" src="./img/extracted-molecules-glucose.png" alt="Glucose" />
-				<img class="item-preview" data-confim-id="118" src="./img/extracted-molecules-xylose.png" alt="Xylose" />
-				<img class="item-preview" data-confim-id="119" src="./img/extracted-molecules-hmf.png" alt="HMF" />
+				<img class="item-preview" data-confim-id="280" src="./img/extracted-molecules-glucose.png" alt="Glucose" />
+				<img class="item-preview" data-confim-id="281" src="./img/extracted-molecules-xylose.png" alt="Xylose" />
+				<img class="item-preview" data-confim-id="282" src="./img/extracted-molecules-hmf.png" alt="HMF" />
 			</div>
 
 			<!-- Chapter 7 -->
 			<div class="chapter flexrow flexstart flexwrap">
 				<div class="chapter-number">7</div>
 				<img class="item-preview chapter-item" data-confim-id="8" src="./img/foam.png" alt="Foam" />
-				<img class="item-preview" data-confim-id="120" src="./img/foam-site-actif-1.jpg" alt="Foam active site 1" />
-				<img class="item-preview" data-confim-id="121" src="./img/foam-site-actif-2.jpg" alt="Foam active site 2" />
-				<img class="item-preview" data-confim-id="122" src="./img/foam-site-actif-3.jpg" alt="Foam active site 3" />
-				<img class="item-preview" data-confim-id="123" src="./img/foam-site-actif-4.jpg" alt="Foam active site 4" />
 			</div>
 
 			<!-- Chapter 8 -->
-			<div class="chapter flexrow flexstart">
+			<div class="chapter flexrow flexstart flexwrap">
 				<div class="chapter-number">8</div>
-				<img class="item-preview chapter-item" data-confim-id="9" src="./img/sequence.png" alt="Chemical sequence" />
+				<img class="item-preview chapter-item" data-confim-id="9" src="./img/foam-image.png" alt="Foam" />
+				<img class="item-preview" data-confim-id="117" src="./img/foam-image-1.png" alt="Foam active site 1" />
+				<img class="item-preview" data-confim-id="118" src="./img/foam-image-2.png" alt="Foam active site 2" />
+				<img class="item-preview" data-confim-id="119" src="./img/foam-image-3.png" alt="Foam active site 3" />
+				<img class="item-preview" data-confim-id="120" src="./img/foam-image-4.png" alt="Foam active site 4" />
+			</div>
+
+			<!-- Chapter 9 -->
+			<div class="chapter flexrow flexstart">
+				<div class="chapter-number">9</div>
+				<img class="item-preview chapter-item" data-confim-id="10" src="./img/sequence.png" alt="Chemical sequence" />
 
 				<div class="flexrow flexwrap">
-					<img class="item-preview" data-confim-id="124" src="./img/sequence-hmf.png" alt="HMF toggle" />
-					<img class="item-preview" data-confim-id="125" src="./img/sequence-hmfca.png" alt="HMFCA toggle" />
-					<img class="item-preview" data-confim-id="126" src="./img/sequence-ffca.png" alt="FFCA toggle" />
-					<img class="item-preview" data-confim-id="127" src="./img/sequence-fdca.png" alt="FDCA toggle" />
+					<img class="item-preview" data-confim-id="290" src="./img/sequence-hmf.png" alt="HMF toggle" />
+					<img class="item-preview" data-confim-id="291" src="./img/sequence-hmfca.png" alt="HMFCA toggle" />
+					<img class="item-preview" data-confim-id="292" src="./img/sequence-ffca.png" alt="FFCA toggle" />
+					<img class="item-preview" data-confim-id="293" src="./img/sequence-fdca.png" alt="FDCA toggle" />
 				</div>
 			</div>
 
@@ -214,6 +222,41 @@
 				<div class="chapter-number">4</div>
 				<img class="item-preview chapter-item" data-confim-id="5" src="./img/electrolysis.jpg" alt="Electrolysis" />
 				<div class="flexcol">
+
+					<div class="flexrow flexwrap flexcenter">
+						<!-- Molecule water -->
+						<div class="flexcol flexstart">
+							<img class="item-preview" data-switch-off-img id="switch-img-default" src="../sources/img/molecule-water.png" alt="Water molecule" />
+							<img class="item-preview" data-switch-on-img id="switch-img-default-same-actually" src="../sources/img/molecule-water.png" alt="Water molecule" />
+							<div class="switch molecule-switch on" data-confim-id="252" data-switch-off-img-id="switch-img-default" data-switch-on-img-id="switch-img-default-same-actually"><div class="switch-inner"></div></div>
+						</div>
+						
+						<!-- Molecule KOH -->
+						<div class="flexcol flexstart">
+							<img class="item-preview" data-switch-off-img id="switch-img-default" src="../sources/img/molecule-koh.png" alt="KOH molecule" />
+							<img class="item-preview" data-switch-on-img id="switch-img-default-same-actually" src="../sources/img/molecule-koh.png" alt="KOH molecule" />
+							<div class="switch molecule-switch on" data-confim-id="253" data-switch-off-img-id="switch-img-default" data-switch-on-img-id="switch-img-default-same-actually"><div class="switch-inner"></div></div>
+						</div>
+						
+						<!-- Molecule HMF -->
+						<div class="flexcol flexstart">
+							<img class="item-preview" data-switch-off-img id="switch-img-default" src="../sources/img/molecule-hmf.png" alt="HMF molecule" />
+							<img class="item-preview" data-switch-on-img id="switch-img-default-same-actually" src="../sources/img/molecule-hmf.png" alt="HMF molecule" />
+							<div class="switch molecule-switch on" data-confim-id="256" data-switch-off-img-id="switch-img-default" data-switch-on-img-id="switch-img-default-same-actually"><div class="switch-inner"></div></div>
+						</div>
+						
+						<!-- Molecule FDCA -->
+						<div class="flexcol flexstart">
+							<img class="item-preview" data-switch-off-img id="switch-img-default" src="../sources/img/molecule-fdca.png" alt="FDCA molecule" />
+							<img class="item-preview" data-switch-on-img id="switch-img-default-same-actually" src="../sources/img/molecule-fdca.png" alt="FDCA molecule" />
+							<div class="switch molecule-switch on" data-confim-id="257" data-switch-off-img-id="switch-img-default" data-switch-on-img-id="switch-img-default-same-actually"><div class="switch-inner"></div></div>
+						</div>
+
+						<img class="item-preview all-molecules-off" data-confim-id="250" src="../sources/img/pool-clear.png" alt="Pool clear" />
+						<img class="item-preview" data-confim-id="270" src="../sources/img/pool-reset-physics.png" alt="Pool reset physics" />
+					
+					</div>
+
 					<div class="flexrow flexwrap flexcenter">
 						<img class="item-preview" data-confim-id="113" src="./img/electrolysis-electrodes.png" alt="Electrodes" />
 						<img class="item-preview" data-confim-id="114" src="./img/electrolysis-wire.jpg" alt="Wires" />
@@ -223,31 +266,7 @@
 						<img class="item-preview" data-confim-id="201" src="./img/electrolysis-bubbles-angle.png" alt="Bubbles angle" />
 					</div>
 
-					<div class="flexrow flexwrap flexcenter">
-						<!-- Molecule water -->
-						<div class="flexcol flexstart">
-							<img class="item-preview" data-switch-off-img id="switch-img-default" src="../sources/img/molecule-water.png" alt="Water molecule" />
-							<img class="item-preview" data-switch-on-img id="switch-img-default-same-actually" src="../sources/img/molecule-water.png" alt="Water molecule" />
-							<div class="switch molecule-switch off" data-confim-id="252" data-switch-off-img-id="switch-img-default" data-switch-on-img-id="switch-img-default-same-actually"><div class="switch-inner"></div></div>
-						</div>
-						
-						<!-- Molecule KOH -->
-						<div class="flexcol flexstart">
-							<img class="item-preview" data-switch-off-img id="switch-img-default" src="../sources/img/molecule-koh.png" alt="KOH molecule" />
-							<img class="item-preview" data-switch-on-img id="switch-img-default-same-actually" src="../sources/img/molecule-koh.png" alt="KOH molecule" />
-							<div class="switch molecule-switch off" data-confim-id="253" data-switch-off-img-id="switch-img-default" data-switch-on-img-id="switch-img-default-same-actually"><div class="switch-inner"></div></div>
-						</div>
-						
-						<!-- Molecule FDCA -->
-						<div class="flexcol flexstart">
-							<img class="item-preview" data-switch-off-img id="switch-img-default" src="../sources/img/molecule-fdca.png" alt="FDCA molecule" />
-							<img class="item-preview" data-switch-on-img id="switch-img-default-same-actually" src="../sources/img/molecule-fdca.png" alt="FDCA molecule" />
-							<div class="switch molecule-switch off" data-confim-id="257" data-switch-off-img-id="switch-img-default" data-switch-on-img-id="switch-img-default-same-actually"><div class="switch-inner"></div></div>
-						</div>
-
-						<img class="item-preview" id="all-molecules-off" data-confim-id="250" src="../sources/img/pool-clear.png" alt="Pool clear" />
 					
-					</div>
 
 				</div>
 			</div>
@@ -266,8 +285,9 @@
 				<!-- Molecules -->
 				<div class="flexcol">
 					<div class="flexrow flexwrap">
-						<img class="item-preview" id="all-molecules-on" data-confim-id="251" src="../sources/img/pool-fill.png" alt="Pool fill" />
-						<img class="item-preview" id="all-molecules-off" data-confim-id="250" src="../sources/img/pool-clear.png" alt="Pool clear" />
+						<img class="item-preview all-molecules-on" data-confim-id="251" src="../sources/img/pool-fill.png" alt="Pool fill" />
+						<img class="item-preview all-molecules-off" data-confim-id="250" src="../sources/img/pool-clear.png" alt="Pool clear" />
+						<img class="item-preview" data-confim-id="270" src="../sources/img/pool-reset-physics.png" alt="Pool reset physics" />
 					</div>
 
 				</div>
