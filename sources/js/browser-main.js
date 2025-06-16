@@ -22,19 +22,9 @@ Array.from(document.querySelectorAll('[data-confim-id]')).forEach((el) => {
 	})
 })
 
-let toggleSwitch = (switchNode) => {
-	// Toggle
-	switchNode.classList.toggle('on')
-	switchNode.classList.toggle('off')
-
-	// Display/hide corresponding image
-	if (switchNode.hasAttribute("data-switch-off-img-id") && switchNode.hasAttribute("data-switch-on-img-id")) {
-		let imgOffId = switchNode.getAttribute("data-switch-off-img-id")
-		let imgOnId = switchNode.getAttribute("data-switch-on-img-id")
-		let isOn = switchNode.classList.contains("on")
-		document.getElementById(imgOnId).style.display = isOn ? "inherit" : "none"
-		document.getElementById(imgOffId).style.display = isOn ? "none" : "inherit"
-	}
+let toggleSwitch = (switchComponentNode) => {
+	switchComponentNode.classList.toggle('on')
+	switchComponentNode.classList.toggle('off')
 }
 
 // Joint toggle of identical switch components
@@ -43,8 +33,7 @@ Array.from(document.getElementsByClassName('switch-component')).forEach((el) => 
 		// Detect those with same confim-id
 		let all = document.querySelectorAll("[data-confim-id='" + el.getAttribute('data-confim-id') + "']")
 		all.forEach(el2 => {
-			let childSwitch = el2.querySelector(".switch")
-			toggleSwitch(childSwitch)
+			toggleSwitch(el2)
 		})
 	})
 })
@@ -52,8 +41,7 @@ Array.from(document.getElementsByClassName('switch-component')).forEach((el) => 
 // Switch on/off all molecules at once
 let setAllMoleculeSwitches = (targetState) => {
 	Array.from(document.getElementsByClassName("molecule-switch-component")).forEach(el => {
-		let childSwitch = el.querySelector(".switch")
-		if (childSwitch.classList.contains(targetState == true ? 'off' : 'on')) toggleSwitch(childSwitch)
+		if (el.classList.contains(targetState == true ? 'off' : 'on')) toggleSwitch(el)
 	})
 }
 

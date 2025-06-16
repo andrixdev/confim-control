@@ -111,8 +111,15 @@ h4 {
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
+  /* Display of the right tile */
 }
-.switch {
+.switch-component.off img[data-switch-on-img] {
+  display: none;
+}
+.switch-component.on img[data-switch-off-img] {
+  display: none;
+}
+.switch-component .switch {
   margin: 0.5rem 0;
   width: 60px;
   min-width: 60px;
@@ -125,7 +132,7 @@ h4 {
   position: relative;
   transition: background-color 200ms;
 }
-.switch .switch-inner {
+.switch-component .switch .switch-inner {
   background: white;
   border: solid 1px rgba(0, 0, 0, 0.3);
   border-radius: 50%;
@@ -136,17 +143,14 @@ h4 {
   left: 4px;
   transition: left 200ms ease-out;
 }
-.switch.off {
+.switch-component.off .switch {
   background-color: black;
 }
-.switch.on {
+.switch-component.on .switch {
   background-color: var(--main-blue);
 }
-.switch.on .switch-inner {
+.switch-component.on .switch .switch-inner {
   left: 45px;
-}
-img[data-switch-on-img] {
-  display: none;
 }
 .tile {
   width: 90px;
