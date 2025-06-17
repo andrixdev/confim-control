@@ -6,7 +6,7 @@ h2 {
 #visuals,
 #audio,
 #video,
-#special-brain-controls {
+#pool-physics {
   padding: 1rem 0 0.5rem;
 }
 #music-tracks {
@@ -88,4 +88,19 @@ h2 {
   to {
     transform: rotate(360deg);
   }
+}
+#pool-physics .pool-emoji {
+  font-size: 60px;
+  line-height: 1.5em;
+  margin: 5px 10px;
+  cursor: pointer;
+}
+#pool-physics .pool-emoji:hover {
+  text-shadow: var(--box-shadow-small);
+}
+#pool-physics .pool-row {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  margin: 20px 10px;
 }
