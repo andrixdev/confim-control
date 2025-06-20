@@ -85,9 +85,11 @@ mediaNodes.forEach((couple) => {
 })
 
 // Information overlay hide button
+informationOverlay.style.display = "flex"
+informationOverlay.style.opacity = "1"
 overlayButton.addEventListener("click", () => {
 	informationOverlay.style.opacity = 0
 	setTimeout(() => {
 		informationOverlay.style.display = "none"
-	}, 250)
+	}, 300)
 })
