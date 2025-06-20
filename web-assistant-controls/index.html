@@ -140,14 +140,14 @@
 			
 			<div id="master">
 				<div id="master-container" class="flexrow flexcenter">
-					<div id="minusminus" class="square-btn minus">--</div>
-					<div id="minus" class="square-btn minus">-</div>
+					<div id="minusminus" class="btn square-btn minus">--</div>
+					<div id="minus" class="btn square-btn minus">-</div>
 					<div class="flexcol flexcenter">
 						<p>Master volume</p>
 						<p class="volume"><span id="vol">50</span> %</p>
 					</div>
-					<div id="plus" class="square-btn">+</div>
-					<div id="plusplus" class="square-btn">++</div>
+					<div id="plus" class="btn square-btn">+</div>
+					<div id="plusplus" class="btn square-btn">++</div>
 				</div>
 			</div>
 			
@@ -180,6 +180,14 @@
 	</div>
 
 	<div id="overlay"></div> <!-- Prevents double-taps -->
+
+	<div id="information-overlay">
+		<h2>👋 hey</h2>
+		<p>Before triggering any action</p>
+		<p><span>WAIT for all molecules to be loaded on MASTER and IGs</span></p>
+		<p>They are loaded 5 seconds after the main thread and can induce freezes</p>
+		<button id="overlay-ok-btn" class="btn info-btn">All molecules were loaded</button>
+	</div>
 	
 <!-- Scripts for libraries -->
 <!-- None! -->

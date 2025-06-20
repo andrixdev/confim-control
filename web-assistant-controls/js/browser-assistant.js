@@ -10,6 +10,9 @@ let plus = document.getElementById('plus')
 let plusplus = document.getElementById('plusplus')
 let vol = document.getElementById('vol')
 let container = document.getElementById('master-container')
+let informationOverlay = document.getElementById("information-overlay")
+let overlayButton = document.getElementById("overlay-ok-btn")
+
 let updateVolume = () => {
 	// Update front-end text
 	vol.innerHTML = volume
@@ -79,4 +82,12 @@ mediaNodes.forEach((couple) => {
 		stop.setAttribute('data-visibility', 'hidden')
 		play.setAttribute('data-visibility', 'visible')
 	})
+})
+
+// Information overlay hide button
+overlayButton.addEventListener("click", () => {
+	informationOverlay.style.opacity = 0
+	setTimeout(() => {
+		informationOverlay.style.display = "none"
+	}, 250)
 })

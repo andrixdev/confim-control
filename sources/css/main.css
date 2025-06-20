@@ -5,6 +5,7 @@
   --ui-bg-color-3: #1F1F1F;
   --text-color: #EEE;
   --main-blue: hsl(200, 83%, 42%);
+  --main-green: hsl(160, 83%, 42%);
   --audio-sample-color-0: hsl(0, 0%, 85%);
   --audio-sample-color-1: hsl(200, 83%, 43%);
   --audio-sample-color-2: hsl(230, 70%, 63%);
@@ -52,7 +53,8 @@ label,
 h1,
 h2,
 h3,
-h4 {
+h4,
+button {
   font-family: 'Rationale', 'Raleway', 'Comic Sans MS', serif;
   color: var(--text-color);
 }
@@ -227,20 +229,23 @@ img.item-preview.no-border {
 .video.video-stop {
   border-color: var(--video-color-1);
 }
-.square-btn {
-  margin: 0.25rem;
-  width: 50px;
-  min-width: 50px;
-  height: 35px;
+.btn {
   user-select: none;
-  border-radius: 20px;
   cursor: pointer;
   border: solid 1.5px rgba(255, 255, 255, 0.7);
   background-color: black;
   color: white;
   transition: background-color 70ms ease-out;
-  font-size: 30px;
   text-align: center;
+  border-radius: 2px;
+}
+.square-btn {
+  margin: 0.25rem;
+  width: 50px;
+  min-width: 50px;
+  height: 35px;
+  border-radius: 20px;
+  font-size: 30px;
   padding: 8.5px 0 9.5px 3px;
   letter-spacing: 3px;
 }
